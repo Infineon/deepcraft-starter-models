@@ -1,0 +1,7 @@
+Time(Seconds), Length(Seconds), Label(string), Confidence(double), Comment(string)
+0.3489375,0.3591875,down,,
+1.36375,0.43443750000000003,down,,
+2.2723125,0.37318749999999995,down,,
+3.204875,0.3994375,down,,
+4.302125,0.337125,down,,
+5.3157499999999995,0.40537500000000004,down,,
