@@ -1,0 +1,1 @@
+{"title": "Human Activity Recognition Infineon", "description": "Recognize human activity using any Infineon MCU with a 3-axis accelerometer (e.g. Bosch BMI160).", "algorithm": "Classification", "hardware": "Infineon"}
