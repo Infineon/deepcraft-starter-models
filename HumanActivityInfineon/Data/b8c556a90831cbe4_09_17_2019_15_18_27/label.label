@@ -1,0 +1,5 @@
+﻿Time(Seconds),Length(Seconds),Label(string),Confidence(double),Comment(string)
+0,36.0006641651556,jumping,0,
+36.0011910977024,6.98709142445002,standing,1,
+42.9886578056956,18.9973399849788,jumping,1,
+61.9889743838155,1.67872887022761,standing,1,

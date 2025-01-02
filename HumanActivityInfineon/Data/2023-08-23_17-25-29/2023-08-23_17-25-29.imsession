@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="150b1e36-4e31-4d8b-ba3b-791c6e8f191d">
+    <Tracks>
+      <Track name="accel" type="datacsv" isLabelTrack="False">
+        <PayloadFile>accel.data</PayloadFile>
+      </Track>
+      <Track name="label" type="labelcsv">
+        <PayloadFile>label.label</PayloadFile>
+      </Track>
+      <Track name="conv1d-medium-balanced-00" type="datacsv" timecoded="TimestampBeginDuration" isLabelTrack="False">
+        <PayloadFile>..\..\Models\conv1d-medium-balanced-0\Predictions\sessions\2023-08-23_17-25-29\conv1d-medium-balanced-00.data</PayloadFile>
+        <Offset unit="seconds">9.7709510000E-001</Offset>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

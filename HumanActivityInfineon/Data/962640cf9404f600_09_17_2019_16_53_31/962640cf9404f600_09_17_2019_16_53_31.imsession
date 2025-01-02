@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="2d35c165-0e03-4deb-9ff5-360befd76a16">
+    <Tracks>
+      <Track name="accel" type="datacsv" isLabelTrack="False">
+        <PayloadFile>accel.data</PayloadFile>
+      </Track>
+      <Track name="label" type="labelcsv">
+        <PayloadFile>label.label</PayloadFile>
+      </Track>
+      <Track name="video" type="videomp4">
+        <PayloadFile>video.mp4</PayloadFile>
+      </Track>
+      <Track name="conv1d-medium-balanced-00" type="datacsv" timecoded="TimestampBeginDuration" isLabelTrack="False">
+        <PayloadFile>..\..\Models\conv1d-medium-balanced-0\Predictions\sessions\962640cf9404f600_09_17_2019_16_53_31\conv1d-medium-balanced-00.data</PayloadFile>
+        <Offset unit="seconds">9.6008210000E-001</Offset>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>
