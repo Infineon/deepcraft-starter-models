@@ -1,24 +1,26 @@
 # DEEPCRAFT™ Starter Models
-The repository contains all the DEEPCRAFT™ Starter Models. The Starter Models are various deep learning based projects for various use-cases and are designed to be projects that users can utilise as a starting point for building their custom applications. These projects have data and a project file that is ready to be used with DEEPCRAFT™ Studio. 
+This repository contains DEEPCRAFT™ Starter Models - deep learning based projects for various use-cases designed as starting points for building custom applications. These projects include data and project files ready to use with DEEPCRAFT™ Studio.
 
-This repository is automatically pulled and content is automatically generated in DEEPCRAFT™ Studio, so to access the full content, it is recommended to access it through there.
+This repository is automatically pulled and content is generated in DEEPCRAFT™ Studio. For the best experience, access these models through DEEPCRAFT™ Studio.
 
 ## Usage
-These projects are designed to be used through DEEPCRAFT™ Studio (https://www.imagimob.com/studio), and in general all users should access it that way.
+These projects are designed to be used through DEEPCRAFT™ Studio (https://www.imagimob.com/studio) and should be accessed through that platform.
 
 ## Contribution
-All users are welcome to submit new models/projects, but they are subject to Infineon DEEPCRAFT™ Starter Model review process.
+All users are welcome to submit new models/projects, subject to the Infineon DEEPCRAFT™ Starter Model review process.
 
 ## Submission Process
-To submit a project, you will need to create a pull-request with your data and DEEPCRAFT™ Studio project file (.improj). On top of that, we require that all project submissions have a readme file with the following information:
-* Use-case
-* Sensor settings
-* How to collect more data and expand on it
-* Potential next steps for users to have a path to investigate how to make this model production ready.
+To submit a project, create a pull request with your data and DEEPCRAFT™ Studio project file (.improj). All project submissions must include a README file with the following information:
+* Use-case description
+* Sensor settings specifications
+* Guidelines for collecting and expanding the dataset
+* Recommended path to production, including steps to make the model production-ready
 
-Once the project is ready, you can download and unpack the [Creat PR tool](https://api.imagimob.com/v1/Data/Object/create_pr.zip), and from there run
+To create your pull request, download and unpack the [Create PR tool](https://api.imagimob.com/v1/Data/Object/create_pr.zip), then run:
 
-`python .\create_pr.py --path <project-path>`
+```bash
+python .\create_pr.py --path <project-path>
+```
 
 where `<project-path>` is the root path of the starter model project. For more information review the tools' `README.md` file.
 
