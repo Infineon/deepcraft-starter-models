@@ -1,0 +1,1 @@
+{"title": "Drill Material Detection IMU", "description": "A starter model which differentiates which material is drilled into using IMU data", "algorithm": "Classification", "hardware": "Infineon"}
