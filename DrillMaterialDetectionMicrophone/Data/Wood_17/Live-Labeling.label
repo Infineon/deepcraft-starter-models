@@ -1,0 +1,7 @@
+Time(Seconds),Length(Seconds),Label(string),Confidence(double),Comment(string)
+1.0068671,6.0145683,wood,1,
+7.9787387,3.5777979,wood,1,
+12.6395462,2.311064,wood,1,
+16.0239501,3.6551556,wood,1,
+20.6460786,5.7728254,wood,1,
+27.6071212,0.476524,wood_out,1,
