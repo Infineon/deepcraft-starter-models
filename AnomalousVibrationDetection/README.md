@@ -43,7 +43,7 @@ This starter project requires the [PSOC™ 6 AI Evaluation Kit](https://www.infi
 
 The desktop fan is optional; you may want to collect data directly from your machinery instead. However, if you want to replicate the project out-of-the-box with a small desktop fan, any inexpensive product similar to the one shown will be suitable:
 
-[](Resources/imgs/desktopfan.jpeg)
+![](Resources/imgs/desktopfan.jpeg)
 
 The PSOC 6 board, equipped with the vibration sensor, was simply taped to the center of the small desktop fan.
 
@@ -61,12 +61,12 @@ Make sure you have correctly connected the PSOC6 AI Kit to your machine via the 
 
 In the GraphUX, set the input parameters for the "Serial Capture" block to collect data via the IMU with the following settings:
 
-[](Resources/imgs/graphux_settings.png)
+![](Resources/imgs/graphux_settings.png)
 
 Click the "Start" button on the toolbar to execute the GraphUX pipeline.
 By clicking the "Record" button in the .imsession window, you should be able to record IMU data:
 
-[](Resources/imgs/recording_sample.png)
+![](Resources/imgs/recording_sample.png)
 
 If needed, you can use the predefined "Anomaly" label to label the collected data.
 
@@ -90,7 +90,7 @@ This is particularly useful if you need to label sessions that you are sure cont
 The usage is straightforward.
 Place the script in a folder containing all session folders with anomalous data, following this structure:
 
-[](Resources/imgs/auto_labeler_setup.png)
+![](Resources/imgs/auto_labeler_setup.png)
 
 Simply run the script in your terminal to automatically label all sessions with the "anomaly" label.
 
