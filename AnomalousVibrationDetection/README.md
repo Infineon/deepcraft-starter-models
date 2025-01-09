@@ -1,4 +1,4 @@
-﻿# Anomaly Detection for a Small Desktop Fan - Starter Model Project
+﻿# Anomaly Detection for Vibrating Machinery - Starter Model Project
 
 ## Use-case description
 
