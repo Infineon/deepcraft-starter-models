@@ -49,7 +49,7 @@ The PSOC 6 board, equipped with the vibration sensor, was simply taped to the ce
 
 A video of the demo application can be found here:
 
-<video src='https://www.youtube.com/watch?v=tCRPoyPbcgA' width=180/>
+[![](Resources/imgs/video.png)](https://www.youtube.com/watch?v=tCRPoyPbcgA)
 
 ## Collecting and expanding the dataset
 
