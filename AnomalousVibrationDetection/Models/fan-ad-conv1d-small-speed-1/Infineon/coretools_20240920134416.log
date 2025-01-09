@@ -1,0 +1,49 @@
+[INFO] 
+ml-coretools 3.0.0.8035 based on TensorFlow 2.14.1 and ethos-u-vela 3.10.0
+	ml-coretools-middleware-streaming 3.0.0.12590
+	ml-coretools-tflm-qemu-images 3.0.0.12590
+
+[INFO] Loading Keras model from C:\Users\Mombelli\ImagimobProjects\FanAnomalyDetection\FanAnomalyDetectionClassification\Models\fan-ad-conv1d-small-speed-1\fan-ad-conv1d-small-speed-1.h5 ...
+[INFO] Model loaded successfully
+[WARNING] Untested output layer type Activation encountered, proceed with caution.
+[INFO] Converting Keras h5 C:\Users\Mombelli\ImagimobProjects\FanAnomalyDetection\FanAnomalyDetectionClassification\Models\fan-ad-conv1d-small-speed-1\fan-ad-conv1d-small-speed-1.h5 to tflite model C:\Users\Mombelli\ImagimobProjects\FanAnomalyDetection\FanAnomalyDetectionClassification\Models\fan-ad-conv1d-small-speed-1\Infineon\model_gen_dir\MODEL_float.tflite...
+[INFO] Loading Keras model from C:\Users\Mombelli\ImagimobProjects\FanAnomalyDetection\FanAnomalyDetectionClassification\Models\fan-ad-conv1d-small-speed-1\fan-ad-conv1d-small-speed-1.h5 ...
+[INFO] Model loaded successfully
+[INFO] Saving tflite model to C:\Users\Mombelli\ImagimobProjects\FanAnomalyDetection\FanAnomalyDetectionClassification\Models\fan-ad-conv1d-small-speed-1\Infineon\model_gen_dir\MODEL_float.tflite
+[INFO] Loading tflite model C:\Users\Mombelli\ImagimobProjects\FanAnomalyDetection\FanAnomalyDetectionClassification\Models\fan-ad-conv1d-small-speed-1\Infineon\model_gen_dir\MODEL_float.tflite ...
+[INFO] Loading tflite model C:\Users\Mombelli\ImagimobProjects\FanAnomalyDetection\FanAnomalyDetectionClassification\Models\fan-ad-conv1d-small-speed-1\Infineon\model_gen_dir\MODEL_float.tflite through the interpreter...
+[INFO] Dataset features have total shape (1000, 50, 3)
+[INFO] Inference engine: TFLM
+[INFO] Writing reference evaluation data to C:\Users\Mombelli\ImagimobProjects\FanAnomalyDetection\FanAnomalyDetectionClassification\Models\fan-ad-conv1d-small-speed-1\Infineon\info\MODEL_tflm_tflite_float_model_reference.txt...
+[INFO] Converting model for the reference evaluation...
+[INFO] Loading tflite model C:\Users\Mombelli\ImagimobProjects\FanAnomalyDetection\FanAnomalyDetectionClassification\Models\fan-ad-conv1d-small-speed-1\Infineon\model_gen_dir\MODEL_float.tflite ...
+[INFO] Estimate cycle count of model ...
+[INFO] Writing ops resource info to C:\Users\Mombelli\ImagimobProjects\FanAnomalyDetection\FanAnomalyDetectionClassification\Models\fan-ad-conv1d-small-speed-1\Infineon\info\MODEL_ops_metrics.json.
+[INFO] Evaluating required size of scratch memory (tensor arena) from C:\Users\Mombelli\ImagimobProjects\FanAnomalyDetection\FanAnomalyDetectionClassification\Models\fan-ad-conv1d-small-speed-1\Infineon\model_gen_dir\MODEL_float.tflite ...
+[INFO] C:\Users\Mombelli\ImagimobProjects\FanAnomalyDetection\FanAnomalyDetectionClassification\Models\fan-ad-conv1d-small-speed-1\Infineon\info\MODEL_tflm_float_tensor_arena_size.txt
+[INFO] The TFLM converting C:\Users\Mombelli\ImagimobProjects\FanAnomalyDetection\FanAnomalyDetectionClassification\Models\fan-ad-conv1d-small-speed-1\Infineon\model_gen_dir\MODEL_float.tflite ...
+[INFO] The TFLM generated C:\Users\Mombelli\ImagimobProjects\FanAnomalyDetection\FanAnomalyDetectionClassification\Models\fan-ad-conv1d-small-speed-1\Infineon\mtb_ml_models\MODEL_tflm_model_float.h
+[INFO] The TFLM generated C:\Users\Mombelli\ImagimobProjects\FanAnomalyDetection\FanAnomalyDetectionClassification\Models\fan-ad-conv1d-small-speed-1\Infineon\mtb_ml_models\MODEL_tflm_model_float.bin
+[INFO] The TFLM generated C:\Users\Mombelli\ImagimobProjects\FanAnomalyDetection\FanAnomalyDetectionClassification\Models\fan-ad-conv1d-small-speed-1\Infineon\mtb_ml_models\MODEL_tflm_model_float.c
+[INFO] Writing model resource info to C:\Users\Mombelli\ImagimobProjects\FanAnomalyDetection\FanAnomalyDetectionClassification\Models\fan-ad-conv1d-small-speed-1\Infineon\info\MODEL_model_metrics.json
+[INFO] Model metrics summary:
++----------------------+----------------------+----------------------+----------------------+
+|      Data Type       | Model Memory, bytes  | Tensor Arena, bytes  |      CPU Cycles      |
++======================+======================+======================+======================+
+| float                |        12204         |        16384         |        524322        |
++----------------------+----------------------+----------------------+----------------------+
+[WARNING] Estimated cycle count in the report does not include the following operators: SOFTMAX, RESHAPE
+[INFO] Note: The cycle count estimation is provided for the configuration with the hardware floating-point support enabled.
+[INFO] Model conversion is completed.
+[INFO] Writing validation data for the reference evaluation...
+[INFO] Writing float  X data to C:\Users\Mombelli\ImagimobProjects\FanAnomalyDetection\FanAnomalyDetectionClassification\Models\fan-ad-conv1d-small-speed-1\Infineon\mtb_ml_regression_data\MODEL_tflm_x_data_float.bin
+[INFO] Writing float  X data to C:\Users\Mombelli\ImagimobProjects\FanAnomalyDetection\FanAnomalyDetectionClassification\Models\fan-ad-conv1d-small-speed-1\Infineon\mtb_ml_regression_data\MODEL_tflm_x_data_float.c
+[INFO] Writing float  Y data to C:\Users\Mombelli\ImagimobProjects\FanAnomalyDetection\FanAnomalyDetectionClassification\Models\fan-ad-conv1d-small-speed-1\Infineon\mtb_ml_regression_data\MODEL_tflm_y_data_float.bin
+[INFO] Writing float  Y data to C:\Users\Mombelli\ImagimobProjects\FanAnomalyDetection\FanAnomalyDetectionClassification\Models\fan-ad-conv1d-small-speed-1\Infineon\mtb_ml_regression_data\MODEL_tflm_y_data_float.c
+[INFO] Writing float  X data to C:\Users\Mombelli\ImagimobProjects\FanAnomalyDetection\FanAnomalyDetectionClassification\Models\fan-ad-conv1d-small-speed-1\Infineon\mtb_ml_regression_data\MODEL_tflm_x_data_float.bin
+[INFO] Writing float  X data to C:\Users\Mombelli\ImagimobProjects\FanAnomalyDetection\FanAnomalyDetectionClassification\Models\fan-ad-conv1d-small-speed-1\Infineon\mtb_ml_regression_data\MODEL_tflm_x_data_float.h
+[INFO] Writing float  Y data to C:\Users\Mombelli\ImagimobProjects\FanAnomalyDetection\FanAnomalyDetectionClassification\Models\fan-ad-conv1d-small-speed-1\Infineon\mtb_ml_regression_data\MODEL_tflm_y_data_float.bin
+[INFO] Writing float  Y data to C:\Users\Mombelli\ImagimobProjects\FanAnomalyDetection\FanAnomalyDetectionClassification\Models\fan-ad-conv1d-small-speed-1\Infineon\mtb_ml_regression_data\MODEL_tflm_y_data_float.h
+[INFO] Validation data is written.
+[INFO] The deployment finished successfully.
+[INFO] The log file is located at C:/Users/Mombelli/ImagimobProjects/FanAnomalyDetection/FanAnomalyDetectionClassification/Models/fan-ad-conv1d-small-speed-1/Infineon\coretools_20240920134416.log
