@@ -101,22 +101,26 @@ The script cannot distinguish anomalies and will simply label the entire length 
 
 To bring this project to a production-level system, follow these general steps:
 
-1. Identify the machinery or component whose behavior you want to monitor.
-Ensure that you can run the machinery in both normal and abnormal conditions.
-Consider possible faults that could occur in the machine.
-If available, ensure that you have a faulty machine or prepare one to exhibit anomalous behavior.
+![](Resources/imgs/productionpath.png)
 
-2. Collect extensive data
-Use the GraphUX project to collect an extensive amount of data.
-Start with at least 40 minutes of data for both normal and anomalous behavior and test system performance.
-Increase the data if you find the performance to be unsatisfactory.
-You can save data in the `Data` folder or create a new one.
+**1. Identify the machinery or component whose behavior you want to monitor**
+   
+  Ensure that you can run the machinery in both normal and abnormal conditions.
+  Consider possible faults that could occur in the machine.
+  If available, ensure that you have a faulty machine or prepare one to exhibit anomalous behavior.
 
-Label the data or leverage the script for automated labeling of anomalous data.
+**2. Collect extensive data**
+   
+  Use the GraphUX project to collect an extensive amount of data.
+  Start with at least **40 minutes of data** for both normal and anomalous behavior and test system performance.
+  Increase the data if you find the performance to be unsatisfactory.
+  You can save data in the `Data` folder or create a new one.
+  Label the data or leverage the script for automated labeling of anomalous data.
 
-3. Import your data
-Import the data you collected in the "Data" tab of the .improj file in Deepcraft Studio.
-You may want to first click on "Clear All" button to remove all pre-existing data, if your task is sensibly different from fan monitoring.
+**3. Import your data**
+
+  Import the data you collected in the "Data" tab of the .improj file in Deepcraft Studio.
+  You may want to first click on "Clear All" button to remove all pre-existing data, if your task is sensibly different from fan monitoring.
 
 You are now able to follow the standard Deepcraft Studio steps for processing, training, and deploying your Anomaly Detection model.
 The preprocessor is already set, and some models are already defined for you.
