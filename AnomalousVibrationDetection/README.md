@@ -119,7 +119,7 @@ More in detail, the steps to be followed could look like this:
   Use the GraphUX project to collect a representative amount of data.
   Start with at least **40 minutes of data** for both normal and anomalous behavior and test system performance directly in Studio.
   Increase the data if you find the performance to be unsatisfactory, and try to include all possible anomalies that could happen.
-  You can save data in the `Data` folder or create a new one if you don't want to keep the template data ogf this repo.
+  You can save data in the `Data` folder or create a new one if you don't want to keep the template data of this repo.
   Label the data or leverage the script for automated labeling of anomalous data to ease the job.
 
 **3. Import your data and train the prototype model**
