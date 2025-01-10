@@ -56,7 +56,7 @@ A video of the demo application can be found here:
 To add more data, you need to flash and configure the [Imagimob Streaming Protocol Firmware](https://github.com/Infineon/mtb-example-imagimob-streaming-protocol/blob/master/README.md) on your AI Kit.
 Follow the instructions in the README.md file of the ModusToolbox project to correctly configure and flash the board.
 
-For starting data collection, navigate to the `IMUDataCollectionProject` folder and double-click the `Main.imunit` file.
+For starting data collection, navigate to the `Tools/IMUDataCollectionProject` folder and double-click the `Main.imunit` file.
 Make sure you have correctly connected the PSOC6 AI Kit to your machine via the USB connector.
 
 In the GraphUX, set the input parameters for the "Serial Capture" block to collect data via the IMU with the following settings:
@@ -79,11 +79,12 @@ Note that Deepcraft Studio introduces an "Unlabelled data" class by default, whi
 The only additional label needed is "anomaly", which represents anomalous data.
 
 **Anomaly**: This label indicates that the machinery is operating anomalously.
+
 **No Label**: Data without a label indicates that the machinery is operating as expected (normally).
 
 ### Using the script for fast labeling of data
 
-In the `Utilities` folder, you will find a Python script named `auto_labeler.py`.
+In the `Tools` folder, you will find a Python script named `auto_labeler.py`.
 This script allows you to automatically label all sessions in the same folder with the "anomaly" label.
 This is particularly useful if you need to label sessions that you are sure contain only anomalous data.
 
@@ -103,27 +104,39 @@ To bring this project to a production-level system, follow these general steps:
 
 ![](Resources/imgs/productionpath.png)
 
+The prototyping part is fundamental since it will allow you to state the feasibility of your task in a cheap and fast way. If you can get to a model able to reach satisfactory performance with a simple prototype (an example could be the PSOC 6 6 AI Kit simply taped to the machine you want to monitor, using it for collecting a small dataset), then you can be pretty confident that you'll be able to get a good result in production.
+
+More in detail, the steps to be followed could look like this:
+
 **1. Identify the machinery or component whose behavior you want to monitor**
    
   Ensure that you can run the machinery in both normal and abnormal conditions.
   Consider possible faults that could occur in the machine.
   If available, ensure that you have a faulty machine or prepare one to exhibit anomalous behavior.
 
-**2. Collect extensive data**
+**2. Collect data for a prototype application**
    
-  Use the GraphUX project to collect an extensive amount of data.
-  Start with at least **40 minutes of data** for both normal and anomalous behavior and test system performance.
-  Increase the data if you find the performance to be unsatisfactory.
-  You can save data in the `Data` folder or create a new one.
-  Label the data or leverage the script for automated labeling of anomalous data.
+  Use the GraphUX project to collect a representative amount of data.
+  Start with at least **40 minutes of data** for both normal and anomalous behavior and test system performance directly in Studio.
+  Increase the data if you find the performance to be unsatisfactory, and try to include all possible anomalies that could happen.
+  You can save data in the `Data` folder or create a new one if you don't want to keep the template data ogf this repo.
+  Label the data or leverage the script for automated labeling of anomalous data to ease the job.
 
-**3. Import your data**
+**3. Import your data and train the prototype model**
 
   Import the data you collected in the "Data" tab of the .improj file in Deepcraft Studio.
-  You may want to first click on "Clear All" button to remove all pre-existing data, if your task is sensibly different from fan monitoring.
+  You are now able to follow the standard Deepcraft Studio steps for processing, training, and deploying your Anomaly Detection model.
+  The preprocessor is already set, and some models are already defined for you, which performance is guaranteed to be in real-time on the PSOC6 AI Kit.
 
-You are now able to follow the standard Deepcraft Studio steps for processing, training, and deploying your Anomaly Detection model.
-The preprocessor is already set, and some models are already defined for you.
+  **4. Deploy and do a real-time test of your prototype model**
+
+  Last thing to be done in prototyping phase is to deploy the firmware to the device by leveraging the template application already available in ModusToolbox:[MTB Example ML Imagimob MTBML Deploy](https://github.com/Infineon/mtb-example-ml-imagimob-mtbml-deploy) and test the firmware on the machinery. The UART terminal will show you real-time predictions on machine behavior.
+
+  **5. Going to the production board system**
+
+  Last step is to move to the actual final production setup. The production system will likely have the MCU placed on a board inside the machine and the IMU sensor in a specific position, not necessarly the same one of the prorotyping phase. If you can replicate this conditions during prototyping phase, you will be able to deliver the same model also on the production board. If this is not the case, you might need to do a new data collection step to allow the model to learn the nuances of the final setup. Follow again steps 2, 3 and 4 also for the production setup to reach a functioning application.
+
+All subsequent ML system lifetime monitoring procedures must be defined and implemented by you according to you needs, requirements and targets.
 
 ## Help & Support
 
