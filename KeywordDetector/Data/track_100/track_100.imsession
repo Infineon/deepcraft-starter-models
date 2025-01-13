@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="5318b29d-5348-4fa3-9a43-f33a7f8a73bd">
+    <Tracks>
+      <Track name="data" type="audiowav" isLabelTrack="False">
+        <PayloadFile>data.wav</PayloadFile>
+      </Track>
+      <Track name="label" type="labelcsv">
+        <PayloadFile>label.label</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>
