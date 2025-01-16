@@ -134,9 +134,11 @@ More in detail, the steps to be followed could look like this:
 
   **5. Going to the production board system**
 
-  Last step is to move to the actual final production setup. The production system will likely have the MCU placed on a board inside the machine and the IMU sensor in a specific position, not necessarly the same one of the prorotyping phase. If you can replicate this conditions during prototyping phase, you will be able to deliver the same model also on the production board. If this is not the case, you might need to do a new data collection step to allow the model to learn the nuances of the final setup. Follow again steps 2, 3 and 4 also for the production setup to reach a functioning application.
+Last step is to move to the actual final production setup. The production system will likely have the MCU placed on a board inside the machine and the IMU sensor in a specific position, not necessarly the same one of the prorotyping phase. If you can go as close as possible to production conditions during prototyping phase, you will be able to deliver the same model also on the production board with little-to-no additional training or data needed. If this is not the case, you might need to do a new data collection step to allow the model to learn the nuances of the final setup. Follow again steps 2, 3 and 4 also for the production setup to reach a functioning application.
 
-All subsequent ML system lifetime monitoring procedures must be defined and implemented by you according to you needs, requirements and targets.
+You may also leverage Deepcraft Studio's Transfer Learning features for fine-tuning the prototype model to production data. This could lead to better results and faster go-to-production times, but the usage of Transfer Learning is recommended only to experienced ML users.
+
+**Note:** All subsequent ML system lifetime monitoring procedures must be defined and implemented by you according to you needs, requirements and targets.
 
 ## Help & Support
 
