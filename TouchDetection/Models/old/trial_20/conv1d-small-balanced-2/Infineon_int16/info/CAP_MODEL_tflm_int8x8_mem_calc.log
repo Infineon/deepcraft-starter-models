@@ -1,0 +1,8 @@
+****************** TFL-micro Inference Test Application ******************
+
+Model file: 	C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_20\conv1d-small-balanced-2\Infineon\model_gen_dir\CAP_MODEL_packed_int8x8.tflite
+Result arena file: 	C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_20\conv1d-small-balanced-2\Infineon\info\CAP_MODEL_tflm_int8x8_tensor_arena_size.txt
+Running memory calculation only.
+Reading file "C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_20\conv1d-small-balanced-2\Infineon\model_gen_dir\CAP_MODEL_packed_int8x8.tflite"... Read complete. File size = 12560
+Loading model...
+PASSED: Arena size calculation successful.

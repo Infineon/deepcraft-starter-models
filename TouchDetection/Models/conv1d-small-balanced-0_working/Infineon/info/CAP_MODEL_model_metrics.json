@@ -1,0 +1,18 @@
+{
+    "arena_size": {
+        "float": 16384,
+        "int8x8": 16384
+    },
+    "model_size": {
+        "float": 4128,
+        "int8x8": 4496
+    },
+    "cpu_cycles": {
+        "float": 36667,
+        "int8x8": 38769
+    },
+    "npu_cycles": {
+        "float": null,
+        "int8x8": null
+    }
+}

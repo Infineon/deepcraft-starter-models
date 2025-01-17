@@ -1,0 +1,22 @@
+{
+    "model_key": "CAP_MODEL",
+    "datatype": "int8x8",
+    "cycles_per_op": [
+        [
+            "CONV_2D",
+            20847
+        ],
+        [
+            "MAX_POOL_2D",
+            2746
+        ],
+        [
+            "MEAN",
+            13635
+        ],
+        [
+            "FULLY_CONNECTED",
+            1541
+        ]
+    ]
+}
