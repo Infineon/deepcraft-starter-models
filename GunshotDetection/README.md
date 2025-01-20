@@ -2,14 +2,15 @@
 
 ## Overview
 
-This is a starter model capable of detecting gunshots, quite far along in it's development before it was abandoned due to lack of testing capabilities. It includes strong invariance to many different background noises with around 2 hours of microphone data.
+This is a starter model for detecting gunshots in a noisyu environment, quite far along in it's development before it was abandoned due to lack of testing capabilities. The model includes strong invariance to many different background noises with around 2 hours of microphone data.
 Due to issues with licenses, much of the gunshot data had to be excluded from this starter project.
 
 ## Collection of Data
-The data was collected by downloading Creative Commons licensed audio files from freesounds.org. There was also a collection of gunshot data which could not be published here.
+The data was collected by downloading Creative Commons licensed audio files from freesounds.org.
 
 ## Adding More Data
-In order to add more data you need to upload 48000 Hz audio files with appropriate labels, which can be done directly in DEEPCRAFT Studio. 
+In order to add more data you need to upload 48000 Hz audio files with appropriate labels. This could be done either by finding more data online or recording audio using a microphone, such as the AI Evaluation Kit (https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-062s2-ai/). 
+Regardless of how the data is obtained it can be labelled in DEEPCRAFT Studio.
 The primary goal should be to add more gunshot audio files, since a number of them had to be removed.
 
 ## Steps to Production
