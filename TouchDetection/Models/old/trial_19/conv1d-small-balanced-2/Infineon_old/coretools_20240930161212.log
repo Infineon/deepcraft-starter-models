@@ -1,0 +1,113 @@
+[INFO] 
+ml-coretools 3.0.0.8035 based on TensorFlow 2.14.1 and ethos-u-vela 3.10.0
+	ml-coretools-middleware-streaming 3.0.0.12590
+	ml-coretools-tflm-qemu-images 3.0.0.12590
+
+[INFO] Base data folder: C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon
+[INFO] Validation data: C:/projects_MCU/work_nov_bootcamp/capsense_modelling/IMG_AI_modelling/touch_detection/Models/trial_19/conv1d-small-balanced-2/Infineon/calibrationData.npz
+[INFO] Loading Keras model from C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\conv1d-small-balanced-2.h5 ...
+[INFO] Model loaded successfully
+[WARNING] Untested output layer type Activation encountered, proceed with caution.
+[INFO] Converting Keras h5 C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\conv1d-small-balanced-2.h5 to tflite model C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\model_gen_dir\CAP_MODEL_float.tflite...
+[INFO] Loading Keras model from C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\conv1d-small-balanced-2.h5 ...
+[INFO] Model loaded successfully
+[INFO] Saving tflite model to C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\model_gen_dir\CAP_MODEL_float.tflite
+[INFO] Loading tflite model C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\model_gen_dir\CAP_MODEL_float.tflite ...
+[INFO] Loading tflite model C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\model_gen_dir\CAP_MODEL_float.tflite through the interpreter...
+[INFO] Model expects 2d input data.
+[INFO] Loading data from C:/projects_MCU/work_nov_bootcamp/capsense_modelling/IMG_AI_modelling/touch_detection/Models/trial_19/conv1d-small-balanced-2/Infineon/calibrationData.npz...
+[INFO] The item 1 skipped in C:/projects_MCU/work_nov_bootcamp/capsense_modelling/IMG_AI_modelling/touch_detection/Models/trial_19/conv1d-small-balanced-2/Infineon/calibrationData.npz
+[INFO] Using 29531 samples from the C:/projects_MCU/work_nov_bootcamp/capsense_modelling/IMG_AI_modelling/touch_detection/Models/trial_19/conv1d-small-balanced-2/Infineon/calibrationData.npz
+[INFO] Dataset features have total shape (29531, 24, 3)
+[INFO] Converting Keras h5 C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\conv1d-small-balanced-2.h5 to tflite model C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\model_gen_dir\CAP_MODEL_int8x8.tflite...
+[INFO] Loading Keras model from C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\conv1d-small-balanced-2.h5 ...
+[INFO] Model loaded successfully
+[INFO] Post-training integer quantization: int8x8
+[INFO] Saving tflite model to C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\model_gen_dir\CAP_MODEL_int8x8.tflite
+[INFO] Loading tflite model C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\model_gen_dir\CAP_MODEL_int8x8.tflite ...
+[INFO] Loading tflite model C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\model_gen_dir\CAP_MODEL_int8x8.tflite through the interpreter...
+[INFO] PACKING: C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\model_gen_dir\CAP_MODEL_float.tflite sparsity format: cpu
+[INFO] PACKING: C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\model_gen_dir\CAP_MODEL_int8x8.tflite sparsity format: cpu
+[INFO] TENSOR PACKING CANDIDATE 'b'model_1/conv1d-small-balanced-2/layer_9/MatMul'': 8 BITS
+[INFO]     TENSOR INSUFFICIENTLY SPARSE - eliminate sparse formats
+[INFO]     TENSOR REQUIRES 8+ BIT CODES SPARSE - eliminate narrow formats
+[INFO] TENSOR PACKING CANDIDATE 'b'model_1/conv1d-small-balanced-2/layer_5/batchnorm/mul_1;model_1/conv1d-small-balanced-2/layer_4/Conv1D/Squeeze;model_1/conv1d-small-balanced-2/layer_5/batchnorm/mul;model_1/conv1d-small-balanced-2/layer_4/Conv1D'': 8 BITS
+[INFO]     TENSOR INSUFFICIENTLY SPARSE - eliminate sparse formats
+[INFO]     TENSOR REQUIRES 8+ BIT CODES SPARSE - eliminate narrow formats
+[INFO] TENSOR PACKING CANDIDATE 'b'model_1/conv1d-small-balanced-2/layer_3/Conv1D'': 8 BITS
+[INFO]     TENSOR INSUFFICIENTLY SPARSE - eliminate sparse formats
+[INFO]     TENSOR REQUIRES 8+ BIT CODES SPARSE - eliminate narrow formats
+[INFO] TENSOR PACKING CANDIDATE 'b'model_1/conv1d-small-balanced-2/layer_1/batchnorm/mul_1;model_1/conv1d-small-balanced-2/layer_0/Conv1D/Squeeze;model_1/conv1d-small-balanced-2/layer_1/batchnorm/mul;model_1/conv1d-small-balanced-2/layer_0/Conv1D'': 8 BITS
+[INFO]     TENSOR INSUFFICIENTLY SPARSE - eliminate sparse formats
+[INFO]     TENSOR REQUIRES 8+ BIT CODES SPARSE - eliminate narrow formats
+[INFO] Dataset features have total shape (1000, 24, 3)
+[INFO] Inference engine: TFLM
+[INFO] Model's quantization parameters (inputs): Scale: 5.87843132019043. Zero point :-128.
+[INFO] Saved model's quantization parameters to C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\info\CAP_MODEL_tflm_int8x8_q_param.txt
+[INFO] Writing reference evaluation data to C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\info\CAP_MODEL_tflm_tflite_float_model_reference.txt...
+[INFO] Model's quantization parameters (outputs): Scale: 0.00390625. Zero point :-128.
+[INFO] Saved model's quantization parameters to C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\info\CAP_MODEL_tflm_int8x8_q_param.txt
+[INFO] Writing reference evaluation data to C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\info\CAP_MODEL_tflm_tflite_int8x8_model_reference.txt...
+[INFO] Converting model for the reference evaluation...
+[INFO] Loading tflite model C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\model_gen_dir\CAP_MODEL_packed_float.tflite ...
+[INFO] Estimate cycle count of model ...
+[INFO] Writing ops resource info to C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\info\CAP_MODEL_ops_metrics.json.
+[INFO] Evaluating required size of scratch memory (tensor arena) from C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\model_gen_dir\CAP_MODEL_float.tflite ...
+[INFO] C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\info\CAP_MODEL_tflm_float_tensor_arena_size.txt
+[INFO] Evaluating required size of scratch memory (tensor arena) from C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\model_gen_dir\CAP_MODEL_packed_float.tflite ...
+[INFO] C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\info\CAP_MODEL_tflm_float_tensor_arena_size.txt
+[INFO] The TFLM converting C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\model_gen_dir\CAP_MODEL_packed_float.tflite ...
+[INFO] The TFLM generated C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\mtb_ml_models\CAP_MODEL_tflm_model_float.h
+[INFO] The TFLM generated C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\mtb_ml_models\CAP_MODEL_tflm_model_float.bin
+[INFO] The TFLM generated C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\mtb_ml_models\CAP_MODEL_tflm_model_float.c
+[INFO] Loading tflite model C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\model_gen_dir\CAP_MODEL_packed_int8x8.tflite ...
+[INFO] Estimate cycle count of model ...
+[INFO] Writing ops resource info to C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\info\CAP_MODEL_ops_metrics.json.
+[INFO] Evaluating required size of scratch memory (tensor arena) from C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\model_gen_dir\CAP_MODEL_int8x8.tflite ...
+[INFO] C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\info\CAP_MODEL_tflm_int8x8_tensor_arena_size.txt
+[INFO] Evaluating required size of scratch memory (tensor arena) from C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\model_gen_dir\CAP_MODEL_packed_int8x8.tflite ...
+[INFO] C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\info\CAP_MODEL_tflm_int8x8_tensor_arena_size.txt
+[INFO] The TFLM converting C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\model_gen_dir\CAP_MODEL_packed_int8x8.tflite ...
+[INFO] The TFLM generated C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\mtb_ml_models\CAP_MODEL_tflm_model_int8x8.h
+[INFO] The TFLM generated C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\mtb_ml_models\CAP_MODEL_tflm_model_int8x8.bin
+[INFO] The TFLM generated C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\mtb_ml_models\CAP_MODEL_tflm_model_int8x8.c
+[INFO] Writing model resource info to C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\info\CAP_MODEL_model_metrics.json
+[INFO] Model metrics summary:
++----------------------+----------------------+----------------------+----------------------+
+|      Data Type       | Model Memory, bytes  | Tensor Arena, bytes  |      CPU Cycles      |
++======================+======================+======================+======================+
+| float                |        24416         |        16384         |        610619        |
++----------------------+----------------------+----------------------+----------------------+
+| int8x8               |        12560         |        16384         |        258435        |
++----------------------+----------------------+----------------------+----------------------+
+[WARNING] Estimated cycle count in the report does not include the following operators: SOFTMAX, RESHAPE
+[INFO] Note: The cycle count estimation is provided for the configuration with the hardware floating-point support enabled.
+[INFO] Note: The 'Enable sparsity' optimization results:
+      - decreased model size by 8096 bytes (33%), and
+      - decreased arena size by 0 bytes (0%).
+
+[INFO] Note: The 'Enable sparsity' optimization results:
+      - increased model size by 3752 bytes (29%), and
+      - decreased arena size by 0 bytes (0%).
+
+[INFO] Model conversion is completed.
+[INFO] Writing validation data for the reference evaluation...
+[INFO] Writing float  X data to C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\mtb_ml_regression_data\CAP_MODEL_tflm_x_data_float.bin
+[INFO] Writing float  X data to C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\mtb_ml_regression_data\CAP_MODEL_tflm_x_data_float.c
+[INFO] Writing float  Y data to C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\mtb_ml_regression_data\CAP_MODEL_tflm_y_data_float.bin
+[INFO] Writing float  Y data to C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\mtb_ml_regression_data\CAP_MODEL_tflm_y_data_float.c
+[INFO] Writing float  X data to C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\mtb_ml_regression_data\CAP_MODEL_tflm_x_data_float.bin
+[INFO] Writing float  X data to C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\mtb_ml_regression_data\CAP_MODEL_tflm_x_data_float.h
+[INFO] Writing float  Y data to C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\mtb_ml_regression_data\CAP_MODEL_tflm_y_data_float.bin
+[INFO] Writing float  Y data to C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\mtb_ml_regression_data\CAP_MODEL_tflm_y_data_float.h
+[INFO] Writing int8x8 X data to C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\mtb_ml_regression_data\CAP_MODEL_tflm_x_data_int8x8.bin
+[INFO] Writing int8x8 X data to C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\mtb_ml_regression_data\CAP_MODEL_tflm_x_data_int8x8.c
+[INFO] Writing int8x8 Y data to C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\mtb_ml_regression_data\CAP_MODEL_tflm_y_data_int8x8.bin
+[INFO] Writing int8x8 Y data to C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\mtb_ml_regression_data\CAP_MODEL_tflm_y_data_int8x8.c
+[INFO] Writing int8x8 X data to C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\mtb_ml_regression_data\CAP_MODEL_tflm_x_data_int8x8.bin
+[INFO] Writing int8x8 X data to C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\mtb_ml_regression_data\CAP_MODEL_tflm_x_data_int8x8.h
+[INFO] Writing int8x8 Y data to C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\mtb_ml_regression_data\CAP_MODEL_tflm_y_data_int8x8.bin
+[INFO] Writing int8x8 Y data to C:\projects_MCU\work_nov_bootcamp\capsense_modelling\IMG_AI_modelling\touch_detection\Models\trial_19\conv1d-small-balanced-2\Infineon\mtb_ml_regression_data\CAP_MODEL_tflm_y_data_int8x8.h
+[INFO] Validation data is written.
+[INFO] The deployment finished successfully.
+[INFO] The log file is located at C:/projects_MCU/work_nov_bootcamp/capsense_modelling/IMG_AI_modelling/touch_detection/Models/trial_19/conv1d-small-balanced-2/Infineon\coretools_20240930161212.log

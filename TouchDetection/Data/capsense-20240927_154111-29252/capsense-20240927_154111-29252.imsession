@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="ac15c20e-9de6-4465-aca0-7d28ed34a7a6">
+    <Tracks>
+      <Track name="capsense" type="datacsv" isLabelTrack="False">
+        <PayloadFile>capsense.data</PayloadFile>
+      </Track>
+      <Track name="lcapsense" type="labelcsv">
+        <PayloadFile>lcapsense.label</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

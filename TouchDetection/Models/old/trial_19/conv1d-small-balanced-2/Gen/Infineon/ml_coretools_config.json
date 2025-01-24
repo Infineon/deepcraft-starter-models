@@ -1,0 +1,40 @@
+{
+  "cdv_requirements": {
+    "tflm": {
+      "accuracy": {
+        "float": 98.0,
+        "int8x8": 98.0
+      },
+      "mae": {
+        "float": 1.0,
+        "int8x8": 1.0
+      },
+      "scratch_mem_kb": {
+        "float": 999.0,
+        "int8x8": 999.0
+      }
+    }
+  },
+  "data": {
+    "validation_data": {
+      "base_folder": "C:/projects_MCU/work_nov_bootcamp/01_capsense_modelling/IMG_AI_modelling/touch_detection/Models/trial_19/conv1d-small-balanced-2/Gen/Infineon",
+      "data_file": "C:/projects_MCU/work_nov_bootcamp/01_capsense_modelling/IMG_AI_modelling/touch_detection/Models/trial_19/conv1d-small-balanced-2/Gen/Infineon/validationData.npz",
+      "data_mode": "random",
+      "dataset_structure": "npz",
+      "max_samples": 1000
+    }
+  },
+  "model": {
+    "key_model": "cap_model",
+    "load_model": "C:/projects_MCU/work_nov_bootcamp/01_capsense_modelling/IMG_AI_modelling/touch_detection/Models/trial_19/conv1d-small-balanced-2/Gen/touch_detection.h5",
+    "model_task": "classification",
+    "optimization_settings": {
+      "quantization": [
+        "float"
+      ],
+      "sparsity": false,
+      "target": "PSoC6"
+    }
+  },
+  "version": "2.0.0"
+}

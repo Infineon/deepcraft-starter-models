@@ -1,0 +1,4 @@
+Time(Seconds),Length(Seconds),Label(string),Confidence(double),Comment(string)
+1.932,3.2399999999999998,touch,1.0,
+5.521,0.6450000000000005,touch,1.0,
+6.387,68.295,touch,1.0,
