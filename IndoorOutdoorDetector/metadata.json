@@ -1,1 +1,1 @@
-{"title": "Indoor/outdoor Detector", "description": "Indoor/outdoor detection using the environmental sensors of the Nordic Thingy:91 board.", "algorithm": "Classification", "sensors": ["Radar"]} 
+{"title": "Indoor/outdoor Detector", "description": "Indoor/outdoor detection using the environmental sensors of the Nordic Thingy:91 board.", "algorithm": "Classification", "sensors": ["Inductive Sensing"]} 
