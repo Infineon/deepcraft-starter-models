@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="1790efb5-ca58-43e1-bc79-09304b7bac11">
+    <Tracks>
+      <Track name="AI_Kit_IMU_Data_Output" type="datacsv" isLabelTrack="False">
+        <PayloadFile>AI_Kit_IMU_Data_Output.data</PayloadFile>
+      </Track>
+      <Track name="Live Labeling" type="labelcsv">
+        <PayloadFile>Live-Labeling.label</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

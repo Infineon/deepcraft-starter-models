@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Imaginet version="2.0.0.0">
+  <Compound unit="e2e038a0-e281-4de4-a43c-355bd5afec8d">
+    <Nodes>
+      <UnitNode id="node_3" x="759.0295359292263" y="609.3724895221491" enabled="true" name="AI_Kit_IMU_Data_Output" unit="ImagimobStudio.Modules.DataTrack" />
+      <UnitNode id="node_1" x="140.3524056993408" y="633.5768780001287" enabled="true" unit="Imaginet.Units.Io.ImagimobSerialCapture">
+        <DoubleArgument param="sample_rate">50</DoubleArgument>
+        <StringArgument param="port">COM13</StringArgument>
+        <StringArgument param="sensor">accelerometer</StringArgument>
+      </UnitNode>
+      <LabelListNode id="node_0" width="120" height="120" x="170" y="235.60000000000002" enabled="true">
+        <Label>anomaly</Label>
+      </LabelListNode>
+    </Nodes>
+    <Connections>
+      <Connection>
+        <Source node="node_1" param="data" />
+        <Target node="node_3" param="data" />
+      </Connection>
+    </Connections>
+  </Compound>
+</Imaginet>

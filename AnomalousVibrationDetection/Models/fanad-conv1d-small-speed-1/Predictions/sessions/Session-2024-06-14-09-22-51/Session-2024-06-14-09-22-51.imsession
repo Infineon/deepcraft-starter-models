@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ImagimobStudio>
+  <Timeline id="0703b73f-97b7-4fc4-9418-237477466cd2">
+    <Tracks>
+      <Track name="fanad-conv1d-small-speed-10" type="datacsv" timecoded="TimestampBeginDuration">
+        <PayloadFile TrackType="Prediction">fanad-conv1d-small-speed-10.data</PayloadFile>
+        <Offset unit="seconds">0.48</Offset>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>
