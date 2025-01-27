@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="378c44de-5a87-4649-acb0-bd4b11168f17">
+    <Tracks>
+      <Track name="data" type="datacsv" isLabelTrack="False">
+        <PayloadFile>data.csv</PayloadFile>
+      </Track>
+      <Track name="label" type="labelcsv">
+        <PayloadFile>label.label</PayloadFile>
+      </Track>
+      <Track name="preprocessed_label" type="datacsv" isLabelTrack="False">
+        <PayloadFile>..\..\..\Models\conv1d-medium-balanced-1\Predictions\sessions\indoor-1591801756130\preprocessed_label.data</PayloadFile>
+        <Offset unit="seconds">5.0000000000E+000</Offset>
+      </Track>
+      <Track name="conv1d-medium-balanced-10" type="datacsv" timecoded="TimestampBeginDuration" isLabelTrack="False">
+        <PayloadFile>..\..\..\Models\conv1d-medium-balanced-1\Predictions\sessions\indoor-1591801756130\conv1d-medium-balanced-10.data</PayloadFile>
+        <Offset unit="seconds">5.0000000000E+000</Offset>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

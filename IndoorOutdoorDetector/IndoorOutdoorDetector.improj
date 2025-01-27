@@ -1,0 +1,1204 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="1.1.0">
+  <Job id="e2698389-6008-4ae1-b3b8-2157518abe03" />
+  <Preprocessor inshape="[4]" intype="Float32" infreq="3" outshape="[16,4]" outtype="Float32">
+    <Unit id="Core.Queues.SlidingWindow">
+      <Argument param="input" type="String">data</Argument>
+      <Argument param="time_input" type="String">time</Argument>
+      <Argument param="window_shape" type="Shape">[16,4]</Argument>
+      <Argument param="stride" type="Int32">16</Argument>
+      <Argument param="buffer_multiplier" type="Double">2</Argument>
+      <Argument param="output" type="String">data</Argument>
+      <Argument param="time_output" type="String">time</Argument>
+    </Unit>
+  </Preprocessor>
+  <ModelFactory>
+    <Epochs>250</Epochs>
+    <BatchSize>128</BatchSize>
+    <SplitCount>16</SplitCount>
+    <Patience>20</Patience>
+    <AppendModels>False</AppendModels>
+    <LossFunction>CategoricalCrossentropy</LossFunction>
+    <FactoryOptions>None</FactoryOptions>
+    <HardwareType>Default</HardwareType>
+    <TrainingEnvironment>
+    </TrainingEnvironment>
+    <ModelFamily>Conv1D</ModelFamily>
+    <ModelFlavor>SmallKern</ModelFlavor>
+    <ClassifierType>GlobalAveragePool</ClassifierType>
+    <Optimization>Balanced</Optimization>
+    <Pooling>True</Pooling>
+    <Downscale>False</Downscale>
+    <LearnRate>Mid</LearnRate>
+    <RegularizationFactor>Low</RegularizationFactor>
+    <LastNetworkInputShape>[16,4]</LastNetworkInputShape>
+    <LastClassCount>2</LastClassCount>
+    <Optimizer>
+      <LearningRate>0.05</LearningRate>
+      <WeightDecay>0.005</WeightDecay>
+    </Optimizer>
+    <BuildSteps>
+      <Training />
+      <ConfusionMatrix />
+    </BuildSteps>
+  </ModelFactory>
+  <Models>
+    <Model name="conv1d-medium-balanced-0" id="e04b9ca7-15f6-4253-8370-b656179fdbed">
+      <LossFunction>CategoricalCrossentropy</LossFunction>
+      <Epochs>250</Epochs>
+      <BatchSize>128</BatchSize>
+      <SplitCount>16</SplitCount>
+      <Patience>20</Patience>
+      <TrainingEnvironment>
+      </TrainingEnvironment>
+      <Optimizer>
+        <LearningRate>0.004</LearningRate>
+        <WeightDecay>0.0001</WeightDecay>
+      </Optimizer>
+      <Network inshape="[16,4]" intype="Float32" infreq="0" outshape="[2]" outtype="Float32">
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">12</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">2</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.BatchNormalization">
+          <Argument param="epsilon" type="Double">0.001</Argument>
+          <Argument param="axis" type="Int32">-1</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">relu</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">24</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">24</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.BatchNormalization">
+          <Argument param="epsilon" type="Double">0.001</Argument>
+          <Argument param="axis" type="Int32">-1</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">relu</Argument>
+        </Unit>
+        <Unit id="Core.Layers.MaxPool1D">
+          <Argument param="pool_size" type="Int32">2</Argument>
+          <Argument param="strides" type="Int32">2</Argument>
+          <Argument param="padding" type="String">valid</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">32</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">32</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.BatchNormalization">
+          <Argument param="epsilon" type="Double">0.001</Argument>
+          <Argument param="axis" type="Int32">-1</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">relu</Argument>
+        </Unit>
+        <Unit id="Core.Layers.GlobalAveragePool1D" />
+        <Unit id="Core.Layers.Dense">
+          <Argument param="units" type="Int32">2</Argument>
+          <Argument param="use_bias" type="Boolean">True</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">softmax</Argument>
+        </Unit>
+      </Network>
+      <BuildSteps>
+        <Training />
+        <ConfusionMatrix />
+      </BuildSteps>
+      <SymbolWeights override="False">
+        <SymbolWeight symbol="indoor" weight="1" />
+      </SymbolWeights>
+      <Preprocessor override="False" inshape="[4]" intype="Float32" infreq="0" outshape="[16,4]" outtype="Float32">
+        <Unit id="Core.Queues.SlidingWindow">
+          <Argument param="input" type="String">data</Argument>
+          <Argument param="time_input" type="String">time</Argument>
+          <Argument param="window_shape" type="Shape">[16,4]</Argument>
+          <Argument param="stride" type="Int32">16</Argument>
+          <Argument param="buffer_multiplier" type="Double">2</Argument>
+          <Argument param="output" type="String">data</Argument>
+          <Argument param="time_output" type="String">time</Argument>
+        </Unit>
+      </Preprocessor>
+      <Postprocessor override="False" inshape="[128,3]" intype="Float32" infreq="0" outshape="[10]" outtype="Float32" />
+    </Model>
+    <Model name="conv1d-medium-balanced-1" id="10e35853-5738-4733-90e1-772a52cc38c9">
+      <LossFunction>CategoricalCrossentropy</LossFunction>
+      <Epochs>250</Epochs>
+      <BatchSize>128</BatchSize>
+      <SplitCount>16</SplitCount>
+      <Patience>20</Patience>
+      <TrainingEnvironment>
+      </TrainingEnvironment>
+      <Optimizer>
+        <LearningRate>0.004</LearningRate>
+        <WeightDecay>0.0001</WeightDecay>
+      </Optimizer>
+      <Network inshape="[16,4]" intype="Float32" infreq="0" outshape="[2]" outtype="Float32">
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">16</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">2</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.BatchNormalization">
+          <Argument param="epsilon" type="Double">0.001</Argument>
+          <Argument param="axis" type="Int32">-1</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">relu</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">16</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">16</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.BatchNormalization">
+          <Argument param="epsilon" type="Double">0.001</Argument>
+          <Argument param="axis" type="Int32">-1</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">relu</Argument>
+        </Unit>
+        <Unit id="Core.Layers.MaxPool1D">
+          <Argument param="pool_size" type="Int32">2</Argument>
+          <Argument param="strides" type="Int32">2</Argument>
+          <Argument param="padding" type="String">valid</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">32</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">32</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.BatchNormalization">
+          <Argument param="epsilon" type="Double">0.001</Argument>
+          <Argument param="axis" type="Int32">-1</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">relu</Argument>
+        </Unit>
+        <Unit id="Core.Layers.GlobalAveragePool1D" />
+        <Unit id="Core.Layers.Dense">
+          <Argument param="units" type="Int32">2</Argument>
+          <Argument param="use_bias" type="Boolean">True</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">softmax</Argument>
+        </Unit>
+      </Network>
+      <BuildSteps>
+        <Training />
+        <ConfusionMatrix />
+      </BuildSteps>
+      <SymbolWeights override="False">
+        <SymbolWeight symbol="indoor" weight="1" />
+      </SymbolWeights>
+      <Preprocessor override="False" inshape="[4]" intype="Float32" infreq="0" outshape="[16,4]" outtype="Float32">
+        <Unit id="Core.Queues.SlidingWindow">
+          <Argument param="input" type="String">data</Argument>
+          <Argument param="time_input" type="String">time</Argument>
+          <Argument param="window_shape" type="Shape">[16,4]</Argument>
+          <Argument param="stride" type="Int32">16</Argument>
+          <Argument param="buffer_multiplier" type="Double">2</Argument>
+          <Argument param="output" type="String">data</Argument>
+          <Argument param="time_output" type="String">time</Argument>
+        </Unit>
+      </Preprocessor>
+      <Postprocessor override="False" inshape="[128,3]" intype="Float32" infreq="0" outshape="[10]" outtype="Float32" />
+    </Model>
+    <Model name="conv1d-medium-balanced-2" id="cd19d67b-8853-44e2-b103-504ad783408c">
+      <LossFunction>CategoricalCrossentropy</LossFunction>
+      <Epochs>250</Epochs>
+      <BatchSize>128</BatchSize>
+      <SplitCount>16</SplitCount>
+      <Patience>20</Patience>
+      <TrainingEnvironment>
+      </TrainingEnvironment>
+      <Optimizer>
+        <LearningRate>0.004</LearningRate>
+        <WeightDecay>0.0001</WeightDecay>
+      </Optimizer>
+      <Network inshape="[16,4]" intype="Float32" infreq="0" outshape="[2]" outtype="Float32">
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">16</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">2</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.BatchNormalization">
+          <Argument param="epsilon" type="Double">0.001</Argument>
+          <Argument param="axis" type="Int32">-1</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">relu</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">32</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">32</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.BatchNormalization">
+          <Argument param="epsilon" type="Double">0.001</Argument>
+          <Argument param="axis" type="Int32">-1</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">relu</Argument>
+        </Unit>
+        <Unit id="Core.Layers.MaxPool1D">
+          <Argument param="pool_size" type="Int32">2</Argument>
+          <Argument param="strides" type="Int32">2</Argument>
+          <Argument param="padding" type="String">valid</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">32</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">32</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.BatchNormalization">
+          <Argument param="epsilon" type="Double">0.001</Argument>
+          <Argument param="axis" type="Int32">-1</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">relu</Argument>
+        </Unit>
+        <Unit id="Core.Layers.GlobalAveragePool1D" />
+        <Unit id="Core.Layers.Dense">
+          <Argument param="units" type="Int32">2</Argument>
+          <Argument param="use_bias" type="Boolean">True</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">softmax</Argument>
+        </Unit>
+      </Network>
+      <BuildSteps>
+        <Training />
+        <ConfusionMatrix />
+      </BuildSteps>
+      <SymbolWeights override="False">
+        <SymbolWeight symbol="indoor" weight="1" />
+      </SymbolWeights>
+      <Preprocessor override="False" inshape="[4]" intype="Float32" infreq="0" outshape="[16,4]" outtype="Float32">
+        <Unit id="Core.Queues.SlidingWindow">
+          <Argument param="input" type="String">data</Argument>
+          <Argument param="time_input" type="String">time</Argument>
+          <Argument param="window_shape" type="Shape">[16,4]</Argument>
+          <Argument param="stride" type="Int32">16</Argument>
+          <Argument param="buffer_multiplier" type="Double">2</Argument>
+          <Argument param="output" type="String">data</Argument>
+          <Argument param="time_output" type="String">time</Argument>
+        </Unit>
+      </Preprocessor>
+      <Postprocessor override="False" inshape="[128,3]" intype="Float32" infreq="0" outshape="[10]" outtype="Float32" />
+    </Model>
+    <Model name="conv1d-medium-balanced-3" id="3f1b3286-16d1-4cdb-91d1-1fb2cfdca201">
+      <LossFunction>CategoricalCrossentropy</LossFunction>
+      <Epochs>250</Epochs>
+      <BatchSize>128</BatchSize>
+      <SplitCount>16</SplitCount>
+      <Patience>20</Patience>
+      <TrainingEnvironment>
+      </TrainingEnvironment>
+      <Optimizer>
+        <LearningRate>0.004</LearningRate>
+        <WeightDecay>0.0001</WeightDecay>
+      </Optimizer>
+      <Network inshape="[16,4]" intype="Float32" infreq="0" outshape="[2]" outtype="Float32">
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">16</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">2</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.BatchNormalization">
+          <Argument param="epsilon" type="Double">0.001</Argument>
+          <Argument param="axis" type="Int32">-1</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">relu</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">32</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">32</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.BatchNormalization">
+          <Argument param="epsilon" type="Double">0.001</Argument>
+          <Argument param="axis" type="Int32">-1</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">relu</Argument>
+        </Unit>
+        <Unit id="Core.Layers.MaxPool1D">
+          <Argument param="pool_size" type="Int32">2</Argument>
+          <Argument param="strides" type="Int32">2</Argument>
+          <Argument param="padding" type="String">valid</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">64</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">64</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.BatchNormalization">
+          <Argument param="epsilon" type="Double">0.001</Argument>
+          <Argument param="axis" type="Int32">-1</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">relu</Argument>
+        </Unit>
+        <Unit id="Core.Layers.GlobalAveragePool1D" />
+        <Unit id="Core.Layers.Dense">
+          <Argument param="units" type="Int32">2</Argument>
+          <Argument param="use_bias" type="Boolean">True</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">softmax</Argument>
+        </Unit>
+      </Network>
+      <BuildSteps>
+        <Training />
+        <ConfusionMatrix />
+      </BuildSteps>
+      <SymbolWeights override="False">
+        <SymbolWeight symbol="indoor" weight="1" />
+      </SymbolWeights>
+      <Preprocessor override="False" inshape="[4]" intype="Float32" infreq="0" outshape="[16,4]" outtype="Float32">
+        <Unit id="Core.Queues.SlidingWindow">
+          <Argument param="input" type="String">data</Argument>
+          <Argument param="time_input" type="String">time</Argument>
+          <Argument param="window_shape" type="Shape">[16,4]</Argument>
+          <Argument param="stride" type="Int32">16</Argument>
+          <Argument param="buffer_multiplier" type="Double">2</Argument>
+          <Argument param="output" type="String">data</Argument>
+          <Argument param="time_output" type="String">time</Argument>
+        </Unit>
+      </Preprocessor>
+      <Postprocessor override="False" inshape="[128,3]" intype="Float32" infreq="0" outshape="[10]" outtype="Float32" />
+    </Model>
+  </Models>
+  <Database balance="LabelCount" redistributionScope="Everything">
+    <SymbolMap>
+      <Symbol name="indoor" id="1" weight="1" />
+    </SymbolMap>
+    <DataSet id="unassigned" targetSize="0" labels="Unassigned" />
+    <DataSet id="train" targetSize="0.6" labels="Complete">
+      <Session name="indoor-1591796949206" sessionId="545f6230-d57d-41d4-9e58-ec2bf873b079" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133989226809" start="0" length="377.66666666666265">/Data/indoor/indoor-1591796949206/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591796949206/indoor-1591796949206.imsession</SessionFile>
+        <LabelFile modified="5249982133989123174">/Data/indoor/indoor-1591796949206/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="376.9999999">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591797551223" sessionId="870d43cc-ca7b-4271-9e66-77e93a308c56" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133988238122" start="0" length="289.000000000001">/Data/indoor/indoor-1591797551223/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591797551223/indoor-1591797551223.imsession</SessionFile>
+        <LabelFile modified="5249982133987794204">/Data/indoor/indoor-1591797551223/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="288.3333333">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591798151430" sessionId="7910b68f-1fcf-4a7f-9ce4-65ff2f62af0a" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133985591472" start="0" length="330.6666666666653">/Data/indoor/indoor-1591798151430/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591798151430/indoor-1591798151430.imsession</SessionFile>
+        <LabelFile modified="5249982133983995133">/Data/indoor/indoor-1591798151430/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="329.9999999">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591798451524" sessionId="83ef26bc-2bda-4a13-b414-6edcd8007831" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133983475163" start="0" length="349.3333333333309">/Data/indoor/indoor-1591798451524/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591798451524/indoor-1591798451524.imsession</SessionFile>
+        <LabelFile modified="5249982133983222113">/Data/indoor/indoor-1591798451524/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="348.6666666">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591799053373" sessionId="3438907b-5e06-4103-98cd-3a3d8fa2303f" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133981831043" start="0" length="353.3333333333307">/Data/indoor/indoor-1591799053373/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591799053373/indoor-1591799053373.imsession</SessionFile>
+        <LabelFile modified="5249982133981366886">/Data/indoor/indoor-1591799053373/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="352.6666666">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591799353488" sessionId="2cfccd44-3c0d-404c-8754-6b545394a0a5" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133980714253" start="0" length="351.3333333333308">/Data/indoor/indoor-1591799353488/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591799353488/indoor-1591799353488.imsession</SessionFile>
+        <LabelFile modified="5249982133980424156">/Data/indoor/indoor-1591799353488/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="350.6666666">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591799653909" sessionId="e112522b-5cd0-4eea-8841-116862ddf46c" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133979858767" start="0" length="318.3333333333327">/Data/indoor/indoor-1591799653909/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591799653909/indoor-1591799653909.imsession</SessionFile>
+        <LabelFile modified="5249982133979723483">/Data/indoor/indoor-1591799653909/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="317.6666666">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591799955273" sessionId="81d2b773-4b54-4507-b889-103b97662745" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133979204063" start="0" length="313.333333333333">/Data/indoor/indoor-1591799955273/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591799955273/indoor-1591799955273.imsession</SessionFile>
+        <LabelFile modified="5249982133978852114">/Data/indoor/indoor-1591799955273/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="312.6666666">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591800555544" sessionId="442003e7-ce47-4e2b-bf32-6641bb28acaa" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133977867963" start="0" length="339.3333333333315">/Data/indoor/indoor-1591800555544/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591800555544/indoor-1591800555544.imsession</SessionFile>
+        <LabelFile modified="5249982133977559839">/Data/indoor/indoor-1591800555544/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="338.6666666">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591801155816" sessionId="f1b75969-381b-4724-98e7-a2226afa68ea" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133976779493" start="0" length="320.3333333333326">/Data/indoor/indoor-1591801155816/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591801155816/indoor-1591801155816.imsession</SessionFile>
+        <LabelFile modified="5249982133976572710">/Data/indoor/indoor-1591801155816/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="319.6666666">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591801455991" sessionId="9499cd13-e6fd-4864-9a2e-f60f797192fb" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133976153446" start="0" length="350.33333333333087">/Data/indoor/indoor-1591801455991/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591801455991/indoor-1591801455991.imsession</SessionFile>
+        <LabelFile modified="5249982133975970925">/Data/indoor/indoor-1591801455991/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="349.6666666">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591802656619" sessionId="4bc8ed1b-b475-43bf-bc57-4b6eba49f318" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133973311926" start="0" length="339.9999999999981">/Data/indoor/indoor-1591802656619/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591802656619/indoor-1591802656619.imsession</SessionFile>
+        <LabelFile modified="5249982133973169204">/Data/indoor/indoor-1591802656619/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="339.3333333">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591803256845" sessionId="64dab7b2-6552-4240-a125-939bf571dfaf" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133972069229" start="0" length="254.66666666666953">/Data/indoor/indoor-1591803256845/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591803256845/indoor-1591803256845.imsession</SessionFile>
+        <LabelFile modified="5249982133971909214">/Data/indoor/indoor-1591803256845/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="254">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591803857190" sessionId="da609167-ff75-4e52-bdc6-028f7c2c7d70" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133970815098" start="0" length="303.66666666666686">/Data/indoor/indoor-1591803857190/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591803857190/indoor-1591803857190.imsession</SessionFile>
+        <LabelFile modified="5249982133970665107">/Data/indoor/indoor-1591803857190/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="303">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591804457528" sessionId="ddaeb0e0-5272-4518-a632-bf94cdfc30fe" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133969750586" start="0" length="317.9999999999994">/Data/indoor/indoor-1591804457528/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591804457528/indoor-1591804457528.imsession</SessionFile>
+        <LabelFile modified="5249982133969570626">/Data/indoor/indoor-1591804457528/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="317.3333333">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591805057653" sessionId="835e648d-73cd-4b94-b854-dc1fea09d6e8" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133968753559" start="0" length="293.6666666666674">/Data/indoor/indoor-1591805057653/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591805057653/indoor-1591805057653.imsession</SessionFile>
+        <LabelFile modified="5249982133968633568">/Data/indoor/indoor-1591805057653/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="293">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591805357826" sessionId="39cf8479-87f5-45c6-bba0-dc1982da81b2" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133968322464" start="0" length="289.33333333333434">/Data/indoor/indoor-1591805357826/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591805357826/indoor-1591805357826.imsession</SessionFile>
+        <LabelFile modified="5249982133968038358">/Data/indoor/indoor-1591805357826/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="288.6666666">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591805658231" sessionId="8268df09-b10d-41ec-855c-3f58ad277f22" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133967673000" start="0" length="299.00000000000045">/Data/indoor/indoor-1591805658231/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591805658231/indoor-1591805658231.imsession</SessionFile>
+        <LabelFile modified="5249982133967547031">/Data/indoor/indoor-1591805658231/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="298.3333333">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591806258749" sessionId="307a0683-0d1b-4bc5-a3b8-6fb865b35f63" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133966462469" start="0" length="275.33333333333513">/Data/indoor/indoor-1591806258749/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591806258749/indoor-1591806258749.imsession</SessionFile>
+        <LabelFile modified="5249982133966302348">/Data/indoor/indoor-1591806258749/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="274.6666666">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591806558859" sessionId="ac252bb1-21c2-4b52-863e-e61082dc5d64" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133965867709" start="0" length="287.66666666666777">/Data/indoor/indoor-1591806558859/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591806558859/indoor-1591806558859.imsession</SessionFile>
+        <LabelFile modified="5249982133965644302">/Data/indoor/indoor-1591806558859/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="287">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591806858936" sessionId="f53bef33-ec4a-4801-afa0-a49150c3dfdd" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133965231253" start="0" length="287.00000000000114">/Data/indoor/indoor-1591806858936/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591806858936/indoor-1591806858936.imsession</SessionFile>
+        <LabelFile modified="5249982133964934873">/Data/indoor/indoor-1591806858936/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="286.3333333">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591807760031" sessionId="3f07ab3c-3f2b-4007-9a7c-ae59ea79b96d" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133963667533" start="0" length="202.3333333333347">/Data/indoor/indoor-1591807760031/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591807760031/indoor-1591807760031.imsession</SessionFile>
+        <LabelFile modified="5249982133963400976">/Data/indoor/indoor-1591807760031/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="201.6666666">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591808660609" sessionId="4ddc606b-a9d7-4d4a-ae23-443fd1227af3" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133962077706" start="0" length="236.00000000000233">/Data/indoor/indoor-1591808660609/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591808660609/indoor-1591808660609.imsession</SessionFile>
+        <LabelFile modified="5249982133961927700">/Data/indoor/indoor-1591808660609/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="235.3333333">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591808960723" sessionId="6e9ed548-fee5-4048-934c-caff6530c52e" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133961574113" start="0" length="272.3333333333353">/Data/indoor/indoor-1591808960723/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591808960723/indoor-1591808960723.imsession</SessionFile>
+        <LabelFile modified="5249982133961457587">/Data/indoor/indoor-1591808960723/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="271.6666666">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591809260934" sessionId="00d110b3-017e-4498-b110-491f80d339b4" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133960999040" start="0" length="294.00000000000074">/Data/indoor/indoor-1591809260934/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591809260934/indoor-1591809260934.imsession</SessionFile>
+        <LabelFile modified="5249982133960829022">/Data/indoor/indoor-1591809260934/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="293.3333333">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591809861340" sessionId="8f714fde-feb5-4f7c-8410-bd0a68d662a5" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133959729981" start="0" length="266.00000000000233">/Data/indoor/indoor-1591809861340/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591809861340/indoor-1591809861340.imsession</SessionFile>
+        <LabelFile modified="5249982133959562697">/Data/indoor/indoor-1591809861340/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="265.3333333">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591810161410" sessionId="9c296a9d-cfac-400c-a1b3-9e6087774d97" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133959148227" start="0" length="299.00000000000045">/Data/indoor/indoor-1591810161410/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591810161410/indoor-1591810161410.imsession</SessionFile>
+        <LabelFile modified="5249982133958925456">/Data/indoor/indoor-1591810161410/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="298.3333333">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591810461499" sessionId="e4d1470e-1a9f-42bf-859d-af1ea0f11a73" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133958645520" start="0" length="287.66666666666777">/Data/indoor/indoor-1591810461499/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591810461499/indoor-1591810461499.imsession</SessionFile>
+        <LabelFile modified="5249982133958485226">/Data/indoor/indoor-1591810461499/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="287">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="outdoor-1592221242546" sessionId="9d2226f7-b41e-4614-b452-180284a516ed" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="LabelsMissing">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133957263452" start="0" length="306.00000000000006">/Data/outdoor/outdoor-1592221242546/data.csv</DataFile>
+        <SessionFile>/Data/outdoor/outdoor-1592221242546/outdoor-1592221242546.imsession</SessionFile>
+        <LabelFile modified="5249982133957683837">/Data/outdoor/outdoor-1592221242546/label.label</LabelFile>
+        <Labels />
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">outdoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="outdoor-1592221843072" sessionId="00f1d03b-39b6-4014-a7a1-3a026d48ce3b" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="LabelsMissing">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133956282349" start="0" length="338.33333333333155">/Data/outdoor/outdoor-1592221843072/data.csv</DataFile>
+        <SessionFile>/Data/outdoor/outdoor-1592221843072/outdoor-1592221843072.imsession</SessionFile>
+        <LabelFile modified="5249982133956532887">/Data/outdoor/outdoor-1592221843072/label.label</LabelFile>
+        <Labels />
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">outdoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="outdoor-1592222743780" sessionId="486416f5-3940-4e7b-8d26-e45832cc0cb8" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="LabelsMissing">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133955805687" start="0" length="293.6666666666674">/Data/outdoor/outdoor-1592222743780/data.csv</DataFile>
+        <SessionFile>/Data/outdoor/outdoor-1592222743780/outdoor-1592222743780.imsession</SessionFile>
+        <LabelFile modified="5249982133956136778">/Data/outdoor/outdoor-1592222743780/label.label</LabelFile>
+        <Labels />
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">outdoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="outdoor-1592223043815" sessionId="3bf66f45-1d27-46cb-af5e-45fd5ef3c8fb" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="LabelsMissing">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133955311464" start="0" length="305.0000000000001">/Data/outdoor/outdoor-1592223043815/data.csv</DataFile>
+        <SessionFile>/Data/outdoor/outdoor-1592223043815/outdoor-1592223043815.imsession</SessionFile>
+        <LabelFile modified="5249982133955573959">/Data/outdoor/outdoor-1592223043815/label.label</LabelFile>
+        <Labels />
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">outdoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="outdoor-1592223944220" sessionId="2e99619e-1d76-464b-8fe4-923880a56c35" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="LabelsMissing">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133954369887" start="0" length="329.33333333333206">/Data/outdoor/outdoor-1592223944220/data.csv</DataFile>
+        <SessionFile>/Data/outdoor/outdoor-1592223944220/outdoor-1592223944220.imsession</SessionFile>
+        <LabelFile modified="5249982133954679856">/Data/outdoor/outdoor-1592223944220/label.label</LabelFile>
+        <Labels />
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">outdoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="outdoor-1592757047320" sessionId="a94d852d-1126-4578-9d77-4c33ab6c9350" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="LabelsMissing">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133953918330" start="0" length="189.000000000001">/Data/outdoor/outdoor-1592757047320/data.csv</DataFile>
+        <SessionFile>/Data/outdoor/outdoor-1592757047320/outdoor-1592757047320.imsession</SessionFile>
+        <LabelFile modified="5249982133954249359">/Data/outdoor/outdoor-1592757047320/label.label</LabelFile>
+        <Labels />
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">outdoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="outdoor-1592757347609" sessionId="15d741ff-dd2e-4c00-9215-1ea4f50b297d" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="LabelsMissing">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133953398756" start="0" length="191.3333333333344">/Data/outdoor/outdoor-1592757347609/data.csv</DataFile>
+        <SessionFile>/Data/outdoor/outdoor-1592757347609/outdoor-1592757347609.imsession</SessionFile>
+        <LabelFile modified="5249982133953725334">/Data/outdoor/outdoor-1592757347609/label.label</LabelFile>
+        <Labels />
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">outdoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="outdoor-1592757948019" sessionId="71b89d87-0730-47ba-ad3c-25b89afd8ad4" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="LabelsMissing">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133952495535" start="0" length="191.00000000000105">/Data/outdoor/outdoor-1592757948019/data.csv</DataFile>
+        <SessionFile>/Data/outdoor/outdoor-1592757948019/outdoor-1592757948019.imsession</SessionFile>
+        <LabelFile modified="5249982133952839951">/Data/outdoor/outdoor-1592757948019/label.label</LabelFile>
+        <Labels />
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">outdoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="outdoor-1592758248095" sessionId="a8008f57-4e6a-4d59-b2e3-2ea83fd26307" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="LabelsMissing">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133952046616" start="0" length="197.33333333333456">/Data/outdoor/outdoor-1592758248095/data.csv</DataFile>
+        <SessionFile>/Data/outdoor/outdoor-1592758248095/outdoor-1592758248095.imsession</SessionFile>
+        <LabelFile modified="5249982133952365490">/Data/outdoor/outdoor-1592758248095/label.label</LabelFile>
+        <Labels />
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">outdoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="outdoor-1592758848479" sessionId="c4827014-3fc6-4f66-b831-27e31880584d" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="LabelsMissing">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133950929538" start="0" length="188.00000000000097">/Data/outdoor/outdoor-1592758848479/data.csv</DataFile>
+        <SessionFile>/Data/outdoor/outdoor-1592758848479/outdoor-1592758848479.imsession</SessionFile>
+        <LabelFile modified="5249982133951273818">/Data/outdoor/outdoor-1592758848479/label.label</LabelFile>
+        <Labels />
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">outdoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="outdoor-1592940703286" sessionId="6901722c-67a8-4486-9054-6cd8a542afe0" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="LabelsMissing">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133949241178" start="0" length="188.66666666666765">/Data/outdoor/outdoor-1592940703286/data.csv</DataFile>
+        <SessionFile>/Data/outdoor/outdoor-1592940703286/outdoor-1592940703286.imsession</SessionFile>
+        <LabelFile modified="5249982133949772023">/Data/outdoor/outdoor-1592940703286/label.label</LabelFile>
+        <Labels />
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">outdoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="outdoor-1592941003679" sessionId="e6f220be-ec47-45f7-bc8b-48d9a6fc1a86" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="LabelsMissing">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133948748045" start="0" length="196.33333333333454">/Data/outdoor/outdoor-1592941003679/data.csv</DataFile>
+        <SessionFile>/Data/outdoor/outdoor-1592941003679/outdoor-1592941003679.imsession</SessionFile>
+        <LabelFile modified="5249982133949048045">/Data/outdoor/outdoor-1592941003679/label.label</LabelFile>
+        <Labels />
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">outdoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="outdoor-1592941303705" sessionId="b1d9ea20-c082-480c-acc3-ad7e5306b6cf" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="LabelsMissing">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133948290737" start="0" length="196.0000000000012">/Data/outdoor/outdoor-1592941303705/data.csv</DataFile>
+        <SessionFile>/Data/outdoor/outdoor-1592941303705/outdoor-1592941303705.imsession</SessionFile>
+        <LabelFile modified="5249982133948618071">/Data/outdoor/outdoor-1592941303705/label.label</LabelFile>
+        <Labels />
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">outdoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+    </DataSet>
+    <DataSet id="validation" targetSize="0.2" labels="Complete">
+      <Session name="indoor-1591797851333" sessionId="668ddbe7-72cc-4183-83e4-e45235baaee7" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133986873805" start="0" length="274.0000000000019">/Data/indoor/indoor-1591797851333/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591797851333/indoor-1591797851333.imsession</SessionFile>
+        <LabelFile modified="5249982133986389681">/Data/indoor/indoor-1591797851333/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="273.3333333">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591800255409" sessionId="66ad3fea-09f2-4c24-bcc2-b96c0b4b2bc5" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133978437039" start="0" length="344.6666666666645">/Data/indoor/indoor-1591800255409/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591800255409/indoor-1591800255409.imsession</SessionFile>
+        <LabelFile modified="5249982133978301800">/Data/indoor/indoor-1591800255409/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="343.9999999">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591800855625" sessionId="ce9a4e2e-3781-47e3-aac8-58485108ffa5" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133977189486" start="0" length="324.999999999999">/Data/indoor/indoor-1591800855625/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591800855625/indoor-1591800855625.imsession</SessionFile>
+        <LabelFile modified="5249982133977069454">/Data/indoor/indoor-1591800855625/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="324.3333333">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591802056407" sessionId="4f75167b-8690-4c78-9222-5373c0a8b24a" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133974956438" start="0" length="328.3333333333321">/Data/indoor/indoor-1591802056407/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591802056407/indoor-1591802056407.imsession</SessionFile>
+        <LabelFile modified="5249982133974651424">/Data/indoor/indoor-1591802056407/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="327.6666666">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591802356460" sessionId="0699ff85-c4ed-42b4-a801-7b41b4dba024" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133974134266" start="0" length="324.999999999999">/Data/indoor/indoor-1591802356460/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591802356460/indoor-1591802356460.imsession</SessionFile>
+        <LabelFile modified="5249982133973851350">/Data/indoor/indoor-1591802356460/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="324.3333333">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591802956732" sessionId="3ce787df-067f-4e78-91ba-c67eff11d495" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133972669044" start="0" length="312.66666666666634">/Data/indoor/indoor-1591802956732/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591802956732/indoor-1591802956732.imsession</SessionFile>
+        <LabelFile modified="5249982133972533931">/Data/indoor/indoor-1591802956732/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="311.9999999">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591803557029" sessionId="b2e9b871-4329-40ca-9699-dcc43c4c6b1d" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133971480442" start="0" length="265.0000000000024">/Data/indoor/indoor-1591803557029/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591803557029/indoor-1591803557029.imsession</SessionFile>
+        <LabelFile modified="5249982133971201207">/Data/indoor/indoor-1591803557029/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="264.3333333">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591805958472" sessionId="7f53b73b-0f96-450d-8e9c-cb8300473d83" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133967044697" start="0" length="288.3333333333344">/Data/indoor/indoor-1591805958472/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591805958472/indoor-1591805958472.imsession</SessionFile>
+        <LabelFile modified="5249982133966893653">/Data/indoor/indoor-1591805958472/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="287.6666666">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591808360346" sessionId="4bad0fa2-2e74-4f50-a322-aa05b5c74731" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133962673694" start="0" length="240.00000000000244">/Data/indoor/indoor-1591808360346/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591808360346/indoor-1591808360346.imsession</SessionFile>
+        <LabelFile modified="5249982133962573733">/Data/indoor/indoor-1591808360346/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="239.3333333">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="outdoor-1592757647889" sessionId="de7b9d85-16a6-4528-9176-1888d722fc18" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="LabelsMissing">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133953009943" start="0" length="191.3333333333344">/Data/outdoor/outdoor-1592757647889/data.csv</DataFile>
+        <SessionFile>/Data/outdoor/outdoor-1592757647889/outdoor-1592757647889.imsession</SessionFile>
+        <LabelFile modified="5249982133953286024">/Data/outdoor/outdoor-1592757647889/label.label</LabelFile>
+        <Labels />
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">outdoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="outdoor-1592758548447" sessionId="b3165322-8345-4a71-be28-d98326bb20aa" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="LabelsMissing">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133951407380" start="0" length="190.33333333333437">/Data/outdoor/outdoor-1592758548447/data.csv</DataFile>
+        <SessionFile>/Data/outdoor/outdoor-1592758548447/outdoor-1592758548447.imsession</SessionFile>
+        <LabelFile modified="5249982133951782995">/Data/outdoor/outdoor-1592758548447/label.label</LabelFile>
+        <Labels />
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">outdoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="outdoor-1592759148636" sessionId="71e9a09c-e579-4557-b83e-f29a4301bc3e" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="LabelsMissing">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133950452675" start="0" length="195.00000000000117">/Data/outdoor/outdoor-1592759148636/data.csv</DataFile>
+        <SessionFile>/Data/outdoor/outdoor-1592759148636/outdoor-1592759148636.imsession</SessionFile>
+        <LabelFile modified="5249982133950779626">/Data/outdoor/outdoor-1592759148636/label.label</LabelFile>
+        <Labels />
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">outdoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="outdoor-1592941603747" sessionId="4136b72b-3453-4d4d-a61f-05b90188126b" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="LabelsMissing">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133947679357" start="0" length="197.33333333333456">/Data/outdoor/outdoor-1592941603747/data.csv</DataFile>
+        <SessionFile>/Data/outdoor/outdoor-1592941603747/outdoor-1592941603747.imsession</SessionFile>
+        <LabelFile modified="5249982133948001753">/Data/outdoor/outdoor-1592941603747/label.label</LabelFile>
+        <Labels />
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">outdoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+    </DataSet>
+    <DataSet id="test" targetSize="0.2" labels="Complete">
+      <Session name="indoor-1591796649103" sessionId="2bd24c14-d420-4cc2-9e2d-50df54f14c2a" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133989698472" start="0" length="352.33333333333076">/Data/indoor/indoor-1591796649103/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591796649103/indoor-1591796649103.imsession</SessionFile>
+        <LabelFile modified="5249982133989525474">/Data/indoor/indoor-1591796649103/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="351.6666666">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591797250885" sessionId="b4e15ef0-3803-4d09-8a4a-33ccf592ff17" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133988793199" start="0" length="318.666666666666">/Data/indoor/indoor-1591797250885/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591797250885/indoor-1591797250885.imsession</SessionFile>
+        <LabelFile modified="5249982133988553473">/Data/indoor/indoor-1591797250885/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="317.9999999">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591798751658" sessionId="c9dbb0d3-b3b9-496a-8a22-632e6c0ba76a" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133982680435" start="0" length="366.33333333332996">/Data/indoor/indoor-1591798751658/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591798751658/indoor-1591798751658.imsession</SessionFile>
+        <LabelFile modified="5249982133982341055">/Data/indoor/indoor-1591798751658/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="365.6666666">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591801756130" sessionId="378c44de-5a87-4649-acb0-bd4b11168f17" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133975553593" start="0" length="321.3333333333325">/Data/indoor/indoor-1591801756130/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591801756130/indoor-1591801756130.imsession</SessionFile>
+        <LabelFile modified="5249982133975324477">/Data/indoor/indoor-1591801756130/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="320.6666666">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591804157346" sessionId="c7370c42-73d0-4897-aea1-c8971a654dc7" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133970195885" start="0" length="277.0000000000017">/Data/indoor/indoor-1591804157346/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591804157346/indoor-1591804157346.imsession</SessionFile>
+        <LabelFile modified="5249982133970071198">/Data/indoor/indoor-1591804157346/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="276.3333333">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591804757614" sessionId="57492044-aa58-4bc1-afe8-54a70f1de025" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133969211690" start="0" length="264.00000000000244">/Data/indoor/indoor-1591804757614/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591804757614/indoor-1591804757614.imsession</SessionFile>
+        <LabelFile modified="5249982133969098180">/Data/indoor/indoor-1591804757614/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="263.3333333">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591807158959" sessionId="5a46343f-582d-4c5e-ad4f-b65729aa8ac3" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133964512713" start="0" length="194.00000000000114">/Data/indoor/indoor-1591807158959/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591807158959/indoor-1591807158959.imsession</SessionFile>
+        <LabelFile modified="5249982133964412656">/Data/indoor/indoor-1591807158959/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="193.3333333">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591807459968" sessionId="96db9e21-def7-417c-94ec-043ff1955a3a" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133964111921" start="0" length="214.6666666666684">/Data/indoor/indoor-1591807459968/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591807459968/indoor-1591807459968.imsession</SessionFile>
+        <LabelFile modified="5249982133963948254">/Data/indoor/indoor-1591807459968/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="214">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591808060165" sessionId="a05b6304-e7d2-4afc-8f91-0fc107b02087" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133963161317" start="0" length="207.6666666666682">/Data/indoor/indoor-1591808060165/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591808060165/indoor-1591808060165.imsession</SessionFile>
+        <LabelFile modified="5249982133962973782">/Data/indoor/indoor-1591808060165/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="207">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="indoor-1591809561172" sessionId="684018c6-81a8-4208-b575-176072511c42" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133960236070" start="0" length="290.00000000000097">/Data/indoor/indoor-1591809561172/data.csv</DataFile>
+        <SessionFile>/Data/indoor/indoor-1591809561172/indoor-1591809561172.imsession</SessionFile>
+        <LabelFile modified="5249982133960064385">/Data/indoor/indoor-1591809561172/label.label</LabelFile>
+        <Labels>
+          <Label count="1" length="289.3333333">indoor</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">indoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="outdoor-1592220942267" sessionId="f8a53992-12d7-4647-b4b4-52a562f6944b" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="LabelsMissing">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133957873794" start="0" length="304.3333333333335">/Data/outdoor/outdoor-1592220942267/data.csv</DataFile>
+        <SessionFile>/Data/outdoor/outdoor-1592220942267/outdoor-1592220942267.imsession</SessionFile>
+        <LabelFile modified="5249982133958315687">/Data/outdoor/outdoor-1592220942267/label.label</LabelFile>
+        <Labels />
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">outdoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="outdoor-1592221542677" sessionId="394314dc-2b5c-4e11-99a7-704388c354cd" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="LabelsMissing">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133956682933" start="0" length="312.99999999999966">/Data/outdoor/outdoor-1592221542677/data.csv</DataFile>
+        <SessionFile>/Data/outdoor/outdoor-1592221542677/outdoor-1592221542677.imsession</SessionFile>
+        <LabelFile modified="5249982133957022991">/Data/outdoor/outdoor-1592221542677/label.label</LabelFile>
+        <Labels />
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">outdoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="outdoor-1592223643899" sessionId="d3a452ec-04ac-45d5-a299-51e0b4513236" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="LabelsMissing">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133954861315" start="0" length="288.3333333333344">/Data/outdoor/outdoor-1592223643899/data.csv</DataFile>
+        <SessionFile>/Data/outdoor/outdoor-1592223643899/outdoor-1592223643899.imsession</SessionFile>
+        <LabelFile modified="5249982133955174190">/Data/outdoor/outdoor-1592223643899/label.label</LabelFile>
+        <Labels />
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">outdoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+      <Session name="outdoor-1592940403238" sessionId="f0c2c07e-c63d-4a4f-8709-2c26ef3694a6" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="label" dataTrack="data" tags="LabelsMissing">
+        <DataFile shape="[4]" samplerate="3" modified="5249982133950006370" start="0" length="192.33333333333442">/Data/outdoor/outdoor-1592940403238/data.csv</DataFile>
+        <SessionFile>/Data/outdoor/outdoor-1592940403238/outdoor-1592940403238.imsession</SessionFile>
+        <LabelFile modified="5249982133950332705">/Data/outdoor/outdoor-1592940403238/label.label</LabelFile>
+        <Labels />
+        <CustomColumnValues>
+          <CustomColumnValue columnId="dac9db0d-2365-4513-8879-8f65f8d5a23e">outdoor</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
+    </DataSet>
+  </Database>
+  <CustomColumns>
+    <CustomColumn id="dac9db0d-2365-4513-8879-8f65f8d5a23e" name="Category 1" internalName="Category 1" />
+  </CustomColumns>
+</ImagimobStudio>
