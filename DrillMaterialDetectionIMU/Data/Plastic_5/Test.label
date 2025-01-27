@@ -1,0 +1,2 @@
+Time(Seconds),Length(Seconds),Label(string),Confidence(double),Comment(string)
+4.29,3.68194,wood,0.4723320007324219,Conflict between classes: air and wood.
