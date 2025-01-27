@@ -1,0 +1,8 @@
+****************** TFL-micro Inference Test Application ******************
+
+Model file: 	C:\Users\Mombelli\ImagimobProjects\FanAnomalyDetection\FanAnomalyDetectionClassification\Models\fan-ad-conv1d-small-speed-1\Infineon\model_gen_dir\MODEL_float.tflite
+Result arena file: 	C:\Users\Mombelli\ImagimobProjects\FanAnomalyDetection\FanAnomalyDetectionClassification\Models\fan-ad-conv1d-small-speed-1\Infineon\info\MODEL_tflm_float_tensor_arena_size.txt
+Running memory calculation only.
+Reading file "C:\Users\Mombelli\ImagimobProjects\FanAnomalyDetection\FanAnomalyDetectionClassification\Models\fan-ad-conv1d-small-speed-1\Infineon\model_gen_dir\MODEL_float.tflite"... Read complete. File size = 12204
+Loading model...
+PASSED: Arena size calculation successful.
