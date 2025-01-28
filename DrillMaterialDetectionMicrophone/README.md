@@ -4,8 +4,8 @@
 
 This is a starter model that is capable of classifying the material a power drill is drilling into based on the audio signature and is imagined to be incorporated into smart power tools. 
 A similar model was developed using the IMU data instead, if that is more fitting to your use case. 
-It is developed as a proof of concept and is not fully optimized, achieving around a 85% plastic/wood accuracy.
-Furthermore, the project only differentiates between wood, plastic, and air. 
+It is developed as a proof of concept and is not fully optimized, achieving around an 85% plastic/wood accuracy.
+Furthermore, the current project only differentiates between wood, plastic, and air but is easily scalable to include more labels. 
 The preprocessor and model architectures can be used not only for a drill but for any number of motor-based projects where there is a variability in the audio signature based on the desired classification labels.
 
 ## Collection of Data
