@@ -1,0 +1,3 @@
+﻿Time(Seconds),Length(Seconds),Label(string),Confidence(double),Comment(string)
+0.107986125146199,1.55868058538012,shot,0.5855602,
+2.33333339473684,0.400000010526316,shot,0.1427609,
