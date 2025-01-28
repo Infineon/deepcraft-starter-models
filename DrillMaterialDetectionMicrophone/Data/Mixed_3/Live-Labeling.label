@@ -1,0 +1,11 @@
+Time(Seconds),Length(Seconds),Label(string),Confidence(double),Comment(string)
+1.4746876,2.1718545,air,1,
+5.6511167,2.8714981,plastic,1,
+8.5971805,0.1262643,plastic_out,1,
+9.6156745,0.6204407,plastic,1,
+11.9385926,2.1051108,plastic,1,
+15.7388447,3.2368646,plastic,1,
+19.6889162,0.8107401,plastic_out,1,
+23.9758615,2.0570577,wood,1,
+26.7743524,0.3233315,wood_out,1,
+28.1945337,3.7808735,wood,1,

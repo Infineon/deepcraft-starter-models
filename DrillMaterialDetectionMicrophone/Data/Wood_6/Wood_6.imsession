@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="8a6381f1-eca5-454e-b02e-1e901dbee803">
+    <Tracks>
+      <Track name="Microphone" type="audiowav" isLabelTrack="False">
+        <PayloadFile>Microphone.wav</PayloadFile>
+      </Track>
+      <Track name="Live Labeling" type="labelcsv">
+        <PayloadFile>Live-Labeling.label</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

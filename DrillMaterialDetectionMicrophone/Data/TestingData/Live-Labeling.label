@@ -1,0 +1,3 @@
+Time(Seconds),Length(Seconds),Label(string),Confidence(double),Comment(string)
+38.9571427,2.5250625,air,1,
+44.605659,1.2471506,air,1,
