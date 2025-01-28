@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="d0ba741f-de32-4846-b484-00ae41fdb95e">
+    <Tracks>
+      <Track name="audio" type="audiowav">
+        <PayloadFile>concat1.wav</PayloadFile>
+      </Track>
+      <Track name="Label" type="labelcsv">
+        <PayloadFile>concat1_Label.label</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>
