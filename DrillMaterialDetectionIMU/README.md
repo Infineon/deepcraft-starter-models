@@ -4,8 +4,8 @@
 
 This is a starter model that is capable of classifying the material a power drill is drilling into based on the IMU (6-axis accelerometer and gyroscope) signature and is imagined to be incorporated into smart power tools. 
 A similar model was developed using the audio data instead, if that is more fitting to your use case. 
-It is developed as a proof of concept and is not fully optimized, achieving around a 90% plastic/wood accuracy but only 50% air/none accuracy. This large fault can, however, be mitigated by adding an additional data stream stating whether the drill is on or not.
-Furthermore, the project only differentiates between wood, plastic, and air. 
+It is developed as a proof of concept and is not fully optimized, achieving around a 90% plastic/wood accuracy with a 50% air/none accuracy. This large fault can, however, be mitigated by adding an additional data stream stating whether the drill is on or not.
+Furthermore, the current project only differentiates between wood, plastic, and air but is easily scalable to include more labels. 
 The preprocessor and model architectures can be used not only for a drill but for any number of motor-based projects where there is a variability in the IMU output based on the desired classification labels.
 
 ## Collection of Data
