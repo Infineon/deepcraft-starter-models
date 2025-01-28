@@ -1,0 +1,1 @@
+{"title": "BabyCryInfineon", "description": "A baby cry detector that can be used on any supported Infineon MCU with a microphone.", "algorithm": "Classification", "hardware": "Infineon"}
