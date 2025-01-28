@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ImagimobStudio>
+  <Timeline id="dcd0fccd-c5d8-41ab-a8f3-02f58e43bd50">
+    <Tracks>
+      <Track name="Chainsaw_Model0" type="datacsv" timecoded="TimestampBeginDuration">
+        <PayloadFile TrackType="Prediction">Chainsaw_Model0.data</PayloadFile>
+        <Offset unit="seconds">1.053937</Offset>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

@@ -1,0 +1,1 @@
+{"title": "Chainsaw Detection", "description": "A starter model that identifies if a chainsaw is actively cutting nearby using microphone", "algorithm": "Classification", "sensors": ["Microphone"]}
