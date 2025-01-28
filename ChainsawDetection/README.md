@@ -1,7 +1,8 @@
 ﻿# Chainsaw Detection
 
 ## Overview
-This is a starter model that classifies if there is an actively cutting chainsaw in the vicinity; chainsaws that are stalling are defined as not cutting. The model was developed for use in a wooded environment with a max range of 300 meters. 
+This is a starter model that classifies if there is an actively cutting chainsaw in the vicinity; chainsaws that are stalling are defined as not cutting. 
+The model was developed for use in a wooded environment with a max range of 300 meters. 
 A fully developed model could be used to detect illegal logging or create automatic warning systems. 
 
 ## Collection of Data
@@ -9,7 +10,7 @@ The majority of data for this model was collected with various microphones and p
 Specifically, various forest background noises were added.
 There is limited variety in the types of wood cut due to the collection being in the same forest.
 The data was collected at 16000Hz, and the project contains around 700 minutes of data, with 50 of those being data during cutting. 
-After a preliminary evaluation, the model performed very poorly on chainsaw audio played through a speaker, making it harder to demo. As such, additional data was collected by playing chainsaw audio through a variety of speakers to supplement the dataset, after which it significantly improved.
+After a preliminary evaluation, the model performed very poorly on chainsaw audio played through a speaker, making it harder to demo. As such, additional data was collected by playing chainsaw audio through a variety of speakers to supplement the dataset, after which it significantly improved on sounds played through speakers.
 
 ## Adding More Data
 Adding more background noise data can be done online or by collecting microphone data of a suitable environment (i.e., forest, construction site, river). This can then be imported into the studio project.
@@ -17,7 +18,7 @@ Adding more chainsaw data ought to be done through a thorough collection. Adding
 
 ## Steps to Production
 The first step is to identify the use-case, hardware and location of your desired chainsaw detection model and modifying the existing project to account for that. For example, if your microphone is to be encased to protect it from rain, applying data augmentation on the existing data is likely benefitial.
-Next, collect more data as outlined above with background noise tailored to your use case. 
+Next, collect more data as outlined above with background noise tailored to your use case.
 It is recommended to apply some amount of post processing to reduce false positives. Since chainsaws involved in illegal logging are not active for just a short number of seconds, a models false positive rate can be reduced by for example temporal smoothing.
 
 ## Attributions
