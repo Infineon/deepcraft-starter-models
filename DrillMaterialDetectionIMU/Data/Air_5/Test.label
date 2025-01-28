@@ -1,0 +1,4 @@
+Time(Seconds),Length(Seconds),Label(string),Confidence(double),Comment(string)
+1.32,3.681939999999999,air,0.7693769931793213,
+5.61,14.24194,air,0.7808099985122681,Conflict between classes: air and plastic.
+24.09,5.661940000000001,air,0.7076209783554077,
