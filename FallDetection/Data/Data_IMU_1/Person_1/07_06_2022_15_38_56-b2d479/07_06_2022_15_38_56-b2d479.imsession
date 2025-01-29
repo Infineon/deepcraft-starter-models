@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="57272ff1-49d8-48c5-afad-0ba7741df534">
+    <Tracks>
+      <Track name="join" type="datacsv" isLabelTrack="False">
+        <PayloadFile>join.data</PayloadFile>
+      </Track>
+      <Track name="video" type="videomp4">
+        <PayloadFile>video.mp4</PayloadFile>
+      </Track>
+      <Track name="label" type="labelcsv">
+        <PayloadFile>label.label</PayloadFile>
+      </Track>
+      <Track name="Preprocessor" type="datacsv" timecoded="TimestampBeginDuration" isLabelTrack="False">
+        <PayloadFile>..\..\..\..\PreprocessorTrack\Data_IMU_1\Person_1\07_06_2022_15_38_56-b2d479\join_Preprocessor.data</PayloadFile>
+      </Track>
+      <Track name="conv1d-medium-balanced-20" type="datacsv" timecoded="TimestampBeginDuration" isLabelTrack="False">
+        <PayloadFile>..\..\..\..\Models\conv1d-medium-balanced-2\Predictions\sessions\07_06_2022_15_38_56-b2d479\conv1d-medium-balanced-20.data</PayloadFile>
+        <Offset unit="seconds">1.1650720000E+000</Offset>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

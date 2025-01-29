@@ -1,0 +1,6 @@
+﻿Time(Seconds),Length(Seconds),Label(string),Confidence(double),Comment(string)
+11.076,0.932554692903006,fall,1,
+31.5,0.904105190769293,fall,1,
+60.042,0.904105190769293,fall,1,
+77.0724381223329,0.697846300299876,fall,1,
+93.805,0.790307182234443,fall,1,
