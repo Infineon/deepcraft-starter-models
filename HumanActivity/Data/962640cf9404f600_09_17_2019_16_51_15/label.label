@@ -1,0 +1,3 @@
+﻿Time(Seconds),Length(Seconds),Label(string),Confidence(double),Comment(string)
+0,2.06848649784822,standing,1,
+2.06863158721118,60.614358296337,running,0,
