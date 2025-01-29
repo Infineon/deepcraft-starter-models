@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="fb6e30b7-5482-4b1a-9947-a9799e98d433">
+    <Tracks>
+      <Track name="data" type="audiowav" isLabelTrack="False" frequency="0">
+        <PayloadFile>data.wav</PayloadFile>
+      </Track>
+      <Track name="label" type="labelcsv">
+        <PayloadFile>label.label</PayloadFile>
+      </Track>
+      <Track name="Preprocessor" type="datacsv" timecoded="TimestampBeginDuration" isLabelTrack="False">
+        <PayloadFile>..\..\PreprocessorTrack\Speech_X6fzg9s0VD8_10_20\data_Preprocessor.data</PayloadFile>
+      </Track>
+      <Track name="conv1d-medium-balanced-20" type="datacsv" timecoded="TimestampBeginDuration" isLabelTrack="False">
+        <PayloadFile>..\..\Models\conv1d-medium-balanced-2\Predictions\sessions\Speech_X6fzg9s0VD8_10_20\conv1d-medium-balanced-20.data</PayloadFile>
+        <Offset unit="seconds">1.0119380000E+000</Offset>
+      </Track>
+      <Track name="preprocessed_label" type="datacsv" isLabelTrack="False">
+        <PayloadFile>..\..\Models\conv1d-medium-balanced-2\Predictions\sessions\Speech_X6fzg9s0VD8_10_20\preprocessed_label.data</PayloadFile>
+        <Offset unit="seconds">1.0119380000E+000</Offset>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

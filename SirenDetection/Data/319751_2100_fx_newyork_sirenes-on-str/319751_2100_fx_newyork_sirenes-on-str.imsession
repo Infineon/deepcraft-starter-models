@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="51fd4e55-e7a6-4ee2-ab86-656983819b96">
+    <Tracks>
+      <Track name="data" type="audiowav" isLabelTrack="False" frequency="0">
+        <PayloadFile>data.wav</PayloadFile>
+      </Track>
+      <Track name="label" type="labelcsv">
+        <PayloadFile>label.label</PayloadFile>
+      </Track>
+      <Track name="Preprocessor" type="datacsv" timecoded="TimestampBeginDuration" isLabelTrack="False">
+        <PayloadFile>..\..\PreprocessorTrack\319751_2100_fx_newyork_sirenes-on-str\data_Preprocessor.data</PayloadFile>
+      </Track>
+      <Track name="conv1d-medium-balanced-20" type="datacsv" timecoded="TimestampBeginDuration" isLabelTrack="False">
+        <PayloadFile>..\..\Models\conv1d-medium-balanced-2\Predictions\sessions\319751_2100_fx_newyork_sirenes-on-str\conv1d-medium-balanced-20.data</PayloadFile>
+        <Offset unit="seconds">1.0119370000E+000</Offset>
+      </Track>
+      <Track name="preprocessed_label" type="datacsv" isLabelTrack="False">
+        <PayloadFile>..\..\Models\conv1d-medium-balanced-2\Predictions\sessions\319751_2100_fx_newyork_sirenes-on-str\preprocessed_label.data</PayloadFile>
+        <Offset unit="seconds">1.0119370000E+000</Offset>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>
