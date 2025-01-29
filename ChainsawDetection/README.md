@@ -2,7 +2,6 @@
 
 ## Overview
 This is a starter model that classifies if there is an actively cutting chainsaw in the vicinity; chainsaws that are stalling are defined as not cutting. 
-The model was developed for use in a wooded environment with a max range of 300 meters. 
 A fully developed model could be used to detect illegal logging or create automatic warning systems. 
 
 ## Collection of Data
