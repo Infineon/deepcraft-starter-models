@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ImagimobStudio version="1.1.0">
-  <Job id="e2698389-6008-4ae1-b3b8-2157518abe03" />
+  <Job id="7c6063b1-de41-11ef-8980-6bb89d049593" />
   <Preprocessor inshape="[4]" intype="Float32" infreq="3" outshape="[16,4]" outtype="Float32">
     <Unit id="Core.Queues.SlidingWindow">
       <Argument param="input" type="String">data</Argument>
@@ -34,8 +34,8 @@
     <LastNetworkInputShape>[16,4]</LastNetworkInputShape>
     <LastClassCount>2</LastClassCount>
     <Optimizer>
-      <LearningRate>0.05</LearningRate>
-      <WeightDecay>0.005</WeightDecay>
+      <LearningRate>0.001</LearningRate>
+      <WeightDecay>0.0001</WeightDecay>
     </Optimizer>
     <BuildSteps>
       <Training />
@@ -139,7 +139,7 @@
       <SymbolWeights override="False">
         <SymbolWeight symbol="indoor" weight="1" />
       </SymbolWeights>
-      <Preprocessor override="False" inshape="[4]" intype="Float32" infreq="0" outshape="[16,4]" outtype="Float32">
+      <Preprocessor override="False" inshape="[4]" intype="Float32" infreq="3" outshape="[16,4]" outtype="Float32">
         <Unit id="Core.Queues.SlidingWindow">
           <Argument param="input" type="String">data</Argument>
           <Argument param="time_input" type="String">time</Argument>
@@ -150,7 +150,7 @@
           <Argument param="time_output" type="String">time</Argument>
         </Unit>
       </Preprocessor>
-      <Postprocessor override="False" inshape="[128,3]" intype="Float32" infreq="0" outshape="[10]" outtype="Float32" />
+      <Postprocessor override="False" inshape="[128,3]" intype="Float32" infreq="1" outshape="[128,3]" outtype="Float32" />
     </Model>
     <Model name="conv1d-medium-balanced-1" id="10e35853-5738-4733-90e1-772a52cc38c9">
       <LossFunction>CategoricalCrossentropy</LossFunction>
@@ -248,7 +248,7 @@
       <SymbolWeights override="False">
         <SymbolWeight symbol="indoor" weight="1" />
       </SymbolWeights>
-      <Preprocessor override="False" inshape="[4]" intype="Float32" infreq="0" outshape="[16,4]" outtype="Float32">
+      <Preprocessor override="False" inshape="[4]" intype="Float32" infreq="3" outshape="[16,4]" outtype="Float32">
         <Unit id="Core.Queues.SlidingWindow">
           <Argument param="input" type="String">data</Argument>
           <Argument param="time_input" type="String">time</Argument>
@@ -259,7 +259,7 @@
           <Argument param="time_output" type="String">time</Argument>
         </Unit>
       </Preprocessor>
-      <Postprocessor override="False" inshape="[128,3]" intype="Float32" infreq="0" outshape="[10]" outtype="Float32" />
+      <Postprocessor override="False" inshape="[128,3]" intype="Float32" infreq="1" outshape="[128,3]" outtype="Float32" />
     </Model>
     <Model name="conv1d-medium-balanced-2" id="cd19d67b-8853-44e2-b103-504ad783408c">
       <LossFunction>CategoricalCrossentropy</LossFunction>
@@ -357,7 +357,7 @@
       <SymbolWeights override="False">
         <SymbolWeight symbol="indoor" weight="1" />
       </SymbolWeights>
-      <Preprocessor override="False" inshape="[4]" intype="Float32" infreq="0" outshape="[16,4]" outtype="Float32">
+      <Preprocessor override="False" inshape="[4]" intype="Float32" infreq="3" outshape="[16,4]" outtype="Float32">
         <Unit id="Core.Queues.SlidingWindow">
           <Argument param="input" type="String">data</Argument>
           <Argument param="time_input" type="String">time</Argument>
@@ -368,7 +368,7 @@
           <Argument param="time_output" type="String">time</Argument>
         </Unit>
       </Preprocessor>
-      <Postprocessor override="False" inshape="[128,3]" intype="Float32" infreq="0" outshape="[10]" outtype="Float32" />
+      <Postprocessor override="False" inshape="[128,3]" intype="Float32" infreq="1" outshape="[128,3]" outtype="Float32" />
     </Model>
     <Model name="conv1d-medium-balanced-3" id="3f1b3286-16d1-4cdb-91d1-1fb2cfdca201">
       <LossFunction>CategoricalCrossentropy</LossFunction>
@@ -466,7 +466,7 @@
       <SymbolWeights override="False">
         <SymbolWeight symbol="indoor" weight="1" />
       </SymbolWeights>
-      <Preprocessor override="False" inshape="[4]" intype="Float32" infreq="0" outshape="[16,4]" outtype="Float32">
+      <Preprocessor override="False" inshape="[4]" intype="Float32" infreq="3" outshape="[16,4]" outtype="Float32">
         <Unit id="Core.Queues.SlidingWindow">
           <Argument param="input" type="String">data</Argument>
           <Argument param="time_input" type="String">time</Argument>
@@ -477,7 +477,7 @@
           <Argument param="time_output" type="String">time</Argument>
         </Unit>
       </Preprocessor>
-      <Postprocessor override="False" inshape="[128,3]" intype="Float32" infreq="0" outshape="[10]" outtype="Float32" />
+      <Postprocessor override="False" inshape="[128,3]" intype="Float32" infreq="1" outshape="[128,3]" outtype="Float32" />
     </Model>
   </Models>
   <Database balance="LabelCount" redistributionScope="Everything">
