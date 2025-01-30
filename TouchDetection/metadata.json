@@ -1,1 +1,1 @@
-{"title": "TouchDetection", "description": "Capsense based touch detection", "algorithm": "Classification", "hardware": "Infineon"}
+{"title": "TouchDetection", "description": "Capsense based touch detection", "algorithm": "Classification", "sensors": ["Capacitive Sensing"]}
