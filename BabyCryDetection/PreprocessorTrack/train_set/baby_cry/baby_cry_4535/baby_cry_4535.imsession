@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="2e576e4c-dc4f-4453-bba8-238a919c07ea">
+    <Tracks>
+      <Track name="Preprocessor" type="datacsv" timecoded="TimestampBeginDuration" isLabelTrack="False">
+        <PayloadFile>data_Preprocessor.data</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>
