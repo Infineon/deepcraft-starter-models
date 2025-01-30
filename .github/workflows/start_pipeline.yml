@@ -20,10 +20,9 @@ jobs:
             import json
             import os
             import requests
-            
             token = os.environ['STARTER_MODELS_PIPELINE_TOKEN']
             pr_head = json.loads(os.environ['PR_HEAD'])
-            requests.post(
+            response = requests.post(
                 url='https://api.bitbucket.org/2.0/repositories/Imagimob/_starter-projects-pipeline/pipelines',
                 headers={
                     'Authorization': f'Bearer {token}',
@@ -51,3 +50,4 @@ jobs:
                     ],
                 },
             )
+            response.raise_for_status()
