@@ -2,6 +2,7 @@ name: Start Pipeline
 
 on:
   workflow_call:
+  workflow_dispatch:
 
 jobs:
   start_pipeline:
@@ -21,7 +22,8 @@ jobs:
             import os
             import requests
             token = os.environ['STARTER_MODELS_PIPELINE_TOKEN']
-            assert token
+            if not token:
+                raise Exception('Token is missing')
             pr_head = json.loads(os.environ['PR_HEAD'])
             response = requests.post(
                 url='https://api.bitbucket.org/2.0/repositories/Imagimob/_starter-projects-pipeline/pipelines',
