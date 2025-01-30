@@ -1,8 +1,8 @@
-﻿# Keyword Detector
+# Keyword Detector
 
 ## Overview
 
-This machine learning project contains everything to get started with keyword detection. Bundled with the project is a trained model, the Google Speech commands dataset, and the guide how to download and prepare the dataset.
+This machine learning project contains everything to get started with keyword detection. Bundled with the project is a trained model, the Google Speech commands dataset, and the guide how to download and prepare the dataset as well as some hints on how to take the model to production.
 
 ## Data
 
@@ -11,6 +11,15 @@ The dataset differs from the original dataset in that the single wave files are 
 to prevent that multiple words are in one input time window of the model. For the transformation, you need to modify the paths in the Python script (locatied at Tools/prepare_dataset.py).
 
 You can add more data by recording with your preferred recorder app of the OS, Deepcraft Studio's [Graph UX](https://developer.imagimob.com/data-preparation/data-collection/collect-data-using-graph-ux) with either your Computer mic or an MCU with [Imagimob Streaming protocoll](https://github.com/Infineon/mtb-example-imagimob-streaming-protocol).
+
+## Taking this model to production
+
+This model has been fed with a lot of data to make it more comprehensive. To take this model to production we recommend the following:
+1. Shortlisting a group of desired keywords, the smaller the list the better so you can focus on ensuring that the selected list is production grade
+2. Change the other classes to negative data so that the model can focus on only learning the selected classes
+3. Utilise the augmentation functionality to make the model more robust. We recommend also experimenting with other kinds of augmentation other than what's available in Studio to really bring the performance up
+4. Collect more talking data to make the model more robust (negative data so all the words not in the selected keywords)
+5. Collect more data of the selected keywords from people of different ethnicities, ages and genders
 
 
 ## Contents
