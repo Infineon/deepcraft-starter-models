@@ -1,0 +1,56 @@
+name: Start Pipeline
+
+on:
+  workflow_call:
+  workflow_dispatch:
+
+jobs:
+  start_pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Requirements
+        run: |
+          python -m pip install requests
+      - uses: jannekem/run-python-script-action@v1
+        name: Start Pipeline
+        env:
+          STARTER_MODELS_PIPELINE_TOKEN: ${{ secrets.STARTER_MODELS_PIPELINE_TOKEN }}
+          PR_HEAD: ${{ toJson(github.event.pull_request.head) }}
+        with:
+          script: |
+            import json
+            import os
+            import requests
+            token = os.environ['STARTER_MODELS_PIPELINE_TOKEN']
+            if not token:
+                raise Exception('Token is missing')
+            pr_head = json.loads(os.environ['PR_HEAD'])
+            response = requests.post(
+                url='https://api.bitbucket.org/2.0/repositories/Imagimob/_starter-projects-pipeline/pipelines',
+                headers={
+                    'Authorization': f'Bearer {token}',
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                },
+                json = {
+                    'target': {
+                        'type': 'pipeline_ref_target',
+                        'ref_type': 'branch',
+                        'ref_name': 'master',
+                        'selector': {
+                            'type': 'custom',
+                            'pattern': 'update-project',
+                        }
+                    },
+                    'variables': [
+                        {
+                            'key': 'PIPELINE',
+                            'value': json.dumps({
+                                'repo_url': pr_head['repo']['clone_url'],
+                                'branch': pr_head['ref'],
+                            }),
+                        },
+                    ],
+                },
+            )
+            response.raise_for_status()
