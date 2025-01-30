@@ -18,10 +18,10 @@ All project submissions must include a README file with the following informatio
 * Guidelines for collecting and expanding the dataset
 * Recommended path to production, including steps to make the model production-ready
 
-Once the project is ready, you can download and unpack the [Create PR tool](https://api.imagimob.com/v1/Data/Object/create_pr.zip), then run the following command from within the unpacked directory:
+Once the project is ready, you can download and unpack the [PR tool](https://api.imagimob.com/v1/Data/Object/pr_tool.zip), then run the following command from within the unpacked directory:
 
 ```bash
-python .\create_pr.py --path <project-path>
+python .\pr_tool.py --path <project-path>
 ```
 
 where `<project-path>` is the root path of the starter model project. For more information review the tools' `README.md` file.
