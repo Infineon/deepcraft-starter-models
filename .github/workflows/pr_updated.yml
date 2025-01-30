@@ -7,4 +7,4 @@ on:
 
 jobs:
   start_pipeline:
-    uses: 'Infineon/deepcraft-starter-models/.github/workflows/start_pipeline.yml@22c9c7a7e5ff1ad37dea4635cd8c6c2843c03ce5'
+    uses: 'Infineon/deepcraft-starter-models/.github/workflows/start_pipeline.yml@main'
