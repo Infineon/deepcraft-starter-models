@@ -8,4 +8,4 @@ on:
 jobs:
   start_pipeline:
     if: github.event.review.state == 'approved'
-    uses: 'Infineon/deepcraft-starter-models/.github/workflows/start_pipeline.yml@ee9c56dce718e5d30f35e60a3b1e0ba030b00632'
+    uses: 'Infineon/deepcraft-starter-models/.github/workflows/start_pipeline.yml@765064dd7b3bc5c902bc141ed7332ceee6fee515'
