@@ -34,6 +34,8 @@ This model has been fed with a lot of data to make it more comprehensive. To tak
 
 `Models` - Folder where trained models, their predictions and generated Edge code are saved.
 
+`Tools`  - Folder where additional files and tools can be added.
+
 
 ## How to train models
 
