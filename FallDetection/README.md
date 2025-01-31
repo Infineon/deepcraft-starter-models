@@ -30,11 +30,3 @@ You can check the ModusToolbox™ BSP CEs for different options for model deploy
 `Units`  - Folder where custom layers and pre-processors can be added.
 
 `Models` - Folder where trained models, their predictions and generated Edge code are saved.
-
-## Getting Started
-
-Please visit [developer.imagimob.com](https://developer.imagimob.com), where you can read about Imagimob Studio and go through step-by-step tutorials to get you quickly started.
-
-## Help & Support
-
-If you need support or if you want to know how to deploy the model on to the device, please submit a ticket on the Infineon [community forum ](https://community.infineon.com/t5/Imagimob/bd-p/Imagimob/page/1) Imagimob Studio page.
