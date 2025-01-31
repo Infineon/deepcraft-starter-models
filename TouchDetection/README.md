@@ -60,14 +60,4 @@ You can take the project further in a number of different ways:
 
 `Data` 	- Folder to put your data.
 
-`Units`	- Folder where custom layers and pre-processors can be added
-
 `Models` - Folder where trained models, their predictions and generated Edge code are saved.
-
-`Tools`	- Folder where all extra tools and scripts belonging to the project should be placed. 
-
-`PreprocessorTrack` - Folder where preprocessed data is located
-
-## Getting Started
-
-Please visit [developer.imagimob.com](https://developer.imagimob.com), where you can read about Imagimob Studio and go through step-by-step tutorials to get you quickly started.
