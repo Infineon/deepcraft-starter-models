@@ -139,8 +139,3 @@ Last step is to move to the actual final production setup. The production system
 You may also leverage Deepcraft Studio's Transfer Learning features for fine-tuning the prototype model to production data. This could lead to better results and faster go-to-production times, but the usage of Transfer Learning is recommended only to experienced ML users.
 
 **Note:** All subsequent ML system lifetime monitoring procedures must be defined and implemented by you according to you needs, requirements and targets.
-
-## Help & Support
-
-Please visit [developer.imagimob.com](https://developer.imagimob.com), where you can read about Imagimob AI and go through step-by-step tutorials to get you quickly started.
-If you need additional support or if you want to know how to deploy the model on to the device, please contact us on the following email: [support@imagimob.com](mailto:support@imagimob.com).
