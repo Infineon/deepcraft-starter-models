@@ -2,7 +2,7 @@
 <ImagimobStudio version="0.9">
   <Timeline id="b62024cc-001b-4611-8495-b402f75320ea">
     <Tracks>
-      <Track name="data" type="audiowav">
+      <Track name="data" type="audiowav" isLabelTrack="False">
         <PayloadFile>data.wav</PayloadFile>
       </Track>
       <Track name="label" type="labelcsv">
