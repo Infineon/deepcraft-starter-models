@@ -1,4 +1,0 @@
-Time(Seconds),Length(Seconds),Label(string),Confidence(double),Comment(string)
-3.3,5.33194,wood,0.7285569906234741,
-9.9,12.59194,plastic,0.4575439989566803,Conflict between classes: air and plastic.
-26.07,5.661940000000001,plastic,0.6304839849472046,

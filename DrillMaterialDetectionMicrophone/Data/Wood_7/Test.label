@@ -1,4 +1,0 @@
-Time(Seconds),Length(Seconds),Label(string),Confidence(double),Comment(string)
-1.98,3.3519399999999995,plastic,0.5767670273780823,
-12.54,3.351939999999999,plastic,0.56557297706604,
-18.81,3.3519400000000026,plastic,0.5847910046577454,
