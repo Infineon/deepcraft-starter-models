@@ -1,0 +1,1 @@
+{"title": "Siren Detection (Starter Model)", "description": "This starter model detects if you have different kinds of emergency vehicle sirens in the vicinity", "algorithm": "Classification", "sensors": ["Microphone"]}
