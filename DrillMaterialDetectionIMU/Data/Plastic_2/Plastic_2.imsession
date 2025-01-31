@@ -2,8 +2,8 @@
 <ImagimobStudio version="0.9">
   <Timeline id="c68121a1-b85d-4455-a43a-dc362ba20e43">
     <Tracks>
-      <Track name="Microphone" type="audiowav" isLabelTrack="False">
-        <PayloadFile>Microphone.wav</PayloadFile>
+      <Track name="IMU" type="datacsv" isLabelTrack="False">
+        <PayloadFile>IMU.data</PayloadFile>
       </Track>
       <Track name="Live Labeling" type="labelcsv">
         <PayloadFile>Live-Labeling.label</PayloadFile>
