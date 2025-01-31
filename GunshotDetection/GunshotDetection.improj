@@ -2,7 +2,7 @@
 <ImagimobStudio version="1.1.0">
   <Job id="7ce5fef3-dfb5-11ef-914a-afc875009f2c" />
   <UnitLibrary>
-    <Directory>Tools/AddConstant</Directory>
+    <Directory>Units/AddConstant</Directory>
   </UnitLibrary>
   <Preprocessor inshape="[1]" intype="Float32" infreq="48000" outshape="[80,80]" outtype="Float32">
     <Unit id="Core.Queues.SlidingWindow">
