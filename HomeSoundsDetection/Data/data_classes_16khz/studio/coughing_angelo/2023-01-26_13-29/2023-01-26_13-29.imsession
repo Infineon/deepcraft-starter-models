@@ -8,11 +8,8 @@
       <Track name="data" type="audiowav" isLabelTrack="False" frequency="0">
         <PayloadFile>data.wav</PayloadFile>
       </Track>
-      <Track name="Angelo_cough" type="audiowav" isLabelTrack="False">
+      <Track name="Angelo_cough" type="audiowav" isLabelTrack="False" frequency="0">
         <PayloadFile>Angelo_cough.wav</PayloadFile>
-      </Track>
-      <Track name="label_0" type="labelcsv">
-        <PayloadFile>label_0.label</PayloadFile>
       </Track>
     </Tracks>
   </Timeline>
