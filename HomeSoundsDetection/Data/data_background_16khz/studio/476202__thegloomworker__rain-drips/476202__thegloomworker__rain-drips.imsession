@@ -5,20 +5,11 @@
       <Track name="label" type="labelcsv">
         <PayloadFile>label.label</PayloadFile>
       </Track>
-      <Track name="data" type="audiowav">
+      <Track name="data" type="audiowav" isLabelTrack="False" frequency="0">
         <PayloadFile>data.wav</PayloadFile>
       </Track>
-      <Track name="evenkern_2dconv_few_filters_big_revcone_5p0" type="datacsv">
-        <PayloadFile TrackType="Prediction">../../../../iter_1p5_16khz_5p0_nonClass_rand_rec_classes_augVol_moreData/big_revcone/Predictions/sessions/476202__thegloomworker__rain-drips/evenkern_2dconv_few_filters_big_revcone.data</PayloadFile>
-        <Offset unit="seconds">1.9130000000E+000</Offset>
-      </Track>
-      <Track name="evenkern_2dconv_few_filters_big_revcone_5p1" type="datacsv">
-        <PayloadFile TrackType="Prediction">../../../../iter_1p5_16khz_5p1_nonClass_rand_rec_classes_augVol_moreDataKSprep/big_revcone/Predictions/sessions/476202__thegloomworker__rain-drips/evenkern_2dconv_few_filters_big_revcone.data</PayloadFile>
-        <Offset unit="seconds">6.2200000000E-001</Offset>
-      </Track>
-      <Track name="evenkern_2dconv_few_filters_revcone_5p2" type="datacsv">
-        <PayloadFile TrackType="Prediction">../../../../iter_1p5_16khz_5p2_nonClass_rand_rec_classes_augVol_moreDataKSprep/revcone/Predictions/sessions/476202__thegloomworker__rain-drips/evenkern_2dconv_few_filters_revcone.data</PayloadFile>
-        <Offset unit="seconds">6.2200000000E-001</Offset>
+      <Track name="label_0" type="labelcsv">
+        <PayloadFile>label_0.label</PayloadFile>
       </Track>
     </Tracks>
   </Timeline>

@@ -5,8 +5,11 @@
       <Track name="label" type="labelcsv">
         <PayloadFile>label.label</PayloadFile>
       </Track>
-      <Track name="data" type="audiowav">
+      <Track name="data" type="audiowav" isLabelTrack="False" frequency="0">
         <PayloadFile>data.wav</PayloadFile>
+      </Track>
+      <Track name="label_0" type="labelcsv">
+        <PayloadFile>label_0.label</PayloadFile>
       </Track>
     </Tracks>
   </Timeline>
