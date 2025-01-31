@@ -79,13 +79,3 @@ The folders train_set, validation_set, and test_set contain:
 `Models` - Folder where trained models, their predictions and generated Edge code are saved. The folder includes also GradCam results for each session, which provide visual explanations of the model's predictions. For more information about GradCam, you can refer to the following [link](https://keras.io/examples/vision/grad_cam/).
 
 `PreprocessorTrack` - Folder where preprocessed data is located
-
-## Getting Started
-
-Please visit [developer.imagimob.com](https://developer.imagimob.com), where you can read about Imagimob Studio and go through step-by-step tutorials to get you quickly started.
-
-## Help & Support
-
-If you need support or if you want to know how to deploy the model on to the device, please contact us on the following email: [support@imagimob.com](mailto:support@imagimob.com).
-
-You can also access the Infineon [community forum ](https://community.infineon.com/t5/Imagimob/bd-p/Imagimob/page/1) Imagimob Studio page and ask your questions.
