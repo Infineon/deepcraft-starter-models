@@ -3,6 +3,8 @@ This repository contains DEEPCRAFT™ Starter Models - deep learning based proje
 
 This repository is automatically pulled and content is generated in DEEPCRAFT™ Studio. For the best experience, access these models through DEEPCRAFT™ Studio.
 
+For commercial use, our standard terms and conditions applies, https://developer.imagimob.com/legal/studio-terms-and-conditions.
+
 ## Usage
 These projects are designed to be used through DEEPCRAFT™ Studio (https://www.imagimob.com/studio) and should be accessed through that platform.
 
