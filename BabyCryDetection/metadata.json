@@ -1,1 +1,1 @@
-{"title": "Baby Cry Detection (Starter Model)", "description": "This model uses a microphone to detect if a baby is crying in the vicinity", "algorithm": "Classification", "sensors": ["Microphone"]}
+{"title": "Baby Cry Detection using Mic", "description": "Detect different kinds of baby cries", "algorithm": "Classification", "sensors": ["Microphone"]}
