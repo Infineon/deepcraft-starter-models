@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="1.1.0">
+  <Job id="b622cc36-37a1-4a49-a3e7-d0309c229c31" />
+  <ModelFactory>
+    <Stateful>False</Stateful>
+    <HyperParams>8</HyperParams>
+    <ModelStructures>2</ModelStructures>
+    <Epochs>250</Epochs>
+    <BatchSize>128</BatchSize>
+    <SplitCount>16</SplitCount>
+    <Patience>20</Patience>
+    <ModelType>Classification</ModelType>
+    <AppendModels>False</AppendModels>
+    <LossFunction>CategoricalCrossentropy</LossFunction>
+    <FactoryOptions>None</FactoryOptions>
+    <HardwareType>Default</HardwareType>
+    <TrainingEnvironment>
+    </TrainingEnvironment>
+    <MaxCountOfConvolutionLayers>4</MaxCountOfConvolutionLayers>
+    <MinCountOfConvolutionLayers>2</MinCountOfConvolutionLayers>
+    <MaxCountOfRecurrentLayers>3</MaxCountOfRecurrentLayers>
+    <MinCountOfRecurrentLayers>0</MinCountOfRecurrentLayers>
+    <MaxCountOfDenseLayers>3</MaxCountOfDenseLayers>
+    <MinCountOfDenseLayers>1</MinCountOfDenseLayers>
+    <UseMaxPoolingLayers>True</UseMaxPoolingLayers>
+    <UseDroupoutLayers>True</UseDroupoutLayers>
+    <SeedForRandom>42</SeedForRandom>
+    <Optimizer>
+      <LearningRate>0.05</LearningRate>
+      <WeightDecay>0.005</WeightDecay>
+    </Optimizer>
+    <BuildSteps>
+      <Training />
+      <ConfusionMatrix />
+    </BuildSteps>
+  </ModelFactory>
+  <Database balance="AnnotatedLength" redistributionScope="Everything">
+    <SymbolMap>
+      <Symbol name="cough" id="1" weight="1" />
+    </SymbolMap>
+    <DataSet id="unassigned" targetSize="0" labels="Unassigned">
+      <Segment name="coughconcat17" sessionId="be2a9488-84d5-4628-80b4-3772bfb5f80c" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile ndim="1" samplerate="16000" modified="5249818000047387904" start="0" length="68.4">/coughconcat17/data.wav</DataFile>
+        <SessionFile>/coughconcat17/coughconcat17.imsession</SessionFile>
+        <LabelFile modified="5249818629507387904">/coughconcat17/label.label</LabelFile>
+        <Labels>
+          <Label count="8" length="6.509">cough</Label>
+        </Labels>
+      </Segment>
+      <Segment name="coughconcat18" sessionId="715df0b7-2bb4-43bb-80ff-df278ac97943" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile ndim="1" samplerate="16000" modified="5249818000047387904" start="0" length="63.54">/coughconcat18/data.wav</DataFile>
+        <SessionFile>/coughconcat18/coughconcat18.imsession</SessionFile>
+        <LabelFile modified="5249818631207387904">/coughconcat18/label.label</LabelFile>
+        <Labels>
+          <Label count="7" length="6.812">cough</Label>
+        </Labels>
+      </Segment>
+      <Segment name="coughconcat19" sessionId="5b3c5244-4a0a-464c-8ec3-e98ebbaddacf" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile ndim="1" samplerate="16000" modified="5249818000047387904" start="0" length="66.6">/coughconcat19/data.wav</DataFile>
+        <SessionFile>/coughconcat19/coughconcat19.imsession</SessionFile>
+        <LabelFile modified="5249818634087387904">/coughconcat19/label.label</LabelFile>
+        <Labels>
+          <Label count="19" length="11.102">cough</Label>
+        </Labels>
+      </Segment>
+      <Segment name="coughconcat20" sessionId="5d06c4de-3a46-46d8-a5a7-6de1b872d1f1" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile ndim="1" samplerate="16000" modified="5249818000047387904" start="0" length="66.7933125">/coughconcat20/data.wav</DataFile>
+        <SessionFile>/coughconcat20/coughconcat20.imsession</SessionFile>
+        <LabelFile modified="5249818636267387904">/coughconcat20/label.label</LabelFile>
+        <Labels>
+          <Label count="14" length="8.85">cough</Label>
+        </Labels>
+      </Segment>
+      <Segment name="coughconcat21" sessionId="a6647259-59de-4a87-9dfe-eca62e21408c" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile ndim="1" samplerate="16000" modified="5249818000047387904" start="0" length="66.72">/coughconcat21/data.wav</DataFile>
+        <SessionFile>/coughconcat21/coughconcat21.imsession</SessionFile>
+        <LabelFile modified="5249818638147387904">/coughconcat21/label.label</LabelFile>
+        <Labels>
+          <Label count="10" length="9.373">cough</Label>
+        </Labels>
+      </Segment>
+      <Segment name="coughconcat22" sessionId="3e7ad011-c7e6-4070-9eb0-18ae477c0011" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile ndim="1" samplerate="16000" modified="5249818000047387904" start="0" length="61.08">/coughconcat22/data.wav</DataFile>
+        <SessionFile>/coughconcat22/coughconcat22.imsession</SessionFile>
+        <LabelFile modified="5249818639827387904">/coughconcat22/label.label</LabelFile>
+        <Labels>
+          <Label count="8" length="6.894">cough</Label>
+        </Labels>
+      </Segment>
+      <Segment name="coughconcat23" sessionId="d47beba1-486a-47fb-8e6f-d043b47ce3b5" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile ndim="1" samplerate="16000" modified="5249818000047387904" start="0" length="67.2786875">/coughconcat23/data.wav</DataFile>
+        <SessionFile>/coughconcat23/coughconcat23.imsession</SessionFile>
+        <LabelFile modified="5249818642387387904">/coughconcat23/label.label</LabelFile>
+        <Labels>
+          <Label count="14" length="10.132">cough</Label>
+        </Labels>
+      </Segment>
+      <Segment name="coughconcat24" sessionId="295496b2-e480-4c6e-be3d-f48867378cb1" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile ndim="1" samplerate="16000" modified="5249818000067387904" start="0" length="65.52">/coughconcat24/data.wav</DataFile>
+        <SessionFile>/coughconcat24/coughconcat24.imsession</SessionFile>
+        <LabelFile modified="5249818645367387904">/coughconcat24/label.label</LabelFile>
+        <Labels>
+          <Label count="14" length="8.635">cough</Label>
+        </Labels>
+      </Segment>
+      <Segment name="coughconcat25" sessionId="13af2cd1-df97-4a03-8e9d-1671fcaeff0a" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile ndim="1" samplerate="16000" modified="5249818000067387904" start="0" length="67.56">/coughconcat25/data.wav</DataFile>
+        <SessionFile>/coughconcat25/coughconcat25.imsession</SessionFile>
+        <LabelFile modified="5249818656967387904">/coughconcat25/label.label</LabelFile>
+        <Labels>
+          <Label count="13" length="9.035">cough</Label>
+        </Labels>
+      </Segment>
+      <Segment name="coughconcat26" sessionId="a3457ba3-f135-44c4-aabb-4336b46158bb" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile ndim="1" samplerate="16000" modified="5249818000067387904" start="0" length="69.18">/coughconcat26/data.wav</DataFile>
+        <SessionFile>/coughconcat26/coughconcat26.imsession</SessionFile>
+        <LabelFile modified="5249818660567387904">/coughconcat26/label.label</LabelFile>
+        <Labels>
+          <Label count="13" length="10.54">cough</Label>
+        </Labels>
+      </Segment>
+      <Segment name="coughconcat27" sessionId="bebe330c-e71d-46b3-ab97-8783fd391740" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile ndim="1" samplerate="16000" modified="5249818000067387904" start="0" length="61.8">/coughconcat27/data.wav</DataFile>
+        <SessionFile>/coughconcat27/coughconcat27.imsession</SessionFile>
+        <LabelFile modified="5249818662107387904">/coughconcat27/label.label</LabelFile>
+        <Labels>
+          <Label count="8" length="8.954">cough</Label>
+        </Labels>
+      </Segment>
+      <Segment name="coughconcat28" sessionId="ccfdbbea-bda2-4e88-abd2-9db8cd2696fc" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile ndim="1" samplerate="16000" modified="5249818000067387904" start="0" length="68.4">/coughconcat28/data.wav</DataFile>
+        <SessionFile>/coughconcat28/coughconcat28.imsession</SessionFile>
+        <LabelFile modified="5249818665607387904">/coughconcat28/label.label</LabelFile>
+        <Labels>
+          <Label count="14" length="12.056">cough</Label>
+        </Labels>
+      </Segment>
+      <Segment name="coughconcat29" sessionId="6f5fd6c6-b49b-4cf1-9ef3-d25739d06796" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile ndim="1" samplerate="16000" modified="5249818000067387904" start="0" length="60.36">/coughconcat29/data.wav</DataFile>
+        <SessionFile>/coughconcat29/coughconcat29.imsession</SessionFile>
+        <LabelFile modified="5249818667387387904">/coughconcat29/label.label</LabelFile>
+        <Labels>
+          <Label count="12" length="8.958">cough</Label>
+        </Labels>
+      </Segment>
+      <Segment name="coughconcat30" sessionId="3e16e237-72cb-40ba-963d-57b9b260ce31" ownerLocked="False" labelTrack="label" dataTrack="data" tags="None">
+        <DataFile ndim="1" samplerate="16000" modified="5249818000067387904" start="0" length="64.44">/coughconcat30/data.wav</DataFile>
+        <SessionFile>/coughconcat30/coughconcat30.imsession</SessionFile>
+        <LabelFile modified="5249818669387387904">/coughconcat30/label.label</LabelFile>
+        <Labels>
+          <Label count="11" length="10.971">cough</Label>
+        </Labels>
+      </Segment>
+    </DataSet>
+    <DataSet id="train" targetSize="0.6" labels="Complete" />
+    <DataSet id="validation" targetSize="0.2" labels="Complete" />
+    <DataSet id="test" targetSize="0.2" labels="Complete" />
+  </Database>
+</ImagimobStudio>
