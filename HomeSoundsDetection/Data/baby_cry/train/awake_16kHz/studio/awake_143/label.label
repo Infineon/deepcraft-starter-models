@@ -1,0 +1,4 @@
+﻿Time(Seconds),Length(Seconds),Label(string),Confidence(double),Comment(string)
+4.685,2.06230192719486,baby_cry,1,
+8.53816494914347,1.87539862152034,baby_cry,1,
+11.337,3.12875020074947,baby_cry,1,

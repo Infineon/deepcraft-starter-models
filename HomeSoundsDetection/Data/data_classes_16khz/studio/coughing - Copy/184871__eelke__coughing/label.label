@@ -1,0 +1,5 @@
+﻿Time(Seconds),Length(Seconds),Label(string),Confidence(double),Comment(string)
+0.128,1.14216021571998,cough,1,
+3.356,1.25067057497697,cough,1,
+6.618,1.10340651598534,cough,1,
+10.055,1.2041661352954,cough,1,
