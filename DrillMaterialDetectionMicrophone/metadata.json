@@ -1,0 +1,1 @@
+{"title": "Drill Material Detection Audio", "description": "A starter model which detects material being drilled into using audio signature", "algorithm": "Classification", "sensors": ["Microphone"]}
