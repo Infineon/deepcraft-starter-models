@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="2e576e4c-dc4f-4453-bba8-238a919c07ea">
+    <Tracks>
+      <Track name="data" type="audiowav" isLabelTrack="False" frequency="0">
+        <PayloadFile>data.wav</PayloadFile>
+      </Track>
+      <Track name="label" type="labelcsv">
+        <PayloadFile>label.label</PayloadFile>
+      </Track>
+      <Track name="Preprocessor" type="datacsv" timecoded="TimestampBeginDuration" isLabelTrack="False">
+        <PayloadFile>..\..\..\..\PreprocessorTrack\train_set\baby_cry\baby_cry_4535\data_Preprocessor.data</PayloadFile>
+      </Track>
+      <Track name="preprocessed_label" type="datacsv" isLabelTrack="False">
+        <PayloadFile>..\..\..\..\Models\conv2d-medium-speed-2\Predictions\sessions\baby_cry_4535\preprocessed_label.data</PayloadFile>
+        <Offset unit="seconds">6.2193750000E-001</Offset>
+      </Track>
+      <Track name="conv2d-medium-speed-20" type="datacsv" timecoded="TimestampBeginDuration" isLabelTrack="False">
+        <PayloadFile>..\..\..\..\Models\conv2d-medium-speed-2\Predictions\sessions\baby_cry_4535\conv2d-medium-speed-20.data</PayloadFile>
+        <Offset unit="seconds">6.2193750000E-001</Offset>
+      </Track>
+      <Track name="conv2d-medium-speed-2_grad" type="videomp4">
+        <PayloadFile>..\..\..\..\Models\conv2d-medium-speed-2\Predictions\sessions\baby_cry_4535\conv2d-medium-speed-2_grad.mp4</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

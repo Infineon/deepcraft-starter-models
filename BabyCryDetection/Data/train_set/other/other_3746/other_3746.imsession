@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="d07bf606-b64a-454c-8701-131cbdfd28d7">
+    <Tracks>
+      <Track name="data" type="audiowav" isLabelTrack="False" frequency="0">
+        <PayloadFile>data.wav</PayloadFile>
+      </Track>
+      <Track name="label" type="labelcsv">
+        <PayloadFile>label.label</PayloadFile>
+      </Track>
+      <Track name="Preprocessor" type="datacsv" timecoded="TimestampBeginDuration" isLabelTrack="False">
+        <PayloadFile>..\..\..\..\PreprocessorTrack\train_set\other\other_3746\data_Preprocessor.data</PayloadFile>
+      </Track>
+      <Track name="preprocessed_label" type="datacsv" isLabelTrack="False">
+        <PayloadFile>..\..\..\..\Models\conv2d-medium-speed-2\Predictions\sessions\other_3746\preprocessed_label.data</PayloadFile>
+        <Offset unit="seconds">6.2193750000E-001</Offset>
+      </Track>
+      <Track name="conv2d-medium-speed-20" type="datacsv" timecoded="TimestampBeginDuration" isLabelTrack="False">
+        <PayloadFile>..\..\..\..\Models\conv2d-medium-speed-2\Predictions\sessions\other_3746\conv2d-medium-speed-20.data</PayloadFile>
+        <Offset unit="seconds">6.2193750000E-001</Offset>
+      </Track>
+      <Track name="conv2d-medium-speed-2_grad" type="videomp4">
+        <PayloadFile>..\..\..\..\Models\conv2d-medium-speed-2\Predictions\sessions\other_3746\conv2d-medium-speed-2_grad.mp4</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>
