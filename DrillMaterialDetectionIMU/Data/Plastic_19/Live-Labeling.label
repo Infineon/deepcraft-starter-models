@@ -1,0 +1,8 @@
+Time(Seconds),Length(Seconds),Label(string),Confidence(double),Comment(string)
+1.7345547,4.2406805,plastic,1,
+6.9201289,0.4629976,plastic_out,1,
+8.32802,3.1559432,plastic,1,
+12.0320012,0.9070974,plastic_out,1,
+13.998708299999999,2.8660699,plastic,1,
+17.7361856,2.8933139,plastic,1,
+21.2013873,0.2258776,plastic_out,1,
