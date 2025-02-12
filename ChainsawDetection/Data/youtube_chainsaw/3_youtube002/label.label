@@ -1,0 +1,4 @@
+﻿Time(Seconds),Length(Seconds),Label(string),Confidence(double),Comment(string)
+0.0444179104477633,87.4026417910448,cut,1,
+108.069807080597,7.36567164179104,cut,1,
+118.244808113433,18.4704776119403,cut,1,
