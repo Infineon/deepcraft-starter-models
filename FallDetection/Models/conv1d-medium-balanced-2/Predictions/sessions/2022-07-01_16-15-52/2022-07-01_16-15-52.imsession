@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ImagimobStudio>
+  <Timeline id="eb51a56a-386b-4667-9bd0-2ab0dfae2bbe">
+    <Tracks>
+      <Track name="conv1d-medium-balanced-20" type="datacsv" timecoded="TimestampBeginDuration">
+        <PayloadFile TrackType="Prediction">conv1d-medium-balanced-20.data</PayloadFile>
+        <Offset unit="seconds">1.189288</Offset>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

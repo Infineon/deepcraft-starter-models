@@ -1,0 +1,1 @@
+{"title": "Fall Detection (Belt-mounted)", "description": "This starter model detects if the user has fallen, it's intended to be placed on a belt or waist", "algorithm": "Classification", "sensors": ["IMU"]}
