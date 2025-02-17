@@ -1,8 +1,22 @@
 name: Start Pipeline
 
 on:
-  workflow_call:
   workflow_dispatch:
+    inputs:
+      user:
+        description: 'PR User'
+        required: true
+      branch:
+        description: 'PR Branch'
+        required: true
+  workflow_call:
+    inputs:
+      user:
+        type: string
+        required: true
+      branch:
+        type: string
+        required: true
 
 jobs:
   start_pipeline:
@@ -15,16 +29,19 @@ jobs:
         name: Start Pipeline
         env:
           STARTER_MODELS_PIPELINE_TOKEN: ${{ secrets.STARTER_MODELS_PIPELINE_TOKEN }}
-          PR_HEAD: ${{ toJson(github.event.pull_request.head) }}
+          PR_USER: ${{ github.event.inputs.user }}
+          PR_BRANCH: ${{ github.event.inputs.branch }}
         with:
           script: |
             import json
             import os
             import requests
+            
             token = os.environ['STARTER_MODELS_PIPELINE_TOKEN']
             if not token:
                 raise Exception('Token is missing')
-            pr_head = json.loads(os.environ['PR_HEAD'])
+            user = os.environ['PR_USER']
+            branch = os.environ['PR_BRANCH']
             response = requests.post(
                 url='https://api.bitbucket.org/2.0/repositories/Imagimob/_starter-projects-pipeline/pipelines',
                 headers={
@@ -32,7 +49,7 @@ jobs:
                     'Content-Type': 'application/json',
                     'Accept': 'application/json',
                 },
-                json = {
+                json={
                     'target': {
                         'type': 'pipeline_ref_target',
                         'ref_type': 'branch',
@@ -46,8 +63,8 @@ jobs:
                         {
                             'key': 'PIPELINE',
                             'value': json.dumps({
-                                'repo_url': pr_head['repo']['clone_url'],
-                                'branch': pr_head['ref'],
+                                'repo_owner': user,
+                                'branch': branch,
                             }),
                         },
                     ],

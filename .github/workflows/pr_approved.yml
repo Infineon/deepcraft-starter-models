@@ -9,3 +9,6 @@ jobs:
   start_pipeline:
     if: github.event.review.state == 'approved'
     uses: 'Infineon/deepcraft-starter-models/.github/workflows/start_pipeline.yml@main'
+    with:
+      user: ${{ github.event.review.pull_request.head.user }}
+      branch: ${{ github.event.review.pull_request.head.ref }}
