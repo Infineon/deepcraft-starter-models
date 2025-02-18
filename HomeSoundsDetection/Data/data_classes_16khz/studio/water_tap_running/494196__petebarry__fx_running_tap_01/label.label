@@ -1,0 +1,3 @@
+﻿Time(Seconds),Length(Seconds),Label(string),Confidence(double),Comment(string)
+0.043,11.2232846504401,water_tap,0.974980115890503,
+13.326,4.5264824359448,water_tap,0.913314461708069,
