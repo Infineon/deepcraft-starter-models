@@ -1,0 +1,1 @@
+{"title": "Home Sounds Detection", "description": "This starter model detects sound signatures common to a home.", "algorithm": "Classification", "sensors": ["Microphone"]}
