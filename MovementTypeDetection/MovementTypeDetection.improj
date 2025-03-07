@@ -1,0 +1,799 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="1.1.0">
+  <Job id="93d1eefd-fb3c-11ef-97a7-d7a379fdecd5" />
+  <Preprocessor inshape="[2,3]" intype="Float32" infreq="50" outshape="[50,6]" outtype="Float32">
+    <Unit id="Core.Packages.ContextualWindow">
+      <Argument param="contextual_length_sec" type="Double">1</Argument>
+      <Argument param="prediction_freq" type="Double">5</Argument>
+      <Argument param="input" type="String">data</Argument>
+      <Argument param="time_input" type="String">time</Argument>
+      <Argument param="output" type="String">data</Argument>
+      <Argument param="time_output" type="String">time</Argument>
+    </Unit>
+  </Preprocessor>
+  <ModelFactory>
+    <Epochs>100</Epochs>
+    <BatchSize>16</BatchSize>
+    <SplitCount>16</SplitCount>
+    <Patience>20</Patience>
+    <AppendModels>False</AppendModels>
+    <LossFunction>CategoricalCrossentropy</LossFunction>
+    <FactoryOptions>None</FactoryOptions>
+    <HardwareType>Default</HardwareType>
+    <TrainingEnvironment>
+    </TrainingEnvironment>
+    <ModelFamily>Conv1DLSTM</ModelFamily>
+    <ModelFlavor>SmallKern</ModelFlavor>
+    <ClassifierType>GlobalAveragePool</ClassifierType>
+    <Optimization>Speed</Optimization>
+    <Pooling>True</Pooling>
+    <Downscale>False</Downscale>
+    <LearnRate>Mid</LearnRate>
+    <RegularizationFactor>Low</RegularizationFactor>
+    <LastNetworkInputShape>[50,6]</LastNetworkInputShape>
+    <Optimizer>
+      <LearningRate>0.001</LearningRate>
+      <WeightDecay>0.0001</WeightDecay>
+    </Optimizer>
+    <BuildSteps>
+      <Training />
+      <ConfusionMatrix />
+    </BuildSteps>
+  </ModelFactory>
+  <Models>
+    <Model name="conv1dlstm-large-speed-0" id="8a1ff3d4-0e5d-4d23-a5b6-b1f790a67c99">
+      <LossFunction>CategoricalCrossentropy</LossFunction>
+      <Epochs>100</Epochs>
+      <BatchSize>16</BatchSize>
+      <SplitCount>16</SplitCount>
+      <Patience>20</Patience>
+      <TrainingEnvironment>
+      </TrainingEnvironment>
+      <Optimizer>
+        <LearningRate>0.004</LearningRate>
+        <WeightDecay>0.0001</WeightDecay>
+      </Optimizer>
+      <Network inshape="[50,6]" intype="Float32" infreq="0" outshape="[3]" outtype="Float32">
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">16</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">2</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">16</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">2</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.BatchNormalization">
+          <Argument param="epsilon" type="Double">0.001</Argument>
+          <Argument param="axis" type="Int32">-1</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">relu</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">32</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">32</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">32</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.BatchNormalization">
+          <Argument param="epsilon" type="Double">0.001</Argument>
+          <Argument param="axis" type="Int32">-1</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">relu</Argument>
+        </Unit>
+        <Unit id="Core.Layers.MaxPool1D">
+          <Argument param="pool_size" type="Int32">2</Argument>
+          <Argument param="strides" type="Int32">2</Argument>
+          <Argument param="padding" type="String">valid</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">32</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">32</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.BatchNormalization">
+          <Argument param="epsilon" type="Double">0.001</Argument>
+          <Argument param="axis" type="Int32">-1</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">relu</Argument>
+        </Unit>
+        <Unit id="Core.Layers.MaxPool1D">
+          <Argument param="pool_size" type="Int32">2</Argument>
+          <Argument param="strides" type="Int32">2</Argument>
+          <Argument param="padding" type="String">valid</Argument>
+        </Unit>
+        <Unit id="Core.Layers.LSTM">
+          <Argument param="units" type="Int32">32</Argument>
+          <Argument param="activation" type="String">tanh</Argument>
+          <Argument param="recurrent_activation" type="String">sigmoid</Argument>
+          <Argument param="use_bias" type="Boolean">True</Argument>
+          <Argument param="return_sequences" type="Boolean">True</Argument>
+          <Argument param="return_state" type="Boolean">False</Argument>
+          <Argument param="stateful" type="Boolean">False</Argument>
+          <Argument param="go_backwards" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.GlobalAveragePool1D" />
+        <Unit id="Core.Layers.Dense">
+          <Argument param="units" type="Int32">3</Argument>
+          <Argument param="use_bias" type="Boolean">True</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">softmax</Argument>
+        </Unit>
+      </Network>
+      <BuildSteps>
+        <Training />
+        <ConfusionMatrix />
+      </BuildSteps>
+      <SymbolWeights override="False">
+        <SymbolWeight symbol="circle" weight="1" />
+        <SymbolWeight symbol="shaking" weight="1" />
+      </SymbolWeights>
+      <Preprocessor override="False" inshape="[2,3]" intype="Float32" infreq="50" outshape="[50,6]" outtype="Float32">
+        <Unit id="Core.Packages.ContextualWindow">
+          <Argument param="contextual_length_sec" type="Double">1</Argument>
+          <Argument param="prediction_freq" type="Double">5</Argument>
+          <Argument param="input" type="String">data</Argument>
+          <Argument param="time_input" type="String">time</Argument>
+          <Argument param="output" type="String">data</Argument>
+          <Argument param="time_output" type="String">time</Argument>
+        </Unit>
+      </Preprocessor>
+      <Postprocessor override="False" inshape="[128,3]" intype="Float32" infreq="1" outshape="[128,3]" outtype="Float32" />
+    </Model>
+    <Model name="conv1dlstm-large-speed-1" id="a1615354-6755-4492-9856-672c36ad3990">
+      <LossFunction>CategoricalCrossentropy</LossFunction>
+      <Epochs>100</Epochs>
+      <BatchSize>16</BatchSize>
+      <SplitCount>16</SplitCount>
+      <Patience>20</Patience>
+      <TrainingEnvironment>
+      </TrainingEnvironment>
+      <Optimizer>
+        <LearningRate>0.004</LearningRate>
+        <WeightDecay>0.0001</WeightDecay>
+      </Optimizer>
+      <Network inshape="[50,6]" intype="Float32" infreq="0" outshape="[3]" outtype="Float32">
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">32</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">2</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">32</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">2</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.BatchNormalization">
+          <Argument param="epsilon" type="Double">0.001</Argument>
+          <Argument param="axis" type="Int32">-1</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">relu</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">48</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">48</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">48</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.BatchNormalization">
+          <Argument param="epsilon" type="Double">0.001</Argument>
+          <Argument param="axis" type="Int32">-1</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">relu</Argument>
+        </Unit>
+        <Unit id="Core.Layers.MaxPool1D">
+          <Argument param="pool_size" type="Int32">2</Argument>
+          <Argument param="strides" type="Int32">2</Argument>
+          <Argument param="padding" type="String">valid</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">48</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">48</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.BatchNormalization">
+          <Argument param="epsilon" type="Double">0.001</Argument>
+          <Argument param="axis" type="Int32">-1</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">relu</Argument>
+        </Unit>
+        <Unit id="Core.Layers.MaxPool1D">
+          <Argument param="pool_size" type="Int32">2</Argument>
+          <Argument param="strides" type="Int32">2</Argument>
+          <Argument param="padding" type="String">valid</Argument>
+        </Unit>
+        <Unit id="Core.Layers.LSTM">
+          <Argument param="units" type="Int32">64</Argument>
+          <Argument param="activation" type="String">tanh</Argument>
+          <Argument param="recurrent_activation" type="String">sigmoid</Argument>
+          <Argument param="use_bias" type="Boolean">True</Argument>
+          <Argument param="return_sequences" type="Boolean">True</Argument>
+          <Argument param="return_state" type="Boolean">False</Argument>
+          <Argument param="stateful" type="Boolean">False</Argument>
+          <Argument param="go_backwards" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.GlobalAveragePool1D" />
+        <Unit id="Core.Layers.Dense">
+          <Argument param="units" type="Int32">3</Argument>
+          <Argument param="use_bias" type="Boolean">True</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">softmax</Argument>
+        </Unit>
+      </Network>
+      <BuildSteps>
+        <Training />
+        <ConfusionMatrix />
+      </BuildSteps>
+      <SymbolWeights override="False">
+        <SymbolWeight symbol="circle" weight="1" />
+        <SymbolWeight symbol="shaking" weight="1" />
+      </SymbolWeights>
+      <Preprocessor override="False" inshape="[2,3]" intype="Float32" infreq="50" outshape="[50,6]" outtype="Float32">
+        <Unit id="Core.Packages.ContextualWindow">
+          <Argument param="contextual_length_sec" type="Double">1</Argument>
+          <Argument param="prediction_freq" type="Double">5</Argument>
+          <Argument param="input" type="String">data</Argument>
+          <Argument param="time_input" type="String">time</Argument>
+          <Argument param="output" type="String">data</Argument>
+          <Argument param="time_output" type="String">time</Argument>
+        </Unit>
+      </Preprocessor>
+      <Postprocessor override="False" inshape="[128,3]" intype="Float32" infreq="1" outshape="[128,3]" outtype="Float32" />
+    </Model>
+    <Model name="conv1dlstm-large-speed-2" id="2d7ec122-7dba-4ee5-ab21-f66ba42928e8">
+      <LossFunction>CategoricalCrossentropy</LossFunction>
+      <Epochs>100</Epochs>
+      <BatchSize>16</BatchSize>
+      <SplitCount>16</SplitCount>
+      <Patience>20</Patience>
+      <TrainingEnvironment>
+      </TrainingEnvironment>
+      <Optimizer>
+        <LearningRate>0.004</LearningRate>
+        <WeightDecay>0.0001</WeightDecay>
+      </Optimizer>
+      <Network inshape="[50,6]" intype="Float32" infreq="0" outshape="[3]" outtype="Float32">
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">16</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">16</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">16</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.BatchNormalization">
+          <Argument param="epsilon" type="Double">0.001</Argument>
+          <Argument param="axis" type="Int32">-1</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">relu</Argument>
+        </Unit>
+        <Unit id="Core.Layers.MaxPool1D">
+          <Argument param="pool_size" type="Int32">2</Argument>
+          <Argument param="strides" type="Int32">2</Argument>
+          <Argument param="padding" type="String">valid</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">32</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">32</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.BatchNormalization">
+          <Argument param="epsilon" type="Double">0.001</Argument>
+          <Argument param="axis" type="Int32">-1</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">relu</Argument>
+        </Unit>
+        <Unit id="Core.Layers.MaxPool1D">
+          <Argument param="pool_size" type="Int32">2</Argument>
+          <Argument param="strides" type="Int32">2</Argument>
+          <Argument param="padding" type="String">valid</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">32</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">32</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.BatchNormalization">
+          <Argument param="epsilon" type="Double">0.001</Argument>
+          <Argument param="axis" type="Int32">-1</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">relu</Argument>
+        </Unit>
+        <Unit id="Core.Layers.MaxPool1D">
+          <Argument param="pool_size" type="Int32">2</Argument>
+          <Argument param="strides" type="Int32">2</Argument>
+          <Argument param="padding" type="String">valid</Argument>
+        </Unit>
+        <Unit id="Core.Layers.LSTM">
+          <Argument param="units" type="Int32">32</Argument>
+          <Argument param="activation" type="String">tanh</Argument>
+          <Argument param="recurrent_activation" type="String">sigmoid</Argument>
+          <Argument param="use_bias" type="Boolean">True</Argument>
+          <Argument param="return_sequences" type="Boolean">True</Argument>
+          <Argument param="return_state" type="Boolean">False</Argument>
+          <Argument param="stateful" type="Boolean">False</Argument>
+          <Argument param="go_backwards" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.GlobalAveragePool1D" />
+        <Unit id="Core.Layers.Dense">
+          <Argument param="units" type="Int32">3</Argument>
+          <Argument param="use_bias" type="Boolean">True</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">softmax</Argument>
+        </Unit>
+      </Network>
+      <BuildSteps>
+        <Training />
+        <ConfusionMatrix />
+      </BuildSteps>
+      <SymbolWeights override="False">
+        <SymbolWeight symbol="circle" weight="1" />
+        <SymbolWeight symbol="shaking" weight="1" />
+      </SymbolWeights>
+      <Preprocessor override="False" inshape="[2,3]" intype="Float32" infreq="50" outshape="[50,6]" outtype="Float32">
+        <Unit id="Core.Packages.ContextualWindow">
+          <Argument param="contextual_length_sec" type="Double">1</Argument>
+          <Argument param="prediction_freq" type="Double">5</Argument>
+          <Argument param="input" type="String">data</Argument>
+          <Argument param="time_input" type="String">time</Argument>
+          <Argument param="output" type="String">data</Argument>
+          <Argument param="time_output" type="String">time</Argument>
+        </Unit>
+      </Preprocessor>
+      <Postprocessor override="False" inshape="[128,3]" intype="Float32" infreq="1" outshape="[128,3]" outtype="Float32" />
+    </Model>
+    <Model name="conv1dlstm-large-speed-3" id="074d0ef4-886e-49fb-85d3-9e105bdd168a">
+      <LossFunction>CategoricalCrossentropy</LossFunction>
+      <Epochs>100</Epochs>
+      <BatchSize>16</BatchSize>
+      <SplitCount>16</SplitCount>
+      <Patience>20</Patience>
+      <TrainingEnvironment>
+      </TrainingEnvironment>
+      <Optimizer>
+        <LearningRate>0.004</LearningRate>
+        <WeightDecay>0.0001</WeightDecay>
+      </Optimizer>
+      <Network inshape="[50,6]" intype="Float32" infreq="0" outshape="[3]" outtype="Float32">
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">32</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">32</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">32</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.BatchNormalization">
+          <Argument param="epsilon" type="Double">0.001</Argument>
+          <Argument param="axis" type="Int32">-1</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">relu</Argument>
+        </Unit>
+        <Unit id="Core.Layers.MaxPool1D">
+          <Argument param="pool_size" type="Int32">2</Argument>
+          <Argument param="strides" type="Int32">2</Argument>
+          <Argument param="padding" type="String">valid</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">48</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">48</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.BatchNormalization">
+          <Argument param="epsilon" type="Double">0.001</Argument>
+          <Argument param="axis" type="Int32">-1</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">relu</Argument>
+        </Unit>
+        <Unit id="Core.Layers.MaxPool1D">
+          <Argument param="pool_size" type="Int32">2</Argument>
+          <Argument param="strides" type="Int32">2</Argument>
+          <Argument param="padding" type="String">valid</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">48</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Convolution1D">
+          <Argument param="filters" type="Int32">48</Argument>
+          <Argument param="kernel_size" type="Int32">3</Argument>
+          <Argument param="strides" type="Int32">1</Argument>
+          <Argument param="padding" type="String">same</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+          <Argument param="use_bias" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.BatchNormalization">
+          <Argument param="epsilon" type="Double">0.001</Argument>
+          <Argument param="axis" type="Int32">-1</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">relu</Argument>
+        </Unit>
+        <Unit id="Core.Layers.MaxPool1D">
+          <Argument param="pool_size" type="Int32">2</Argument>
+          <Argument param="strides" type="Int32">2</Argument>
+          <Argument param="padding" type="String">valid</Argument>
+        </Unit>
+        <Unit id="Core.Layers.LSTM">
+          <Argument param="units" type="Int32">64</Argument>
+          <Argument param="activation" type="String">tanh</Argument>
+          <Argument param="recurrent_activation" type="String">sigmoid</Argument>
+          <Argument param="use_bias" type="Boolean">True</Argument>
+          <Argument param="return_sequences" type="Boolean">True</Argument>
+          <Argument param="return_state" type="Boolean">False</Argument>
+          <Argument param="stateful" type="Boolean">False</Argument>
+          <Argument param="go_backwards" type="Boolean">False</Argument>
+        </Unit>
+        <Unit id="Core.Layers.GlobalAveragePool1D" />
+        <Unit id="Core.Layers.Dense">
+          <Argument param="units" type="Int32">3</Argument>
+          <Argument param="use_bias" type="Boolean">True</Argument>
+          <Argument param="activation" type="String">linear</Argument>
+        </Unit>
+        <Unit id="Core.Layers.Activation">
+          <Argument param="activation" type="String">softmax</Argument>
+        </Unit>
+      </Network>
+      <BuildSteps>
+        <Training />
+        <ConfusionMatrix />
+      </BuildSteps>
+      <SymbolWeights override="False">
+        <SymbolWeight symbol="circle" weight="1" />
+        <SymbolWeight symbol="shaking" weight="1" />
+      </SymbolWeights>
+      <Preprocessor override="False" inshape="[2,3]" intype="Float32" infreq="50" outshape="[50,6]" outtype="Float32">
+        <Unit id="Core.Packages.ContextualWindow">
+          <Argument param="contextual_length_sec" type="Double">1</Argument>
+          <Argument param="prediction_freq" type="Double">5</Argument>
+          <Argument param="input" type="String">data</Argument>
+          <Argument param="time_input" type="String">time</Argument>
+          <Argument param="output" type="String">data</Argument>
+          <Argument param="time_output" type="String">time</Argument>
+        </Unit>
+      </Preprocessor>
+      <Postprocessor override="False" inshape="[128,3]" intype="Float32" infreq="1" outshape="[128,3]" outtype="Float32" />
+    </Model>
+  </Models>
+  <Database balance="AnnotatedLength" redistributionScope="Everything">
+    <SymbolMap>
+      <Symbol name="circle" id="1" weight="1" />
+      <Symbol name="shaking" id="2" weight="1" />
+    </SymbolMap>
+    <DataSet id="unassigned" targetSize="0" labels="Unassigned" />
+    <DataSet id="train" targetSize="0.7671189095418485" labels="Complete">
+      <Session name="Transitions1" sessionId="32e4734c-0f54-4722-9975-b1fd64383efb" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live Labeling" dataTrack="IMU Data" tags="None">
+        <DataFile shape="[2,3]" samplerate="50" modified="5250455327676545414" start="0.0099999" length="50.36">/Data/Transitions1/IMU-Data.data</DataFile>
+        <SessionFile>/Data/Transitions1/Transitions1.imsession</SessionFile>
+        <LabelFile modified="5250455327676694740">/Data/Transitions1/Live-Labeling.label</LabelFile>
+        <Labels>
+          <Label count="3" length="15.1136623">shaking</Label>
+          <Label count="2" length="10.7371591">circle</Label>
+        </Labels>
+        <CustomColumnValues />
+      </Session>
+      <Session name="CircleShaking1" sessionId="93d55383-4920-46f1-8cf4-a1dc2fc38044" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live Labeling" dataTrack="IMU Data" tags="None">
+        <DataFile shape="[2,3]" samplerate="50" modified="5250455327671636648" start="0.0099999" length="58.22">/Data/CircleShaking1/IMU-Data.data</DataFile>
+        <SessionFile>/Data/CircleShaking1/CircleShaking1.imsession</SessionFile>
+        <LabelFile modified="5250455327671865658">/Data/CircleShaking1/Live-Labeling.label</LabelFile>
+        <Labels>
+          <Label count="1" length="39.9742604">circle</Label>
+          <Label count="1" length="18.2360431">shaking</Label>
+        </Labels>
+        <CustomColumnValues />
+      </Session>
+      <Session name="CircleVerticalPlane1" sessionId="411d7221-6105-488b-95a4-6b3fb3d57e65" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live Labeling" dataTrack="IMU Data" tags="None">
+        <DataFile shape="[2,3]" samplerate="50" modified="5250455327672353563" start="0.0099999" length="179.56">/Data/CircleVerticalPlane1/IMU-Data.data</DataFile>
+        <SessionFile>/Data/CircleVerticalPlane1/CircleVerticalPlane1.imsession</SessionFile>
+        <LabelFile modified="5250455327672492954">/Data/CircleVerticalPlane1/Live-Labeling.label</LabelFile>
+        <Labels>
+          <Label count="1" length="179.56">circle</Label>
+        </Labels>
+        <CustomColumnValues />
+      </Session>
+      <Session name="StationaryTable2" sessionId="999a5c35-56c5-4d75-81c6-1bc100fb8f48" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live Labeling" dataTrack="IMU Data" tags="LabelsMissing">
+        <DataFile shape="[2,3]" samplerate="50" modified="5250455327674474373" start="0.0099999" length="60.44">/Data/StationaryTable2/IMU-Data.data</DataFile>
+        <SessionFile>/Data/StationaryTable2/StationaryTable2.imsession</SessionFile>
+        <LabelFile modified="5250455327674623714">/Data/StationaryTable2/Live-Labeling.label</LabelFile>
+        <Labels />
+        <CustomColumnValues />
+      </Session>
+      <Session name="Transition3" sessionId="191302e4-8850-4a08-9c7f-c8a6b4468a34" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live Labeling" dataTrack="IMU Data" tags="None">
+        <DataFile shape="[2,3]" samplerate="50" modified="5250455327676037595" start="0.0099999" length="40.82">/Data/Transition3/IMU-Data.data</DataFile>
+        <SessionFile>/Data/Transition3/Transition3.imsession</SessionFile>
+        <LabelFile modified="5250455327676186957">/Data/Transition3/Live-Labeling.label</LabelFile>
+        <Labels>
+          <Label count="3" length="15.3470589">shaking</Label>
+          <Label count="2" length="11.4042389">circle</Label>
+        </Labels>
+        <CustomColumnValues />
+      </Session>
+      <Session name="Transitions2" sessionId="b8e1416e-f2c2-4be0-abc5-ef7f187d1d6d" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live Labeling" dataTrack="IMU Data" tags="None">
+        <DataFile shape="[2,3]" samplerate="50" modified="5250455327677561002" start="0.0099999" length="42.24">/Data/Transitions2/IMU-Data.data</DataFile>
+        <SessionFile>/Data/Transitions2/Transitions2.imsession</SessionFile>
+        <LabelFile modified="5250455327677700399">/Data/Transitions2/Live-Labeling.label</LabelFile>
+        <Labels>
+          <Label count="3" length="14.1894067">shaking</Label>
+          <Label count="2" length="12.6235397">circle</Label>
+        </Labels>
+        <CustomColumnValues />
+      </Session>
+      <Session name="CircleHorizontalPlane1" sessionId="2d9b049a-5521-4ed1-ae4e-5bf38d12f84a" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live Labeling" dataTrack="IMU Data" tags="None">
+        <DataFile shape="[2,3]" samplerate="50" modified="5250455327670979512" start="0.0099999" length="295.64">/Data/CircleHorizontalPlane1/IMU-Data.data</DataFile>
+        <SessionFile>/Data/CircleHorizontalPlane1/CircleHorizontalPlane1.imsession</SessionFile>
+        <LabelFile modified="5250455327671148765">/Data/CircleHorizontalPlane1/Live-Labeling.label</LabelFile>
+        <Labels>
+          <Label count="1" length="295.64">circle</Label>
+        </Labels>
+        <CustomColumnValues />
+      </Session>
+      <Session name="StationaryHold1" sessionId="39d83f6d-222d-44a1-af7f-97b5910491bc" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live Labeling" dataTrack="IMU Data" tags="LabelsMissing">
+        <DataFile shape="[2,3]" samplerate="50" modified="5250455327673389103" start="0.0099999" length="233.94">/Data/StationaryHold1/IMU-Data.data</DataFile>
+        <SessionFile>/Data/StationaryHold1/StationaryHold1.imsession</SessionFile>
+        <LabelFile modified="5250455327673558346">/Data/StationaryHold1/Live-Labeling.label</LabelFile>
+        <Labels />
+        <CustomColumnValues />
+      </Session>
+      <Session name="StationaryTable3" sessionId="7aa3178d-ca09-41d1-ade2-d672b8b749e5" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live Labeling" dataTrack="IMU Data" tags="LabelsMissing">
+        <DataFile shape="[2,3]" samplerate="50" modified="5250455327674992125" start="0.0099999" length="60.800000000000004">/Data/StationaryTable3/IMU-Data.data</DataFile>
+        <SessionFile>/Data/StationaryTable3/StationaryTable3.imsession</SessionFile>
+        <LabelFile modified="5250455327675131533">/Data/StationaryTable3/Live-Labeling.label</LabelFile>
+        <Labels />
+        <CustomColumnValues />
+      </Session>
+      <Session name="Shaking1" sessionId="4b458f0a-2e42-47e9-a1cf-51599b2cd313" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live Labeling" dataTrack="IMU Data" tags="None">
+        <DataFile shape="[2,3]" samplerate="50" modified="5250455327672821525" start="0.0099999" length="240.38">/Data/Shaking1/IMU-Data.data</DataFile>
+        <SessionFile>/Data/Shaking1/Shaking1.imsession</SessionFile>
+        <LabelFile modified="5250455327672950974">/Data/Shaking1/Live-Labeling.label</LabelFile>
+        <Labels>
+          <Label count="1" length="240.38">shaking</Label>
+        </Labels>
+        <CustomColumnValues />
+      </Session>
+      <Session name="StationaryTable4" sessionId="b192d6bb-11e1-48bc-a80a-c830a836d784" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live Labeling" dataTrack="IMU Data" tags="LabelsMissing">
+        <DataFile shape="[2,3]" samplerate="50" modified="5250455327675509881" start="0.0099999" length="65.72">/Data/StationaryTable4/IMU-Data.data</DataFile>
+        <SessionFile>/Data/StationaryTable4/StationaryTable4.imsession</SessionFile>
+        <LabelFile modified="5250455327675659241">/Data/StationaryTable4/Live-Labeling.label</LabelFile>
+        <Labels />
+        <CustomColumnValues />
+      </Session>
+      <Session name="Transitions10" sessionId="b7775ae4-6caa-4aa3-8e46-3a8d6c590c43" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live Labeling" dataTrack="IMU Data" tags="None">
+        <DataFile shape="[2,3]" samplerate="50" modified="5250455327677053188" start="0.0099999" length="38.44">/Data/Transitions10/IMU-Data.data</DataFile>
+        <SessionFile>/Data/Transitions10/Transitions10.imsession</SessionFile>
+        <LabelFile modified="5250455327677202560">/Data/Transitions10/Live-Labeling.label</LabelFile>
+        <Labels>
+          <Label count="1" length="23.8481481">shaking</Label>
+          <Label count="1" length="8.234448">circle</Label>
+        </Labels>
+        <CustomColumnValues />
+      </Session>
+    </DataSet>
+    <DataSet id="validation" targetSize="0.21935349662549164" labels="Complete">
+      <Session name="Transitions5" sessionId="5a4b67f6-e252-42ee-be2f-903ac571433c" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live Labeling" dataTrack="IMU Data" tags="None">
+        <DataFile shape="[2,3]" samplerate="50" modified="5250455327678573826" start="0.0099999" length="60.480000000000004">/Data/Transitions5/IMU-Data.data</DataFile>
+        <SessionFile>/Data/Transitions5/Transitions5.imsession</SessionFile>
+        <LabelFile modified="5250455327678713241">/Data/Transitions5/Live-Labeling.label</LabelFile>
+        <Labels>
+          <Label count="1" length="15.0881824">shaking</Label>
+          <Label count="2" length="40.5586126">circle</Label>
+        </Labels>
+        <CustomColumnValues />
+      </Session>
+      <Session name="StationaryTable1" sessionId="44836fbf-6424-4751-8c96-577a741d2966" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live Labeling" dataTrack="IMU Data" tags="LabelsMissing">
+        <DataFile shape="[2,3]" samplerate="50" modified="5250455327673936706" start="0.0099999" length="81.98">/Data/StationaryTable1/IMU-Data.data</DataFile>
+        <SessionFile>/Data/StationaryTable1/StationaryTable1.imsession</SessionFile>
+        <LabelFile modified="5250455327674086061">/Data/StationaryTable1/Live-Labeling.label</LabelFile>
+        <Labels />
+        <CustomColumnValues />
+      </Session>
+      <Session name="Transitions4" sessionId="3a4f091b-0225-4d0d-a9bd-893e3c039eb6" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live Labeling" dataTrack="IMU Data" tags="None">
+        <DataFile shape="[2,3]" samplerate="50" modified="5250455327678076050" start="0.0099999" length="80.28">/Data/Transitions4/IMU-Data.data</DataFile>
+        <SessionFile>/Data/Transitions4/Transitions4.imsession</SessionFile>
+        <LabelFile modified="5250455327678205448">/Data/Transitions4/Live-Labeling.label</LabelFile>
+        <Labels>
+          <Label count="2" length="20.1690013">circle</Label>
+          <Label count="3" length="30.6679889">shaking</Label>
+        </Labels>
+        <CustomColumnValues />
+      </Session>
+      <Session name="Transitions9" sessionId="26e75a49-59e0-4553-8aa8-c98c47a344a8" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live Labeling" dataTrack="IMU Data" tags="None">
+        <DataFile shape="[2,3]" samplerate="50" modified="5250455327680644204" start="0.0099999" length="31.36">/Data/Transitions9/IMU-Data.data</DataFile>
+        <SessionFile>/Data/Transitions9/Transitions9.imsession</SessionFile>
+        <LabelFile modified="5250455327680783619">/Data/Transitions9/Live-Labeling.label</LabelFile>
+        <Labels>
+          <Label count="3" length="13.8575673">shaking</Label>
+          <Label count="1" length="12.3878248">circle</Label>
+        </Labels>
+        <CustomColumnValues />
+      </Session>
+      <Session name="Transitions6" sessionId="86073fcb-4006-4970-8610-e733c21a08cc" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live Labeling" dataTrack="IMU Data" tags="None">
+        <DataFile shape="[2,3]" samplerate="50" modified="5250455327679118561" start="0.0099999" length="39.58">/Data/Transitions6/IMU-Data.data</DataFile>
+        <SessionFile>/Data/Transitions6/Transitions6.imsession</SessionFile>
+        <LabelFile modified="5250455327679258008">/Data/Transitions6/Live-Labeling.label</LabelFile>
+        <Labels>
+          <Label count="1" length="26.0497771">shaking</Label>
+          <Label count="1" length="7.0071054">circle</Label>
+        </Labels>
+        <CustomColumnValues />
+      </Session>
+      <Session name="Transitions7" sessionId="e46864c8-0788-4b19-8b47-0e278a5f1b37" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live Labeling" dataTrack="IMU Data" tags="None">
+        <DataFile shape="[2,3]" samplerate="50" modified="5250455327679626372" start="0.0099999" length="46.660000000000004">/Data/Transitions7/IMU-Data.data</DataFile>
+        <SessionFile>/Data/Transitions7/Transitions7.imsession</SessionFile>
+        <LabelFile modified="5250455327679775764">/Data/Transitions7/Live-Labeling.label</LabelFile>
+        <Labels>
+          <Label count="2" length="16.3992899">shaking</Label>
+          <Label count="1" length="19.8694604">circle</Label>
+        </Labels>
+        <CustomColumnValues />
+      </Session>
+      <Session name="Transitions8" sessionId="cf5420ae-a2bd-4876-b6aa-091c4d72da27" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live Labeling" dataTrack="IMU Data" tags="None">
+        <DataFile shape="[2,3]" samplerate="50" modified="5250455327680154134" start="0.0099999" length="51.46">/Data/Transitions8/IMU-Data.data</DataFile>
+        <SessionFile>/Data/Transitions8/Transitions8.imsession</SessionFile>
+        <LabelFile modified="5250455327680283584">/Data/Transitions8/Live-Labeling.label</LabelFile>
+        <Labels>
+          <Label count="2" length="25.205118">circle</Label>
+          <Label count="3" length="15.0009972">shaking</Label>
+        </Labels>
+        <CustomColumnValues />
+      </Session>
+    </DataSet>
+    <DataSet id="test" targetSize="0.013527593832659933" labels="Complete" />
+  </Database>
+</ImagimobStudio>

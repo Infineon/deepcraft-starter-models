@@ -1,0 +1,1 @@
+{"title": "Movement Type Detection", "description": "A project that classifies the movement pattern of an IMU Sensor: Stationary, Shaking or Circle", "algorithm": "Classification", "sensors": ["IMU"]}
