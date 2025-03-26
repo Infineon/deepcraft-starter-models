@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="4b458f0a-2e42-47e9-a1cf-51599b2cd313">
+    <Tracks>
+      <Track name="IMU Data" type="datacsv" isLabelTrack="False">
+        <PayloadFile>IMU-Data.data</PayloadFile>
+        <Shape>
+          <Axis name="Axis" size="3">
+            <Label index="0">X</Label>
+            <Label index="1">Y</Label>
+            <Label index="2">Z</Label>
+          </Axis>
+          <Axis name="Sensor" size="2">
+            <Label index="0">Accel</Label>
+            <Label index="1">Gyro</Label>
+          </Axis>
+        </Shape>
+      </Track>
+      <Track name="Live Labeling" type="labelcsv">
+        <PayloadFile>Live-Labeling.label</PayloadFile>
+        <Shape>
+          <Axis name="Labels" size="1">
+            <Label index="0">shaking</Label>
+          </Axis>
+        </Shape>
+      </Track>
+      <Track name="conv1d-medium-balanced-30" type="datacsv" timecoded="TimestampBeginDuration" isLabelTrack="False">
+        <PayloadFile>..\..\..\Models\conv1d-medium-balanced-3\Predictions\sessions\Shaking1\conv1d-medium-balanced-30.data</PayloadFile>
+        <Offset unit="seconds">1.9799990000E+000</Offset>
+        <Shape />
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>
