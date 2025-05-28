@@ -1,0 +1,1 @@
+{"title": "AnomalousVibrationDetection", "description": "Classification-based anomalous vibration detection starter project.", "algorithm": "Classification", "sensors": ["IMU"]}
