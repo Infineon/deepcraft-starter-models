@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ImagimobStudio>
+	<Timeline id="78604b23-1da8-4eb0-aea8-6afe8e1fb638">
+		<Tracks>
+			<Track name="prediction_label" type="labelxml">
+				<PayloadFile>Screen-Shot-2022-02-16-at-1-25-32-PM_png.rf.080de46b2f6be9b72175d3fcb9a8cab6_pred.labelxml</PayloadFile>
+			</Track>
+		</Tracks>
+	</Timeline>
+</ImagimobStudio>

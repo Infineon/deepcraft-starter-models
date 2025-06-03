@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="e31089b9-5a9b-4c0e-bc50-0a37aa647906">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>zoom_tests_RockPaperScissors-mohamed_mp4-41_jpg.rf.c0b13b96a49cbee1c2bf1a2f246fdcaa.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>zoom_tests_RockPaperScissors-mohamed_mp4-41_jpg.rf.c0b13b96a49cbee1c2bf1a2f246fdcaa.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

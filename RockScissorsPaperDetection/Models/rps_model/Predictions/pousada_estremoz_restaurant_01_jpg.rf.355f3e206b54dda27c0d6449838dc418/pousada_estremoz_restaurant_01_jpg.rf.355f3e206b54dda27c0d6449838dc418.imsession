@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ImagimobStudio>
+	<Timeline id="2bc0490d-1fe4-408a-988e-de0399b1db40">
+		<Tracks>
+			<Track name="prediction_label" type="labelxml">
+				<PayloadFile>pousada_estremoz_restaurant_01_jpg.rf.355f3e206b54dda27c0d6449838dc418_pred.labelxml</PayloadFile>
+			</Track>
+		</Tracks>
+	</Timeline>
+</ImagimobStudio>

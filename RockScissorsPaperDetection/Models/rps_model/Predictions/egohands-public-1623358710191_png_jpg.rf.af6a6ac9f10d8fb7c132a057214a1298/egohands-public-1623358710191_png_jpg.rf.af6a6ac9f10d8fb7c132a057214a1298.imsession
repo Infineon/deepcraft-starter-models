@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ImagimobStudio>
+	<Timeline id="627aff0a-a4be-4938-8764-82672c34983c">
+		<Tracks>
+			<Track name="prediction_label" type="labelxml">
+				<PayloadFile>egohands-public-1623358710191_png_jpg.rf.af6a6ac9f10d8fb7c132a057214a1298_pred.labelxml</PayloadFile>
+			</Track>
+		</Tracks>
+	</Timeline>
+</ImagimobStudio>

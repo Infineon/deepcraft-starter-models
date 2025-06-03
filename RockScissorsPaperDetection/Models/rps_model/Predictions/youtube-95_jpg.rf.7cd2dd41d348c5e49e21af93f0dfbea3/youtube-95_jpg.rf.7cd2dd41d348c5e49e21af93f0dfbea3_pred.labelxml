@@ -1,0 +1,13 @@
+<annotation>
+	<path>youtube-95_jpg.rf.7cd2dd41d348c5e49e21af93f0dfbea3.jpg</path>
+	<object>
+		<name>Scissors</name>
+		<confidence>0.9077</confidence>
+		<bndbox>
+			<x>0.4703125</x>
+			<y>0.478125</y>
+			<width>0.41875</width>
+			<height>0.36875</height>
+		</bndbox>
+	</object>
+</annotation>

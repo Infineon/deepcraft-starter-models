@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="e1727dd5-13c6-46f6-bd2a-ab7b470cb367">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>GMT20210709-195148_Recording_640x360_mp4-0_jpg.rf.912c9a490d0616a5df3576061e823f2a.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>GMT20210709-195148_Recording_640x360_mp4-0_jpg.rf.912c9a490d0616a5df3576061e823f2a.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

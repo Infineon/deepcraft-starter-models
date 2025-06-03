@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="2e5343b2-4880-470e-8c8c-d40f0f604093">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>pariscellR_450x348_jpg.rf.169ce83c1ad3f542827047931631ad35.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>pariscellR_450x348_jpg.rf.169ce83c1ad3f542827047931631ad35.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

@@ -1,0 +1,13 @@
+<annotation>
+	<path>IMG_5636_MOV-37_jpg.rf.0ac1cbfa1ce0e7226d210aa2e48e88bb.jpg</path>
+	<object>
+		<name>Scissors</name>
+		<confidence>0.892</confidence>
+		<bndbox>
+			<x>0.7515625</x>
+			<y>0.48671875</y>
+			<width>0.29375</width>
+			<height>0.2515625</height>
+		</bndbox>
+	</object>
+</annotation>

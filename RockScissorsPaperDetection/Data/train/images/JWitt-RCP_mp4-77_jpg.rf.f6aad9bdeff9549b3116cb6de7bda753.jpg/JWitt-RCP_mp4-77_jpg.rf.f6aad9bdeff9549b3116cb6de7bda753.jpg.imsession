@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="3311c550-4dec-4585-824d-cceaf2e2e476">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>JWitt-RCP_mp4-77_jpg.rf.f6aad9bdeff9549b3116cb6de7bda753.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>JWitt-RCP_mp4-77_jpg.rf.f6aad9bdeff9549b3116cb6de7bda753.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

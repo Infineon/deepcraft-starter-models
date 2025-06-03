@@ -1,0 +1,13 @@
+<annotation>
+	<path>JWitt-RCP_mp4-58_jpg.rf.c6a435e50f0e09da8e35a05f9c775250.jpg</path>
+	<object>
+		<name>Scissors</name>
+		<confidence>0.9198</confidence>
+		<bndbox>
+			<x>0.37421875</x>
+			<y>0.53828125</y>
+			<width>0.5640625</width>
+			<height>0.4109375</height>
+		</bndbox>
+	</object>
+</annotation>

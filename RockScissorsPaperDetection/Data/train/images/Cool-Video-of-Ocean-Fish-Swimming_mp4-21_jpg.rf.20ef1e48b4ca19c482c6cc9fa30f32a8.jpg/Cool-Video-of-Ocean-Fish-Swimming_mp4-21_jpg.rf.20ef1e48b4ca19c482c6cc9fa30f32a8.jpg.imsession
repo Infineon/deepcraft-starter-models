@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="4d48da16-c92f-451f-986b-eadb356a34ae">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>Cool-Video-of-Ocean-Fish-Swimming_mp4-21_jpg.rf.20ef1e48b4ca19c482c6cc9fa30f32a8.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>Cool-Video-of-Ocean-Fish-Swimming_mp4-21_jpg.rf.20ef1e48b4ca19c482c6cc9fa30f32a8.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ImagimobStudio>
+	<Timeline id="a82f7429-7b41-41f9-a7cb-85f44a08494e">
+		<Tracks>
+			<Track name="prediction_label" type="labelxml">
+				<PayloadFile>Cool-Video-of-Ocean-Fish-Swimming_mp4-8_jpg.rf.a4d6d92d03609a369c1e129434a92567_pred.labelxml</PayloadFile>
+			</Track>
+		</Tracks>
+	</Timeline>
+</ImagimobStudio>

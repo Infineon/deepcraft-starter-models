@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ImagimobStudio>
+	<Timeline id="13c2f3a9-86cb-452f-948d-f7a2335235d8">
+		<Tracks>
+			<Track name="prediction_label" type="labelxml">
+				<PayloadFile>pool_inside_02_03_altavista_jpg.rf.67f058cb5d63134868035d46ebd4f8c9_pred.labelxml</PayloadFile>
+			</Track>
+		</Tracks>
+	</Timeline>
+</ImagimobStudio>

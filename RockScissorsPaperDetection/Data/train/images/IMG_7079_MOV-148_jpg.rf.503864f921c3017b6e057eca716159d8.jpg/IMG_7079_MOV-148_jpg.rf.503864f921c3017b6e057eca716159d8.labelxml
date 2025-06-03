@@ -1,0 +1,11 @@
+<annotation>
+  <object>
+    <name>Scissors</name>
+    <bndbox>
+      <x>0.246875</x>
+      <y>0.51015625</y>
+      <width>0.49375</width>
+      <height>0.39765625</height>
+    </bndbox>
+  </object>
+</annotation>

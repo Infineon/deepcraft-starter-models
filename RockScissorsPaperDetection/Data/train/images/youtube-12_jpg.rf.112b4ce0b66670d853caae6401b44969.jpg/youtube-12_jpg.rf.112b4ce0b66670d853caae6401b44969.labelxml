@@ -1,0 +1,20 @@
+<annotation>
+  <object>
+    <name>Rock</name>
+    <bndbox>
+      <x>0.13046875</x>
+      <y>0.33984375</y>
+      <width>0.25078125</width>
+      <height>0.4484375</height>
+    </bndbox>
+  </object>
+  <object>
+    <name>Rock</name>
+    <bndbox>
+      <x>0.78671875</x>
+      <y>0.19140625</y>
+      <width>0.2328125</width>
+      <height>0.3828125</height>
+    </bndbox>
+  </object>
+</annotation>

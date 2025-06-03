@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="d7ff8090-e25c-4655-87e8-ffa0bbc62923">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>Screen-Shot-2022-02-16-at-11-18-18-AM-2-_png.rf.3cc56051618e7faea95848c358a56bef.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>Screen-Shot-2022-02-16-at-11-18-18-AM-2-_png.rf.3cc56051618e7faea95848c358a56bef.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

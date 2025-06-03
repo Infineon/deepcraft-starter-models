@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ImagimobStudio>
+	<Timeline id="e6c14401-354d-4a36-99b9-ffe22a30830c">
+		<Tracks>
+			<Track name="prediction_label" type="labelxml">
+				<PayloadFile>justice_7_jpg.rf.4feafe76182b4bf7c52568f6150cd4df_pred.labelxml</PayloadFile>
+			</Track>
+		</Tracks>
+	</Timeline>
+</ImagimobStudio>

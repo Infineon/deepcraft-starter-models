@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="b0b934b7-407b-44dd-8724-1213bc8b555c">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>PUZZLE_OFFICE_H_B_frame_0521_jpg.rf.0e4839bb0d45f5db1a5dedda6beac10c.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>PUZZLE_OFFICE_H_B_frame_0521_jpg.rf.0e4839bb0d45f5db1a5dedda6beac10c.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

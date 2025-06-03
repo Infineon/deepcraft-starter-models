@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="37f819ac-5ec5-43cd-a49b-4df50d9da707">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>JENGA_COURTYARD_B_H_frame_1291_jpg.rf.394e4d3b1cc7a71dc02af3b38d188fa6.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>JENGA_COURTYARD_B_H_frame_1291_jpg.rf.394e4d3b1cc7a71dc02af3b38d188fa6.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

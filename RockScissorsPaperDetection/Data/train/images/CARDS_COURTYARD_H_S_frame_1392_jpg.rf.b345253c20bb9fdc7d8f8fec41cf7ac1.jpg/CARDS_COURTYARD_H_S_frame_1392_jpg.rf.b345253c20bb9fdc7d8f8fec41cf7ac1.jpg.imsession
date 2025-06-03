@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="ccf8308c-e564-42a6-b3be-5ea643699a87">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>CARDS_COURTYARD_H_S_frame_1392_jpg.rf.b345253c20bb9fdc7d8f8fec41cf7ac1.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>CARDS_COURTYARD_H_S_frame_1392_jpg.rf.b345253c20bb9fdc7d8f8fec41cf7ac1.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

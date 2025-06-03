@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="a2c49a6e-694c-4d30-a847-d2ae95b1711e">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>JENGA_LIVINGROOM_H_B_frame_0703_jpg.rf.e9d4c327cbea8770e0b2f9d6fbad487b.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>JENGA_LIVINGROOM_H_B_frame_0703_jpg.rf.e9d4c327cbea8770e0b2f9d6fbad487b.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

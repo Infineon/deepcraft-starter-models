@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ImagimobStudio>
+	<Timeline id="afc41baf-699a-48e9-be9f-77d0ff270a2d">
+		<Tracks>
+			<Track name="prediction_label" type="labelxml">
+				<PayloadFile>territorial_prison_cell_block_jpg.rf.822e5a6826614cd75f58f5481df4b5b8_pred.labelxml</PayloadFile>
+			</Track>
+		</Tracks>
+	</Timeline>
+</ImagimobStudio>

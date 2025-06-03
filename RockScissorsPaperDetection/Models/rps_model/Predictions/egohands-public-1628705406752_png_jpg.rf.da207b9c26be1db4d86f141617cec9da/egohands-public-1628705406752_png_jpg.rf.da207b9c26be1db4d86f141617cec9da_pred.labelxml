@@ -1,0 +1,13 @@
+<annotation>
+	<path>egohands-public-1628705406752_png_jpg.rf.da207b9c26be1db4d86f141617cec9da.jpg</path>
+	<object>
+		<name>Rock</name>
+		<confidence>0.8379</confidence>
+		<bndbox>
+			<x>0.521875</x>
+			<y>0.7828125</y>
+			<width>0.34375</width>
+			<height>0.346875</height>
+		</bndbox>
+	</object>
+</annotation>

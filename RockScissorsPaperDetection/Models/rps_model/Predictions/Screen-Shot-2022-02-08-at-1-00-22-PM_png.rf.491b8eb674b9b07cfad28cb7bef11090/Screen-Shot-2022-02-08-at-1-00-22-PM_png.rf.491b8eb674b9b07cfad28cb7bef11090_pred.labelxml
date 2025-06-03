@@ -1,0 +1,13 @@
+<annotation>
+	<path>Screen-Shot-2022-02-08-at-1-00-22-PM_png.rf.491b8eb674b9b07cfad28cb7bef11090.jpg</path>
+	<object>
+		<name>Paper</name>
+		<confidence>0.8961</confidence>
+		<bndbox>
+			<x>0.78203125</x>
+			<y>0.45</y>
+			<width>0.1484375</width>
+			<height>0.50625</height>
+		</bndbox>
+	</object>
+</annotation>

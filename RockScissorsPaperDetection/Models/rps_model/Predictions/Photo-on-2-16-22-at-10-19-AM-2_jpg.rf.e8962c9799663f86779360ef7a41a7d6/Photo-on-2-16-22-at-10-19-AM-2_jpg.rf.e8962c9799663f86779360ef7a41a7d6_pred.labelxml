@@ -1,0 +1,13 @@
+<annotation>
+	<path>Photo-on-2-16-22-at-10-19-AM-2_jpg.rf.e8962c9799663f86779360ef7a41a7d6.jpg</path>
+	<object>
+		<name>Rock</name>
+		<confidence>0.8999</confidence>
+		<bndbox>
+			<x>0.2421875</x>
+			<y>0.6125</y>
+			<width>0.146875</width>
+			<height>0.284375</height>
+		</bndbox>
+	</object>
+</annotation>

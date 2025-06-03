@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="c9d9a349-bfbe-4b2d-9d14-53c2ae90b2aa">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>hotel_crillon_salle_jpg.rf.08c54f2e50646b8f2d014a98fa0a0c07.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>hotel_crillon_salle_jpg.rf.08c54f2e50646b8f2d014a98fa0a0c07.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

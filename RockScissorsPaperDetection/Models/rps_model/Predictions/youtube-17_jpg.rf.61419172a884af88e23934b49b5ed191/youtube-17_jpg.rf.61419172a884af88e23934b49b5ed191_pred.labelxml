@@ -1,0 +1,23 @@
+<annotation>
+	<path>youtube-17_jpg.rf.61419172a884af88e23934b49b5ed191.jpg</path>
+	<object>
+		<name>Rock</name>
+		<confidence>0.9029</confidence>
+		<bndbox>
+			<x>0.0890625</x>
+			<y>0.19140625</y>
+			<width>0.178125</width>
+			<height>0.3828125</height>
+		</bndbox>
+	</object>
+	<object>
+		<name>Rock</name>
+		<confidence>0.8789</confidence>
+		<bndbox>
+			<x>0.78359375</x>
+			<y>0.20078125</y>
+			<width>0.2359375</width>
+			<height>0.4015625</height>
+		</bndbox>
+	</object>
+</annotation>

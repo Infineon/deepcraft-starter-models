@@ -1,0 +1,13 @@
+<annotation>
+	<path>CARDS_COURTYARD_B_T_frame_1377_jpg.rf.7a3886730a6e61b44bd42807b88ac684.jpg</path>
+	<object>
+		<name>Rock</name>
+		<confidence>0.4101</confidence>
+		<bndbox>
+			<x>0.2515625</x>
+			<y>0.90703125</y>
+			<width>0.1625</width>
+			<height>0.1828125</height>
+		</bndbox>
+	</object>
+</annotation>

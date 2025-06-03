@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="cc28d2a0-9dbe-410d-8afd-696f6d1d26d9">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>pic_venue_rosewoodbistro_jpg.rf.796b6f4b8f1846cccd7c1ca620489cd9.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>pic_venue_rosewoodbistro_jpg.rf.796b6f4b8f1846cccd7c1ca620489cd9.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

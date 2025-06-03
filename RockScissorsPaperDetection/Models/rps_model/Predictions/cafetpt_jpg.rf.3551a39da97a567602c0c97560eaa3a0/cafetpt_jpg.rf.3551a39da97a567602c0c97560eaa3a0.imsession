@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ImagimobStudio>
+	<Timeline id="cdd33fc4-0eaa-426a-a6b9-0a355e55c153">
+		<Tracks>
+			<Track name="prediction_label" type="labelxml">
+				<PayloadFile>cafetpt_jpg.rf.3551a39da97a567602c0c97560eaa3a0_pred.labelxml</PayloadFile>
+			</Track>
+		</Tracks>
+	</Timeline>
+</ImagimobStudio>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="1f6ffbf2-fb4a-4a07-8e39-aac5c8c6f807">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>egohands-public-1625254246946_png_jpg.rf.a3695b3dfacda587b7ac25e3bb4fa171.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>egohands-public-1625254246946_png_jpg.rf.a3695b3dfacda587b7ac25e3bb4fa171.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

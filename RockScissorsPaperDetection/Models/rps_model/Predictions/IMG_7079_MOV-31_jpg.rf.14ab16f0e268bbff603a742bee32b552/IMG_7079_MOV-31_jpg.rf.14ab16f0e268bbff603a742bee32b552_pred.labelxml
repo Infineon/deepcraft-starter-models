@@ -1,0 +1,33 @@
+<annotation>
+	<path>IMG_7079_MOV-31_jpg.rf.14ab16f0e268bbff603a742bee32b552.jpg</path>
+	<object>
+		<name>Paper</name>
+		<confidence>0.6922</confidence>
+		<bndbox>
+			<x>0.6078125</x>
+			<y>0.61328125</y>
+			<width>0.784375</width>
+			<height>0.2359375</height>
+		</bndbox>
+	</object>
+	<object>
+		<name>Paper</name>
+		<confidence>0.5552</confidence>
+		<bndbox>
+			<x>0.7359375</x>
+			<y>0.61015625</y>
+			<width>0.525</width>
+			<height>0.2328125</height>
+		</bndbox>
+	</object>
+	<object>
+		<name>Paper</name>
+		<confidence>0.4124</confidence>
+		<bndbox>
+			<x>0.48046875</x>
+			<y>0.64296875</y>
+			<width>0.6953125</width>
+			<height>0.2234375</height>
+		</bndbox>
+	</object>
+</annotation>

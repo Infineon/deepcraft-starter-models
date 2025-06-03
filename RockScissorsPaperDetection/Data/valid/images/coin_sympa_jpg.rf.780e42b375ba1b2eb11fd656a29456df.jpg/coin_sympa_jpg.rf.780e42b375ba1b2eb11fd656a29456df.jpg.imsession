@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="9c6a729e-d5d5-4f4d-9563-0f9a584c88ea">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>coin_sympa_jpg.rf.780e42b375ba1b2eb11fd656a29456df.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>coin_sympa_jpg.rf.780e42b375ba1b2eb11fd656a29456df.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

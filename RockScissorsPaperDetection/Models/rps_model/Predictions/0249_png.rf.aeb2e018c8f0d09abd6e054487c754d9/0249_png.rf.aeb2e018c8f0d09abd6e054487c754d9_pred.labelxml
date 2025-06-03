@@ -1,0 +1,23 @@
+<annotation>
+	<path>0249_png.rf.aeb2e018c8f0d09abd6e054487c754d9.jpg</path>
+	<object>
+		<name>Paper</name>
+		<confidence>0.9193</confidence>
+		<bndbox>
+			<x>0.46328125</x>
+			<y>0.76328125</y>
+			<width>0.1890625</width>
+			<height>0.2015625</height>
+		</bndbox>
+	</object>
+	<object>
+		<name>Scissors</name>
+		<confidence>0.8991</confidence>
+		<bndbox>
+			<x>0.66484375</x>
+			<y>0.809375</y>
+			<width>0.1703125</width>
+			<height>0.171875</height>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,13 @@
+<annotation>
+	<path>JWitt-RCP_mp4-33_jpg.rf.c89ae052ce80d98ca1fc8a49691284af.jpg</path>
+	<object>
+		<name>Rock</name>
+		<confidence>0.9383</confidence>
+		<bndbox>
+			<x>0.61484375</x>
+			<y>0.3171875</y>
+			<width>0.7703125</width>
+			<height>0.490625</height>
+		</bndbox>
+	</object>
+</annotation>

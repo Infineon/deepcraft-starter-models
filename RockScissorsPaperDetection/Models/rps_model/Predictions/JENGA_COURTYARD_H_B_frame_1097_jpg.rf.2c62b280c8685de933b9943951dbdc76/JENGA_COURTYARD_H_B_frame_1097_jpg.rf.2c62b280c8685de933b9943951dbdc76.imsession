@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ImagimobStudio>
+	<Timeline id="4fcc4b11-51f8-4166-895f-094aa5ed2a8b">
+		<Tracks>
+			<Track name="prediction_label" type="labelxml">
+				<PayloadFile>JENGA_COURTYARD_H_B_frame_1097_jpg.rf.2c62b280c8685de933b9943951dbdc76_pred.labelxml</PayloadFile>
+			</Track>
+		</Tracks>
+	</Timeline>
+</ImagimobStudio>

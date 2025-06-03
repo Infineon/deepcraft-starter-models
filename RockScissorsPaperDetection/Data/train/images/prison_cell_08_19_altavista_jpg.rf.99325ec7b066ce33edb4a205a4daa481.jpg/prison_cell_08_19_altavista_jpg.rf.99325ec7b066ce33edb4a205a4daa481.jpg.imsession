@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="3ca0df22-41b5-4705-aa8a-956f5dc232c9">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>prison_cell_08_19_altavista_jpg.rf.99325ec7b066ce33edb4a205a4daa481.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>prison_cell_08_19_altavista_jpg.rf.99325ec7b066ce33edb4a205a4daa481.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

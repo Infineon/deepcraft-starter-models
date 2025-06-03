@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="64fd1e1d-4785-4a88-8144-970724068c89">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>ComfortSuites_MEETINGM_jpg.rf.7df474edf604511bd9e2c941b5b488d9.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>ComfortSuites_MEETINGM_jpg.rf.7df474edf604511bd9e2c941b5b488d9.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

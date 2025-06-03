@@ -1,0 +1,23 @@
+<annotation>
+	<path>youtube-59_jpg.rf.80a65524f3008c3a80cdf527354eab36.jpg</path>
+	<object>
+		<name>Paper</name>
+		<confidence>0.9257</confidence>
+		<bndbox>
+			<x>0.703125</x>
+			<y>0.39453125</y>
+			<width>0.365625</width>
+			<height>0.6640625</height>
+		</bndbox>
+	</object>
+	<object>
+		<name>Scissors</name>
+		<confidence>0.9072</confidence>
+		<bndbox>
+			<x>0.253125</x>
+			<y>0.4859375</y>
+			<width>0.365625</width>
+			<height>0.396875</height>
+		</bndbox>
+	</object>
+</annotation>

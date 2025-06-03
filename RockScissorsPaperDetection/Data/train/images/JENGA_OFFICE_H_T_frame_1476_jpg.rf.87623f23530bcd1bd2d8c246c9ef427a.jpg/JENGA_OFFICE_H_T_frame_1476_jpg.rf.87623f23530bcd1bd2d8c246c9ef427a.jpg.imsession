@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="5b9ac1f0-feed-4f7a-89b5-06ea76edff04">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>JENGA_OFFICE_H_T_frame_1476_jpg.rf.87623f23530bcd1bd2d8c246c9ef427a.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>JENGA_OFFICE_H_T_frame_1476_jpg.rf.87623f23530bcd1bd2d8c246c9ef427a.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

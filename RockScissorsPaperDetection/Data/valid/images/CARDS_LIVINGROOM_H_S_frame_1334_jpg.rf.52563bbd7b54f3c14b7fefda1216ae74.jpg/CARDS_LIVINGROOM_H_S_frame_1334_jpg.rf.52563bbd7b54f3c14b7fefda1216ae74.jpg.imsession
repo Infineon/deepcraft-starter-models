@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="36efdfc8-961e-4367-b86f-65ab14a43173">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>CARDS_LIVINGROOM_H_S_frame_1334_jpg.rf.52563bbd7b54f3c14b7fefda1216ae74.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>CARDS_LIVINGROOM_H_S_frame_1334_jpg.rf.52563bbd7b54f3c14b7fefda1216ae74.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

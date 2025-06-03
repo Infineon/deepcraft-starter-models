@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ImagimobStudio>
+	<Timeline id="caf007e5-2e9e-4a5e-a8a3-af66a2f72e45">
+		<Tracks>
+			<Track name="prediction_label" type="labelxml">
+				<PayloadFile>CARDS_COURTYARD_H_S_frame_1832_jpg.rf.2c643f9130bf3196a010d4d157b07850_pred.labelxml</PayloadFile>
+			</Track>
+		</Tracks>
+	</Timeline>
+</ImagimobStudio>

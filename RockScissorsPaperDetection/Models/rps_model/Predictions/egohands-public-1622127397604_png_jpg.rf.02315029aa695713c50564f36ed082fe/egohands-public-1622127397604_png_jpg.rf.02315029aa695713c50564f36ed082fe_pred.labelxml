@@ -1,0 +1,13 @@
+<annotation>
+	<path>egohands-public-1622127397604_png_jpg.rf.02315029aa695713c50564f36ed082fe.jpg</path>
+	<object>
+		<name>Paper</name>
+		<confidence>0.9124</confidence>
+		<bndbox>
+			<x>0.74453125</x>
+			<y>0.3609375</y>
+			<width>0.4390625</width>
+			<height>0.721875</height>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,23 @@
+<annotation>
+	<path>IMG_7077_MOV-8_jpg.rf.8845618f972c776cb1e82e5bca264c1e.jpg</path>
+	<object>
+		<name>Rock</name>
+		<confidence>0.9168</confidence>
+		<bndbox>
+			<x>0.3015625</x>
+			<y>0.52578125</y>
+			<width>0.15625</width>
+			<height>0.2390625</height>
+		</bndbox>
+	</object>
+	<object>
+		<name>Rock</name>
+		<confidence>0.9025</confidence>
+		<bndbox>
+			<x>0.57578125</x>
+			<y>0.47109375</y>
+			<width>0.1234375</width>
+			<height>0.2921875</height>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,13 @@
+<annotation>
+	<path>youtube-66_jpg.rf.bcf5414b2f4835c4a8bcfe41167d1fa8.jpg</path>
+	<object>
+		<name>Paper</name>
+		<confidence>0.4441</confidence>
+		<bndbox>
+			<x>0.54140625</x>
+			<y>0.94921875</y>
+			<width>0.2078125</width>
+			<height>0.1015625</height>
+		</bndbox>
+	</object>
+</annotation>

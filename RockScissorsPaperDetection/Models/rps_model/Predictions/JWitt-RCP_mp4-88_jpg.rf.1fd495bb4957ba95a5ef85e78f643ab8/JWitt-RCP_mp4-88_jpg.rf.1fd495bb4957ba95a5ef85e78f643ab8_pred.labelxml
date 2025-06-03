@@ -1,0 +1,13 @@
+<annotation>
+	<path>JWitt-RCP_mp4-88_jpg.rf.1fd495bb4957ba95a5ef85e78f643ab8.jpg</path>
+	<object>
+		<name>Paper</name>
+		<confidence>0.9341</confidence>
+		<bndbox>
+			<x>0.29296875</x>
+			<y>0.39609375</y>
+			<width>0.5859375</width>
+			<height>0.2890625</height>
+		</bndbox>
+	</object>
+</annotation>

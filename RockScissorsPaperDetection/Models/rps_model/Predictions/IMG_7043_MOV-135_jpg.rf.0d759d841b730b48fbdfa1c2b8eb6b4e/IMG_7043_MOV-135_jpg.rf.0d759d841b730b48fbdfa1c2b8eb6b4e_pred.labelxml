@@ -1,0 +1,13 @@
+<annotation>
+	<path>IMG_7043_MOV-135_jpg.rf.0d759d841b730b48fbdfa1c2b8eb6b4e.jpg</path>
+	<object>
+		<name>Paper</name>
+		<confidence>0.935</confidence>
+		<bndbox>
+			<x>0.6484375</x>
+			<y>0.75390625</y>
+			<width>0.7</width>
+			<height>0.3109375</height>
+		</bndbox>
+	</object>
+</annotation>

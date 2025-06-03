@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="f65b5480-8bae-42fc-9251-28423ac895a6">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>SanLuisSteakhouse_Large_Web_view_jpg.rf.c7c97c6345fd52e360152bc259571354.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>SanLuisSteakhouse_Large_Web_view_jpg.rf.c7c97c6345fd52e360152bc259571354.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

@@ -1,0 +1,11 @@
+<annotation>
+  <object>
+    <name>Paper</name>
+    <bndbox>
+      <x>0.4796875</x>
+      <y>0.778125</y>
+      <width>0.4</width>
+      <height>0.23515625</height>
+    </bndbox>
+  </object>
+</annotation>

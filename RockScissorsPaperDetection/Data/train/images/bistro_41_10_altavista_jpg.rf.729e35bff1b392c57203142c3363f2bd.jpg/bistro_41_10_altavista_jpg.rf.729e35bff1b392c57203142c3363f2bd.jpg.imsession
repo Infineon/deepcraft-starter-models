@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="15dacff5-fa59-4121-9ec9-2f326d93bad1">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>bistro_41_10_altavista_jpg.rf.729e35bff1b392c57203142c3363f2bd.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>bistro_41_10_altavista_jpg.rf.729e35bff1b392c57203142c3363f2bd.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

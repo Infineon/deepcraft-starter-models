@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ImagimobStudio>
+	<Timeline id="5769ae29-92db-4866-939a-deedc03441d0">
+		<Tracks>
+			<Track name="prediction_label" type="labelxml">
+				<PayloadFile>pic_venue_rosewoodbistro_jpg.rf.67a34a4e65f929e24a36c81deb4cdb33_pred.labelxml</PayloadFile>
+			</Track>
+		</Tracks>
+	</Timeline>
+</ImagimobStudio>

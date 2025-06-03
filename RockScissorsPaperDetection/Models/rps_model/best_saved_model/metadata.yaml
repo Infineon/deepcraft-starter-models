@@ -1,0 +1,16 @@
+description: Ultralytics YOLOv5n model trained on /dev/shm/jobs/b298fc71-24d9-11f0-a2aa-7117ba7f60d2/rps_model.yaml
+author: Ultralytics
+date: '2025-04-29T09:42:39.125038'
+version: 8.3.48
+license: AGPL-3.0 License (https://ultralytics.com/license)
+docs: https://docs.ultralytics.com
+stride: 32
+task: detect
+batch: 1
+imgsz:
+- 320
+- 320
+names:
+  0: Scissors
+  1: Rock
+  2: Paper

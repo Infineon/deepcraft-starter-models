@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="2958c6be-8a69-49a3-aceb-d578be7f8de4">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>060630_imaginaire_salle_4_jpg.rf.3416fc53183500c32bad551d2041a9d2.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>060630_imaginaire_salle_4_jpg.rf.3416fc53183500c32bad551d2041a9d2.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

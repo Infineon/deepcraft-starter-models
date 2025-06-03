@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="77630a88-d0c9-45ff-bbfb-fd4aecf03e31">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>piscina_cubierta_09_01_altavista_jpg.rf.7e21c8e6c0bf855e797b7118a3fc2949.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>piscina_cubierta_09_01_altavista_jpg.rf.7e21c8e6c0bf855e797b7118a3fc2949.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

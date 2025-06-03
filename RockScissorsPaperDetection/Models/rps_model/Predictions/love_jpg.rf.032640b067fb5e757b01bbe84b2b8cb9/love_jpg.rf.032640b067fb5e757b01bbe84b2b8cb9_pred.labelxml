@@ -1,0 +1,13 @@
+<annotation>
+	<path>love_jpg.rf.032640b067fb5e757b01bbe84b2b8cb9.jpg</path>
+	<object>
+		<name>Scissors</name>
+		<confidence>0.2529</confidence>
+		<bndbox>
+			<x>0.15625</x>
+			<y>0.6140625</y>
+			<width>0.1</width>
+			<height>0.175</height>
+		</bndbox>
+	</object>
+</annotation>

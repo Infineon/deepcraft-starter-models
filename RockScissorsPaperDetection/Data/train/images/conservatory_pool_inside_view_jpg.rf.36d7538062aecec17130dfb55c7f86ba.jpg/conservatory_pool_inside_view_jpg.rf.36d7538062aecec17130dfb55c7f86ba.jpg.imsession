@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="7b09cf8d-c704-455c-a2a0-a2c44edfb90d">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>conservatory_pool_inside_view_jpg.rf.36d7538062aecec17130dfb55c7f86ba.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>conservatory_pool_inside_view_jpg.rf.36d7538062aecec17130dfb55c7f86ba.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

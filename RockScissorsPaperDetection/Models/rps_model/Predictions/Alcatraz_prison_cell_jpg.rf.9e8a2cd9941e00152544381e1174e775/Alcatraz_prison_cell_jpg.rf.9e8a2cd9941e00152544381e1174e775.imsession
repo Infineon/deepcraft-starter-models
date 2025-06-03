@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ImagimobStudio>
+	<Timeline id="40bb3465-9729-4730-b12d-444ac6047adb">
+		<Tracks>
+			<Track name="prediction_label" type="labelxml">
+				<PayloadFile>Alcatraz_prison_cell_jpg.rf.9e8a2cd9941e00152544381e1174e775_pred.labelxml</PayloadFile>
+			</Track>
+		</Tracks>
+	</Timeline>
+</ImagimobStudio>

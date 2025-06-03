@@ -1,0 +1,13 @@
+<annotation>
+	<path>egohands-public-1626442368949_png_jpg.rf.2dd74ec643786554c7d19e0fdf0e48b7.jpg</path>
+	<object>
+		<name>Scissors</name>
+		<confidence>0.8919</confidence>
+		<bndbox>
+			<x>0.22265625</x>
+			<y>0.70625</y>
+			<width>0.4453125</width>
+			<height>0.48125</height>
+		</bndbox>
+	</object>
+</annotation>

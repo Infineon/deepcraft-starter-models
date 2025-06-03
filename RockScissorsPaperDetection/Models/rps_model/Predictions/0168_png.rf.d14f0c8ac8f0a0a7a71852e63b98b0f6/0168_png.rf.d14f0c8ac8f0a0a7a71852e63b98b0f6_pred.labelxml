@@ -1,0 +1,23 @@
+<annotation>
+	<path>0168_png.rf.d14f0c8ac8f0a0a7a71852e63b98b0f6.jpg</path>
+	<object>
+		<name>Rock</name>
+		<confidence>0.8668</confidence>
+		<bndbox>
+			<x>0.428125</x>
+			<y>0.6109375</y>
+			<width>0.0875</width>
+			<height>0.18125</height>
+		</bndbox>
+	</object>
+	<object>
+		<name>Rock</name>
+		<confidence>0.8301</confidence>
+		<bndbox>
+			<x>0.69609375</x>
+			<y>0.61796875</y>
+			<width>0.0734375</width>
+			<height>0.1546875</height>
+		</bndbox>
+	</object>
+</annotation>

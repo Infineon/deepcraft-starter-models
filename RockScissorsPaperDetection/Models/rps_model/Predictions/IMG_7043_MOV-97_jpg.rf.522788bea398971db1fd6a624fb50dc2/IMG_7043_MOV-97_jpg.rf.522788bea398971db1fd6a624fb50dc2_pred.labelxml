@@ -1,0 +1,13 @@
+<annotation>
+	<path>IMG_7043_MOV-97_jpg.rf.522788bea398971db1fd6a624fb50dc2.jpg</path>
+	<object>
+		<name>Rock</name>
+		<confidence>0.9389</confidence>
+		<bndbox>
+			<x>0.665625</x>
+			<y>0.7890625</y>
+			<width>0.346875</width>
+			<height>0.30625</height>
+		</bndbox>
+	</object>
+</annotation>

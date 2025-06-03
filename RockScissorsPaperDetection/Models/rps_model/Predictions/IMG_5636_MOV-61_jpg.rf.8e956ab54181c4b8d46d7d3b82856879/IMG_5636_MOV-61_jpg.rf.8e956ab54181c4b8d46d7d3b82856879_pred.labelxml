@@ -1,0 +1,23 @@
+<annotation>
+	<path>IMG_5636_MOV-61_jpg.rf.8e956ab54181c4b8d46d7d3b82856879.jpg</path>
+	<object>
+		<name>Paper</name>
+		<confidence>0.8981</confidence>
+		<bndbox>
+			<x>0.34765625</x>
+			<y>0.6328125</y>
+			<width>0.4265625</width>
+			<height>0.184375</height>
+		</bndbox>
+	</object>
+	<object>
+		<name>Rock</name>
+		<confidence>0.8917</confidence>
+		<bndbox>
+			<x>0.84375</x>
+			<y>0.66171875</y>
+			<width>0.240625</width>
+			<height>0.1390625</height>
+		</bndbox>
+	</object>
+</annotation>

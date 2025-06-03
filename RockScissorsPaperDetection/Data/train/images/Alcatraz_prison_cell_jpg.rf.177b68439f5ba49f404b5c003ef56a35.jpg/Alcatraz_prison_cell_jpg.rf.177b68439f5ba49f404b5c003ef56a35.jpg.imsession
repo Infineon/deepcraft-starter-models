@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="5e75649d-02f2-41d2-8dcc-b9758cf1d651">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>Alcatraz_prison_cell_jpg.rf.177b68439f5ba49f404b5c003ef56a35.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>Alcatraz_prison_cell_jpg.rf.177b68439f5ba49f404b5c003ef56a35.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

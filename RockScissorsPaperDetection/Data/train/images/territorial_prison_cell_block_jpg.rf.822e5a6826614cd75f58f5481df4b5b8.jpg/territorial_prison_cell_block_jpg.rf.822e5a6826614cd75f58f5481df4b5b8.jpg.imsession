@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="afc41baf-699a-48e9-be9f-77d0ff270a2d">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>territorial_prison_cell_block_jpg.rf.822e5a6826614cd75f58f5481df4b5b8.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>territorial_prison_cell_block_jpg.rf.822e5a6826614cd75f58f5481df4b5b8.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>
