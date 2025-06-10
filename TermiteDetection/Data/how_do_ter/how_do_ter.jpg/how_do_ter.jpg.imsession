@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="46ea1e56-560e-435d-9035-4df82a7718eb">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>how_do_ter.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>how_do_ter.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

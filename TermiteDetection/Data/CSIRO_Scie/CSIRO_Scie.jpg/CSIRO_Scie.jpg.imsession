@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="65bd2ee8-3381-4844-a3f7-d5e920da824c">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>CSIRO_Scie.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>CSIRO_Scie.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

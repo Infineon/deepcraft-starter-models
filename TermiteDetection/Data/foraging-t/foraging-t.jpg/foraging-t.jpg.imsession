@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="d78e4bc3-e76e-4e5a-a741-ab8dc94631b4">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>foraging-t.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>foraging-t.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

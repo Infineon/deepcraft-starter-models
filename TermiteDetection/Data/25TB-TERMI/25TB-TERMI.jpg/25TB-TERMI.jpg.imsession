@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="652c03cf-3fd6-436b-879b-22639d272f35">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>25TB-TERMI.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>25TB-TERMI.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

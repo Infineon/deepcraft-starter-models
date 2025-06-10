@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="d9c105f2-9eb5-4fcd-9597-d846288184c8">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>formosan-t.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>formosan-t.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Annotations>
+  <Annotation>
+    <Object>
+      <Name>termite</Name>
+      <Bndbox>
+        <X>0.4125</X>
+        <Y>0.2625</Y>
+        <Width>0.346875</Width>
+        <Height>0.367969</Height>
+      </Bndbox>
+    </Object>
+  </Annotation>
+  <Annotation>
+    <Object>
+      <Name>termite</Name>
+      <Bndbox>
+        <X>0.759375</X>
+        <Y>0.440625</Y>
+        <Width>0.161719</Width>
+        <Height>0.225781</Height>
+      </Bndbox>
+    </Object>
+  </Annotation>
+  <Annotation>
+    <Object>
+      <Name>termite</Name>
+      <Bndbox>
+        <X>0.909375</X>
+        <Y>0.279687</Y>
+        <Width>0.161719</Width>
+        <Height>0.246094</Height>
+      </Bndbox>
+    </Object>
+  </Annotation>
+  <Annotation>
+    <Object>
+      <Name>termite</Name>
+      <Bndbox>
+        <X>0.257031</X>
+        <Y>0.589063</Y>
+        <Width>0.329688</Width>
+        <Height>0.167969</Height>
+      </Bndbox>
+    </Object>
+  </Annotation>
+</Annotations>

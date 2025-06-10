@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Annotations>
+  <Annotation>
+    <Object>
+      <Name>termite</Name>
+      <Bndbox>
+        <X>0.591406</X>
+        <Y>0.371094</Y>
+        <Width>0.582812</Width>
+        <Height>0.660937</Height>
+      </Bndbox>
+    </Object>
+  </Annotation>
+</Annotations>

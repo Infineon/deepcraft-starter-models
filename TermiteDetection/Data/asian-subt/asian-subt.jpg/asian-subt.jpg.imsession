@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="329a3cfa-6b24-41a4-b0f1-3bc0cb03d984">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>asian-subt.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>asian-subt.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>
