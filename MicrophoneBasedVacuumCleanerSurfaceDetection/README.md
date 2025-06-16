@@ -45,6 +45,8 @@ This project requires the [PSOC™ 6 AI Evaluation Kit](https://www.infineon.com
 
 For this specific example, the PSOC 6 AI Kit board was simply taped to a cheap vacuum cleaner, on the front side.
 
+![](Resources/imgs/vacuum_psoc6_placement.png)
+
 While this project uses a vacuum cleaner, the methodology can be adapted to other machinery or setups. If you want to replicate the functionality out-of-the-box, you can follow the provided steps.
 
 ## Collecting and expanding the dataset
