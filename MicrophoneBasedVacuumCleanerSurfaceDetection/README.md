@@ -43,6 +43,8 @@ This starter project provides a streamlined approach to build a surface detectio
 
 This project requires the [PSOC™ 6 AI Evaluation Kit](https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-062s2-ai/), which includes a PSoC™ 6 MCU and Infineon digital microphones. The kit is ideal for prototyping, enabling real-world data collection to rapidly develop machine learning solutions.
 
+For this specific example, the PSOC 6 AI Kit board was simply taped to a cheap vacuum cleaner, on the front side.
+
 While this project uses a vacuum cleaner, the methodology can be adapted to other machinery or setups. If you want to replicate the functionality out-of-the-box, you can follow the provided steps.
 
 ## Collecting and expanding the dataset
@@ -77,26 +79,27 @@ This project uses three labels corresponding to the three surface types:
 
 1. **Identify the vacuum cleaner or machinery you want to monitor.**
    - Ensure that it produces distinct noise signatures for each surface type.
-   - Test its operation across the three target classes (Floor, Carpet, Air).
+   - Test its operation across the three target classes (Floor, Carpet, Air). Include more classes or remove some if needed.
 
 2. **Collect and label data for a prototype model.**
+   - Setup your vacuum cleaner and the PSOC 6 AI Kit by taping or fixing the board to the machine. Keep in mind that the closer you will be to final production setting, the better the model performance will be.
    - Use the GraphUX project to collect at least 40 minutes of data per surface type.
    - Save the data in the `Data` folder and label it accurately. You may increase the dataset size if initial model performance is unsatisfactory.
 
-3. **Train the prototype model in Deepcraft Studio.**
+4. **Train the prototype model in Deepcraft Studio.**
    - Import your dataset into the "Data" tab of the `.improj` file in Deepcraft Studio.
    - Follow the standard Deepcraft Studio workflow to preprocess, train, and evaluate your classification model.
    - The pre-configured preprocessing settings and model architectures are optimized for real-time performance on the PSoC™ 6 AI Kit.
 
-4. **Deploy and test the model in real-time.**
+5. **Deploy and test the model in real-time.**
    - Use the template application in ModusToolbox ([MTB Example ML Imagimob MTBML Deploy](https://github.com/Infineon/mtb-example-ml-imagimob-mtbml-deploy)) to deploy the trained model firmware onto the PSoC™ 6 AI Kit.
-   - Conduct real-time surface detection tests by connecting the vacuum cleaner to the evaluation board.
+   - Conduct real-time surface detection tests by running the firmware and checking terminal output.
 
-5. **Optimize for production deployment.**
+6. **Optimize for production deployment.**
    - Transition from the prototype to a finalized production setup by placing the sensors and MCU in their intended positions within the vacuum cleaner housing.
    - Collect additional data if the production setup differs significantly from the prototype conditions. Use the Transfer Learning capabilities in Deepcraft Studio to fine-tune the model for the final configuration.
 
-6. **Monitor and maintain the system post-deployment.**
+7. **Monitor and maintain the system post-deployment.**
    - Establish procedures for ongoing monitoring, model updates, and system maintenance based on your production requirements.
 
 ## Help & Support
