@@ -25,7 +25,6 @@ This starter project provides a streamlined approach to build a surface detectio
 
 - A pre-configured framework to perform surface classification based on audio signals.
 - Built-in preprocessing and data windowing settings.
-- A script for efficient data labeling.
 - Predefined model architectures optimized for this task, which can be deployed easily.
 
 ## Contents
