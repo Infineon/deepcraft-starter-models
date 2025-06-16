@@ -1,0 +1,4 @@
+Time(Seconds),Length(Seconds),Label(string),Confidence(double),Comment(string)
+0.0161817,22.6935124,Floor,1,
+22.7096941,19.073225200000003,Air,1,
+41.7829193,20.760999099999992,Carpet,1,

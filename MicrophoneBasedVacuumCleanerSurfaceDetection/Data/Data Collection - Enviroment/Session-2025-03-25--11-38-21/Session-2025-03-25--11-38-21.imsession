@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="ceb0ec63-80c2-4f6e-94fe-e1989c65c4d1">
+    <Tracks>
+      <Track name="Microphone-Data" type="audiowav" isLabelTrack="False" frequency="0">
+        <PayloadFile>Microphone-Data.wav</PayloadFile>
+        <Shape />
+      </Track>
+      <Track name="Live-Labeling" type="labelcsv">
+        <PayloadFile>Live-Labeling.label</PayloadFile>
+        <Shape />
+      </Track>
+      <Track name="Preprocessor" type="datacsv" timecoded="TimestampBeginDuration" isLabelTrack="False">
+        <PayloadFile>..\..\..\PreprocessorTrack\Data Collection - Enviroment\Session-2025-03-25--11-38-21\Microphone-Data_Preprocessor.data</PayloadFile>
+        <Shape />
+      </Track>
+      <Track name="conv1d-small-balanced-20" type="datacsv" timecoded="TimestampBeginDuration" isLabelTrack="False">
+        <PayloadFile>..\..\..\Models\conv1d-small-balanced-2\Predictions\sessions\Session-2025-03-25--11-38-21\conv1d-small-balanced-20.data</PayloadFile>
+        <Offset unit="seconds">2.0219380000E+000</Offset>
+        <Shape />
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

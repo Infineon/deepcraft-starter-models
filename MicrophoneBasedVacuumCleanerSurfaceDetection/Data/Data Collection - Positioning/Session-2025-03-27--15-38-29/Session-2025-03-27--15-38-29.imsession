@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="b3f69f72-e7ec-4831-9f0f-c25cd8ef8de2">
+    <Tracks>
+      <Track name="Microphone-Data" type="audiowav" isLabelTrack="False" frequency="0">
+        <PayloadFile>Microphone-Data.wav</PayloadFile>
+        <Shape />
+      </Track>
+      <Track name="Preprocessor" type="datacsv" isLabelTrack="False">
+        <PayloadFile>../../../Vacuum Cleaner Classification/PreprocessorTrack/Data Collection - Positioning/Session-2025-03-27--15-38-29/Microphone-Data_Preprocessor.data</PayloadFile>
+        <Shape />
+      </Track>
+      <Track name="Live-Labeling" type="labelcsv">
+        <PayloadFile>Live-Labeling.label</PayloadFile>
+        <Shape />
+      </Track>
+      <Track name="Local Camera Video" type="videomp4">
+        <PayloadFile>Local Camera Video.mp4</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

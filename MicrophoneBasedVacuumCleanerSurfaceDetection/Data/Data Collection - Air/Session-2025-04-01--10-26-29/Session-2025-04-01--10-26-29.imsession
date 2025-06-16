@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="f215a188-08ef-499b-af89-8c01b1f2f49a">
+    <Tracks>
+      <Track name="Microphone-Data" type="audiowav" isLabelTrack="False" frequency="16000">
+        <PayloadFile>Microphone-Data.wav</PayloadFile>
+        <Shape>
+          <Axis name="Audio" size="1">
+            <Label index="0">Mono</Label>
+          </Axis>
+        </Shape>
+      </Track>
+      <Track name="Live-Labeling" type="labelcsv">
+        <PayloadFile>Live-Labeling.label</PayloadFile>
+        <Shape>
+          <Axis name="Labels" size="1">
+            <Label index="0">Air</Label>
+          </Axis>
+        </Shape>
+      </Track>
+      <Track name="Preprocessor" type="datacsv" timecoded="TimestampBeginDuration" isLabelTrack="False">
+        <PayloadFile>..\..\..\PreprocessorTrack\Data Collection - Air\Session-2025-04-01--10-26-29\Microphone-Data_Preprocessor.data</PayloadFile>
+        <Shape />
+      </Track>
+      <Track name="Local Camera Video" type="videomp4">
+        <PayloadFile>Local Camera Video.mp4</PayloadFile>
+      </Track>
+      <Track name="conv1d-small-balanced-20" type="datacsv" timecoded="TimestampBeginDuration" isLabelTrack="False">
+        <PayloadFile>..\..\..\Models\conv1d-small-balanced-2\Predictions\sessions\Session-2025-04-01--10-26-29\conv1d-small-balanced-20.data</PayloadFile>
+        <Offset unit="seconds">2.0219380000E+000</Offset>
+        <Shape />
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>
