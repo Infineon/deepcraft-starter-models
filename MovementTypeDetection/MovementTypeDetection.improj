@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ImagimobStudio version="1.1.0">
-  <Job id="08c04d96-2b3c-11f0-8de0-e567beafbb61" />
-  <ProjectType>Classification</ProjectType>
+  <Job id="30fe3510-46c0-11f0-bed6-2333f44e93ad" />
   <Preprocessor inshape="[2,3]" intype="Float32" infreq="50" outshape="[100,6]" outtype="Float32">
     <Unit id="Core.Packages.ContextualWindow">
       <Argument param="contextual_length_sec" type="Double">2</Argument>
@@ -19,7 +18,8 @@
     <Patience>20</Patience>
     <AppendModels>False</AppendModels>
     <LossFunction>CategoricalCrossentropy</LossFunction>
-    <HardwareType>Generic</HardwareType>
+    <FactoryOptions>None</FactoryOptions>
+    <HardwareType>Default</HardwareType>
     <TrainingEnvironment>
     </TrainingEnvironment>
     <ModelFamily>Conv2D</ModelFamily>
@@ -547,6 +547,18 @@
           <CustomColumnValue columnId="cf05cc27-e87c-4806-a71c-c5b2829cfb9b">Person1</CustomColumnValue>
         </CustomColumnValues>
       </Session>
+      <Session name="Transition3" sessionId="191302e4-8850-4a08-9c7f-c8a6b4468a34" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="True" labelTrack="Live Labeling" dataTrack="IMU Data" tags="None">
+        <DataFile shape="[2,3]" samplerate="50" modified="5250455327676037595" start="0.0099999" length="40.82">/Data/Person1/Transition3/IMU-Data.data</DataFile>
+        <SessionFile>/Data/Person1/Transition3/Transition3.imsession</SessionFile>
+        <LabelFile modified="5250455327676186957">/Data/Person1/Transition3/Live-Labeling.label</LabelFile>
+        <Labels>
+          <Label count="3" length="15.3470589">shaking</Label>
+          <Label count="2" length="11.4042389">circle</Label>
+        </Labels>
+        <CustomColumnValues>
+          <CustomColumnValue columnId="cf05cc27-e87c-4806-a71c-c5b2829cfb9b">Person1</CustomColumnValue>
+        </CustomColumnValues>
+      </Session>
       <Session name="Transitions10" sessionId="b7775ae4-6caa-4aa3-8e46-3a8d6c590c43" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live Labeling" dataTrack="IMU Data" tags="None">
         <DataFile shape="[2,3]" samplerate="50" modified="5250455327677053188" start="0.0099999" length="38.44">/Data/Person1/Transitions10/IMU-Data.data</DataFile>
         <SessionFile>/Data/Person1/Transitions10/Transitions10.imsession</SessionFile>
@@ -661,7 +673,7 @@
         <LabelFile modified="5250471837675787560">/Data/Person2/Session-2025-03-25--15-02-15/Live-Labeling.label</LabelFile>
         <Labels>
           <Label count="1" length="5.0713912">circle</Label>
-          <Label count="2" length="16.6760005">shaking</Label>
+          <Label count="2" length="16.6760006">shaking</Label>
         </Labels>
         <CustomColumnValues>
           <CustomColumnValue columnId="cf05cc27-e87c-4806-a71c-c5b2829cfb9b">Person2</CustomColumnValue>
@@ -725,18 +737,6 @@
         </Labels>
         <CustomColumnValues>
           <CustomColumnValue columnId="cf05cc27-e87c-4806-a71c-c5b2829cfb9b">Person2</CustomColumnValue>
-        </CustomColumnValues>
-      </Session>
-      <Session name="Transition3" sessionId="191302e4-8850-4a08-9c7f-c8a6b4468a34" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="True" labelTrack="Live Labeling" dataTrack="IMU Data" tags="None">
-        <DataFile shape="[2,3]" samplerate="50" modified="5250455327676037595" start="0.0099999" length="40.82">/Data/Person1/Transition3/IMU-Data.data</DataFile>
-        <SessionFile>/Data/Person1/Transition3/Transition3.imsession</SessionFile>
-        <LabelFile modified="5250455327676186957">/Data/Person1/Transition3/Live-Labeling.label</LabelFile>
-        <Labels>
-          <Label count="3" length="15.3470589">shaking</Label>
-          <Label count="2" length="11.4042389">circle</Label>
-        </Labels>
-        <CustomColumnValues>
-          <CustomColumnValue columnId="cf05cc27-e87c-4806-a71c-c5b2829cfb9b">Person1</CustomColumnValue>
         </CustomColumnValues>
       </Session>
     </DataSet>
@@ -817,7 +817,7 @@
         <LabelFile modified="5250471837688157997">/Data/Person2/Session-2025-03-25--15-33-15/Live-Labeling.label</LabelFile>
         <Labels>
           <Label count="3" length="16.2166579">circle</Label>
-          <Label count="2" length="11.2228584">shaking</Label>
+          <Label count="2" length="11.2228585">shaking</Label>
         </Labels>
         <CustomColumnValues>
           <CustomColumnValue columnId="cf05cc27-e87c-4806-a71c-c5b2829cfb9b">Person2</CustomColumnValue>
@@ -924,7 +924,7 @@
         <LabelFile modified="5250455327678713241">/Data/Person1/Transitions5/Live-Labeling.label</LabelFile>
         <Labels>
           <Label count="1" length="15.0881824">shaking</Label>
-          <Label count="2" length="40.5586125">circle</Label>
+          <Label count="2" length="40.5586126">circle</Label>
         </Labels>
         <CustomColumnValues>
           <CustomColumnValue columnId="cf05cc27-e87c-4806-a71c-c5b2829cfb9b">Person1</CustomColumnValue>
@@ -1008,7 +1008,7 @@
         <LabelFile modified="5250471837697128297">/Data/Person2/Session-2025-03-25--16-25-17/Live-Labeling.label</LabelFile>
         <Labels>
           <Label count="4" length="24.3948196">circle</Label>
-          <Label count="2" length="10.6921316">shaking</Label>
+          <Label count="2" length="10.6921317">shaking</Label>
         </Labels>
         <CustomColumnValues>
           <CustomColumnValue columnId="cf05cc27-e87c-4806-a71c-c5b2829cfb9b">Person2</CustomColumnValue>
