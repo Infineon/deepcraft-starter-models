@@ -8,9 +8,22 @@ This is a simple starter model capable of differentiating between 3 different mo
 The data was collected from the built-in IMU on the AI-Eval kit (CY8CKIT-062S2-AI) held in hand and streamed into DEEPCRAFT Studio at 50Hz. The data collection was performed separately by two people. Considerations were taken to vary the frequencies of the shaking and circling motions, as well as incorporating a large number of transitions between the 3 states. It was ensured that the model had plenty of transition data by 5 second alternating: stationary, shaking, circle, shaking, stationary, shaking, stationary, circle. This ensures that all combinations of transitions are covered. Furthermore, for the circles the radius and direction of travel were also varied. 
 
 ## Adding More Data
-Adding more data for the existing gesutres or adding another gesture is simple with the [AI-eval kit](https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-062s2-ai/). Connecting this to DEEPCRAFT Studio allows you to stream the data directly, and then labelling it. When adding more motions, make sure to cover all possible transitions between gestures. 
+Adding more data for the existing gesutres or adding another gesture is simple with the [AI-eval kit](https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-062s2-ai/). 
+First, you need to flash and configure the [Imagimob Streaming Protocol Firmware](https://github.com/Infineon/mtb-example-imagimob-streaming-protocol/blob/master/README.md) on your AI Kit.
+
+Connecting this to DEEPCRAFT Studio allows you to stream the data directly, and then labelling it. See below for the setup in GraphUX.
+
+![](Resources/imgs/GraphUX.png)
+
+Click the "Start" button on the toolbar to execute the GraphUX pipeline.
+By clicking the "Record" button in the .imsession window, you should be able to record IMU data:
+
+![](Resources/imgs/recording_sample.png)
+
+When adding more motions, make sure to cover all possible transitions between gestures. 
 If you have a practical application and wish to go into production you might want to create a label that corresponds to no distinct motion, i.e when it is idle. In this case you will have to go through the existing data and label all the currently unlabelled data as 'stationary'. 
 It is recommended to have a minimum of 100 seconds of data per label, preferably more.
+More detailed instructions on collecting data can be found [here](https://developer.imagimob.com/data-preparation/data-collection).
 
 ## Steps to Production
 The recommended path to production for this starter model is to identify what motions you want to identify. If your application requires a class for no distinct motion, go through the existing data and create labels for 'Stationary' to replace the existing unlabelled data. This choice should be given some thought. Collect data for your application as outlined above, in a situation that is as representative as your final use case as possible. Next you should think about what motions you want to ignore, and incorporate negative data for those.

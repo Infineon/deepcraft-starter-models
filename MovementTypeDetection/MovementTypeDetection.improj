@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ImagimobStudio version="1.1.0">
-  <Job id="30fe3510-46c0-11f0-bed6-2333f44e93ad" />
+  <Job id="a56b1b2b-4c25-11f0-85a5-59e2e8ae06b0" />
+  <ProjectType>Classification</ProjectType>
   <Preprocessor inshape="[2,3]" intype="Float32" infreq="50" outshape="[100,6]" outtype="Float32">
     <Unit id="Core.Packages.ContextualWindow">
       <Argument param="contextual_length_sec" type="Double">2</Argument>
@@ -18,8 +19,7 @@
     <Patience>20</Patience>
     <AppendModels>False</AppendModels>
     <LossFunction>CategoricalCrossentropy</LossFunction>
-    <FactoryOptions>None</FactoryOptions>
-    <HardwareType>Default</HardwareType>
+    <HardwareType>Generic</HardwareType>
     <TrainingEnvironment>
     </TrainingEnvironment>
     <ModelFamily>Conv2D</ModelFamily>
@@ -673,7 +673,7 @@
         <LabelFile modified="5250471837675787560">/Data/Person2/Session-2025-03-25--15-02-15/Live-Labeling.label</LabelFile>
         <Labels>
           <Label count="1" length="5.0713912">circle</Label>
-          <Label count="2" length="16.6760006">shaking</Label>
+          <Label count="2" length="16.6760005">shaking</Label>
         </Labels>
         <CustomColumnValues>
           <CustomColumnValue columnId="cf05cc27-e87c-4806-a71c-c5b2829cfb9b">Person2</CustomColumnValue>
@@ -817,7 +817,7 @@
         <LabelFile modified="5250471837688157997">/Data/Person2/Session-2025-03-25--15-33-15/Live-Labeling.label</LabelFile>
         <Labels>
           <Label count="3" length="16.2166579">circle</Label>
-          <Label count="2" length="11.2228585">shaking</Label>
+          <Label count="2" length="11.2228584">shaking</Label>
         </Labels>
         <CustomColumnValues>
           <CustomColumnValue columnId="cf05cc27-e87c-4806-a71c-c5b2829cfb9b">Person2</CustomColumnValue>
@@ -924,7 +924,7 @@
         <LabelFile modified="5250455327678713241">/Data/Person1/Transitions5/Live-Labeling.label</LabelFile>
         <Labels>
           <Label count="1" length="15.0881824">shaking</Label>
-          <Label count="2" length="40.5586126">circle</Label>
+          <Label count="2" length="40.5586125">circle</Label>
         </Labels>
         <CustomColumnValues>
           <CustomColumnValue columnId="cf05cc27-e87c-4806-a71c-c5b2829cfb9b">Person1</CustomColumnValue>
@@ -1008,7 +1008,7 @@
         <LabelFile modified="5250471837697128297">/Data/Person2/Session-2025-03-25--16-25-17/Live-Labeling.label</LabelFile>
         <Labels>
           <Label count="4" length="24.3948196">circle</Label>
-          <Label count="2" length="10.6921317">shaking</Label>
+          <Label count="2" length="10.6921316">shaking</Label>
         </Labels>
         <CustomColumnValues>
           <CustomColumnValue columnId="cf05cc27-e87c-4806-a71c-c5b2829cfb9b">Person2</CustomColumnValue>
