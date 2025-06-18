@@ -14,9 +14,9 @@
         <PayloadFile>..\..\..\PreprocessorTrack\Data Collection - Enviroment\Session-2025-03-25--09-29-56\Microphone-Data_Preprocessor.data</PayloadFile>
         <Shape />
       </Track>
-      <Track name="conv1d-small-balanced-20" type="datacsv" timecoded="TimestampBeginDuration" isLabelTrack="False">
-        <PayloadFile>..\..\..\Models\conv1d-small-balanced-2\Predictions\sessions\Session-2025-03-25--09-29-56\conv1d-small-balanced-20.data</PayloadFile>
-        <Offset unit="seconds">2.0219380000E+000</Offset>
+      <Track name="conv1d-small-balanced-00" type="datacsv" timecoded="TimestampBeginDuration" isLabelTrack="False">
+        <PayloadFile>..\..\..\Models\conv1d-small-balanced-0\Predictions\sessions\Session-2025-03-25--09-29-56\conv1d-small-balanced-00.data</PayloadFile>
+        <Offset unit="seconds">1.0219380000E+000</Offset>
         <Shape />
       </Track>
     </Tracks>

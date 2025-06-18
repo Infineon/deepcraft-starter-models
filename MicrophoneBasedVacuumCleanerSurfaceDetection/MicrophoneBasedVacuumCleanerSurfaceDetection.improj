@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ImagimobStudio version="1.1.0">
-  <Job id="cae5712b-1978-11f0-833e-7705923e9b89" />
+  <Job id="4db149d3-4c3d-11f0-a03e-dd52c0598aed" />
   <ProjectType>Classification</ProjectType>
-  <Preprocessor inshape="[1]" intype="Float32" infreq="16000" outshape="[200,50]" outtype="Float32">
+  <Preprocessor inshape="[1]" intype="Float32" infreq="16000" outshape="[100,50]" outtype="Float32">
     <Unit id="Core.Packages.SpeechAudio">
       <Argument param="output_freq" type="Double">100</Argument>
       <Argument param="output_features" type="Int32">50</Argument>
@@ -14,7 +14,7 @@
       <Argument param="time_output" type="String">time</Argument>
     </Unit>
     <Unit id="Core.Packages.ContextualWindow">
-      <Argument param="contextual_length_sec" type="Double">2</Argument>
+      <Argument param="contextual_length_sec" type="Double">1</Argument>
       <Argument param="prediction_freq" type="Double">10</Argument>
       <Argument param="input" type="String">data</Argument>
       <Argument param="time_input" type="String">time</Argument>
@@ -40,7 +40,7 @@
     <Downscale>False</Downscale>
     <LearnRate>Low</LearnRate>
     <RegularizationFactor>Low</RegularizationFactor>
-    <LastNetworkInputShape>[200,50]</LastNetworkInputShape>
+    <LastNetworkInputShape>[100,50]</LastNetworkInputShape>
     <LastClassCount>4</LastClassCount>
     <Optimizer>
       <LearningRate>0.001</LearningRate>
@@ -52,7 +52,7 @@
     </BuildSteps>
   </ModelFactory>
   <Models>
-    <Model name="conv1d-small-balanced-0" id="42aac348-091f-46b6-bcf3-06c5371ab6c5">
+    <Model name="conv1d-small-balanced-0" id="3de83dab-a74a-40e2-a4e2-ec085876e050">
       <LossFunction>CategoricalCrossentropy</LossFunction>
       <Epochs>100</Epochs>
       <BatchSize>128</BatchSize>
@@ -64,7 +64,7 @@
         <LearningRate>0.0001</LearningRate>
         <WeightDecay>0.0001</WeightDecay>
       </Optimizer>
-      <Network inshape="[200,50]" intype="Float32" infreq="0" outshape="[4]" outtype="Float32">
+      <Network inshape="[100,50]" intype="Float32" infreq="0" outshape="[4]" outtype="Float32">
         <Unit id="Core.Layers.Convolution1D">
           <Argument param="filters" type="Int32">12</Argument>
           <Argument param="kernel_size" type="Int32">3</Argument>
@@ -127,7 +127,7 @@
         <SymbolWeight symbol="Floor" weight="1" />
         <SymbolWeight symbol="Carpet" weight="1" />
       </SymbolWeights>
-      <Preprocessor override="False" inshape="[1]" intype="Float32" infreq="16000" outshape="[200,50]" outtype="Float32">
+      <Preprocessor override="False" inshape="[1]" intype="Float32" infreq="16000" outshape="[100,50]" outtype="Float32">
         <Unit id="Core.Packages.SpeechAudio">
           <Argument param="output_freq" type="Double">100</Argument>
           <Argument param="output_features" type="Int32">50</Argument>
@@ -139,7 +139,7 @@
           <Argument param="time_output" type="String">time</Argument>
         </Unit>
         <Unit id="Core.Packages.ContextualWindow">
-          <Argument param="contextual_length_sec" type="Double">2</Argument>
+          <Argument param="contextual_length_sec" type="Double">1</Argument>
           <Argument param="prediction_freq" type="Double">10</Argument>
           <Argument param="input" type="String">data</Argument>
           <Argument param="time_input" type="String">time</Argument>
@@ -149,7 +149,7 @@
       </Preprocessor>
       <Postprocessor override="False" inshape="[128,3]" intype="Float32" infreq="1" outshape="[128,3]" outtype="Float32" />
     </Model>
-    <Model name="conv1d-small-balanced-1" id="c15c07fb-c27b-4130-87d0-a96d9f731c26">
+    <Model name="conv1d-small-balanced-1" id="05dc0edc-7e3f-4f38-b460-233098a131ad">
       <LossFunction>CategoricalCrossentropy</LossFunction>
       <Epochs>100</Epochs>
       <BatchSize>128</BatchSize>
@@ -161,7 +161,7 @@
         <LearningRate>0.0001</LearningRate>
         <WeightDecay>0.0001</WeightDecay>
       </Optimizer>
-      <Network inshape="[200,50]" intype="Float32" infreq="0" outshape="[4]" outtype="Float32">
+      <Network inshape="[100,50]" intype="Float32" infreq="0" outshape="[4]" outtype="Float32">
         <Unit id="Core.Layers.Convolution1D">
           <Argument param="filters" type="Int32">16</Argument>
           <Argument param="kernel_size" type="Int32">3</Argument>
@@ -224,7 +224,7 @@
         <SymbolWeight symbol="Floor" weight="1" />
         <SymbolWeight symbol="Carpet" weight="1" />
       </SymbolWeights>
-      <Preprocessor override="False" inshape="[1]" intype="Float32" infreq="16000" outshape="[200,50]" outtype="Float32">
+      <Preprocessor override="False" inshape="[1]" intype="Float32" infreq="16000" outshape="[100,50]" outtype="Float32">
         <Unit id="Core.Packages.SpeechAudio">
           <Argument param="output_freq" type="Double">100</Argument>
           <Argument param="output_features" type="Int32">50</Argument>
@@ -236,7 +236,7 @@
           <Argument param="time_output" type="String">time</Argument>
         </Unit>
         <Unit id="Core.Packages.ContextualWindow">
-          <Argument param="contextual_length_sec" type="Double">2</Argument>
+          <Argument param="contextual_length_sec" type="Double">1</Argument>
           <Argument param="prediction_freq" type="Double">10</Argument>
           <Argument param="input" type="String">data</Argument>
           <Argument param="time_input" type="String">time</Argument>
@@ -246,7 +246,7 @@
       </Preprocessor>
       <Postprocessor override="False" inshape="[128,3]" intype="Float32" infreq="1" outshape="[128,3]" outtype="Float32" />
     </Model>
-    <Model name="conv1d-small-balanced-2" id="89e450e1-f8f8-423c-bf8f-3c949a8aa1e0">
+    <Model name="conv1d-small-balanced-2" id="4c5b19e7-8fcc-45f4-900a-892fba26fd5c">
       <LossFunction>CategoricalCrossentropy</LossFunction>
       <Epochs>100</Epochs>
       <BatchSize>128</BatchSize>
@@ -258,7 +258,7 @@
         <LearningRate>0.0001</LearningRate>
         <WeightDecay>0.0001</WeightDecay>
       </Optimizer>
-      <Network inshape="[200,50]" intype="Float32" infreq="0" outshape="[4]" outtype="Float32">
+      <Network inshape="[100,50]" intype="Float32" infreq="0" outshape="[4]" outtype="Float32">
         <Unit id="Core.Layers.Convolution1D">
           <Argument param="filters" type="Int32">16</Argument>
           <Argument param="kernel_size" type="Int32">3</Argument>
@@ -321,7 +321,7 @@
         <SymbolWeight symbol="Floor" weight="1" />
         <SymbolWeight symbol="Carpet" weight="1" />
       </SymbolWeights>
-      <Preprocessor override="False" inshape="[1]" intype="Float32" infreq="16000" outshape="[200,50]" outtype="Float32">
+      <Preprocessor override="False" inshape="[1]" intype="Float32" infreq="16000" outshape="[100,50]" outtype="Float32">
         <Unit id="Core.Packages.SpeechAudio">
           <Argument param="output_freq" type="Double">100</Argument>
           <Argument param="output_features" type="Int32">50</Argument>
@@ -333,7 +333,7 @@
           <Argument param="time_output" type="String">time</Argument>
         </Unit>
         <Unit id="Core.Packages.ContextualWindow">
-          <Argument param="contextual_length_sec" type="Double">2</Argument>
+          <Argument param="contextual_length_sec" type="Double">1</Argument>
           <Argument param="prediction_freq" type="Double">10</Argument>
           <Argument param="input" type="String">data</Argument>
           <Argument param="time_input" type="String">time</Argument>
@@ -343,7 +343,7 @@
       </Preprocessor>
       <Postprocessor override="False" inshape="[128,3]" intype="Float32" infreq="1" outshape="[128,3]" outtype="Float32" />
     </Model>
-    <Model name="conv1d-small-balanced-3" id="38440438-ba82-4901-87d2-05ee17c1aa6f">
+    <Model name="conv1d-small-balanced-3" id="0cfc50aa-92d9-4f81-a9b4-31657abeb0bd">
       <LossFunction>CategoricalCrossentropy</LossFunction>
       <Epochs>100</Epochs>
       <BatchSize>128</BatchSize>
@@ -355,7 +355,7 @@
         <LearningRate>0.0001</LearningRate>
         <WeightDecay>0.0001</WeightDecay>
       </Optimizer>
-      <Network inshape="[200,50]" intype="Float32" infreq="0" outshape="[4]" outtype="Float32">
+      <Network inshape="[100,50]" intype="Float32" infreq="0" outshape="[4]" outtype="Float32">
         <Unit id="Core.Layers.Convolution1D">
           <Argument param="filters" type="Int32">32</Argument>
           <Argument param="kernel_size" type="Int32">3</Argument>
@@ -418,7 +418,7 @@
         <SymbolWeight symbol="Floor" weight="1" />
         <SymbolWeight symbol="Carpet" weight="1" />
       </SymbolWeights>
-      <Preprocessor override="False" inshape="[1]" intype="Float32" infreq="16000" outshape="[200,50]" outtype="Float32">
+      <Preprocessor override="False" inshape="[1]" intype="Float32" infreq="16000" outshape="[100,50]" outtype="Float32">
         <Unit id="Core.Packages.SpeechAudio">
           <Argument param="output_freq" type="Double">100</Argument>
           <Argument param="output_features" type="Int32">50</Argument>
@@ -430,7 +430,7 @@
           <Argument param="time_output" type="String">time</Argument>
         </Unit>
         <Unit id="Core.Packages.ContextualWindow">
-          <Argument param="contextual_length_sec" type="Double">2</Argument>
+          <Argument param="contextual_length_sec" type="Double">1</Argument>
           <Argument param="prediction_freq" type="Double">10</Argument>
           <Argument param="input" type="String">data</Argument>
           <Argument param="time_input" type="String">time</Argument>
