@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="26d7c206-76c2-411d-bcfa-c6115e20019a">
+    <Tracks>
+      <Track name="image" type="imagejpg">
+        <PayloadFile>termite_dataset2_6.jpg</PayloadFile>
+      </Track>
+      <Track name="label" type="labelxml">
+        <PayloadFile>termite_dataset2_6.labelxml</PayloadFile>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

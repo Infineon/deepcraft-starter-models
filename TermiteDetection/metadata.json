@@ -1,0 +1,1 @@
+{"title": "Termite Detection", "description": "This starter model detects termites in the image.", "algorithm": "Classification", "sensors": ["Camera"]}
