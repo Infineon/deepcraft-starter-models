@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ImagimobStudio version="0.9">
+  <Timeline id="f8d11c6e-96bb-465b-83af-cbfc150d5622">
+    <Tracks>
+      <Track name="data" type="audiowav" isLabelTrack="False" frequency="0">
+        <PayloadFile>data.wav</PayloadFile>
+        <Shape />
+      </Track>
+      <Track name="label" type="labelcsv">
+        <PayloadFile>label.label</PayloadFile>
+        <Shape />
+      </Track>
+      <Track name="Preprocessor" type="datacsv" timecoded="TimestampBeginDuration" isLabelTrack="False">
+        <PayloadFile>..\..\..\PreprocessorTrack\Train\21__13f_panska_tlolkova_matilda__broken_glass\data_Preprocessor.data</PayloadFile>
+        <Shape />
+      </Track>
+      <Track name="conv1d-medium-speed-20" type="datacsv" timecoded="TimestampBeginDuration" isLabelTrack="False">
+        <PayloadFile>..\..\..\Models\conv1d-medium-speed-2\Predictions\sessions\21__13f_panska_tlolkova_matilda__broken_glass\conv1d-medium-speed-20.data</PayloadFile>
+        <Offset unit="seconds">6.7193750000E-001</Offset>
+        <Shape />
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>

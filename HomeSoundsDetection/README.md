@@ -20,3 +20,10 @@ Furthermore, background data needs to be collected depending on the location the
 The existing preprocessor and model architecture are unlikely to suffice, and you will need to fine-tune or overhaul these. In this it is important to keep in mind the capacity and memory limits of the deployment location.
 Finally, you should evaluate the model in a realistic setting. 
 In the case that false positives are a problem, you could apply post-processing techniques such as temporal smoothing.
+## Getting Started
+
+Please visit [developer.imagimob.com](https://developer.imagimob.com), where you can read about Imagimob Studio and go through step-by-step tutorials to get you quickly started.
+
+## Help & Support
+
+If you need support or if you want to know how to deploy the model on to the device, please submit a ticket on the Infineon [community forum ](https://community.infineon.com/t5/Imagimob/bd-p/Imagimob/page/1) Imagimob Studio page.
