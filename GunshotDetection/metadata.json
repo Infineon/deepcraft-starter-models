@@ -1,0 +1,1 @@
+{"title": "GunshotDetection", "description": "A starter project for identifying gunshots", "algorithm": "Classification", "sensors": ["Microphone"]}

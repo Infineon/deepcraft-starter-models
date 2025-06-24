@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Annotations>
+	<Annotation>
+		<Path>valid_486.jpg</Path>
+		<Object>
+			<Name>Paper</Name>
+			<Confidence>0.9045</Confidence>
+			<Bndbox>
+				<X>0.3984375</X>
+				<Y>0.4875</Y>
+				<Width>0.546875</Width>
+				<Height>0.2375</Height>
+			</Bndbox>
+		</Object>
+	</Annotation>
+</Annotations>

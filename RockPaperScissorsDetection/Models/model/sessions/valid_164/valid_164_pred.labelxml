@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Annotations>
+	<Annotation>
+		<Path>valid_164.jpg</Path>
+		<Object>
+			<Name>Rock</Name>
+			<Confidence>0.7681</Confidence>
+			<Bndbox>
+				<X>0.7375</X>
+				<Y>0.2453125</Y>
+				<Width>0.33125</Width>
+				<Height>0.209375</Height>
+			</Bndbox>
+		</Object>
+	</Annotation>
+</Annotations>

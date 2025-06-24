@@ -3,6 +3,8 @@ This repository contains DEEPCRAFT™ Starter Models - deep learning based proje
 
 This repository is automatically pulled and content is generated in DEEPCRAFT™ Studio. For the best experience, access these models through DEEPCRAFT™ Studio.
 
+For commercial use, our standard terms and conditions applies, https://developer.imagimob.com/legal/studio-terms-and-conditions.
+
 ## Usage
 These projects are designed to be used through DEEPCRAFT™ Studio (https://www.imagimob.com/studio) and should be accessed through that platform.
 
@@ -18,9 +20,11 @@ All project submissions must include a README file with the following informatio
 * Guidelines for collecting and expanding the dataset
 * Recommended path to production, including steps to make the model production-ready
 
-Once the project is ready, you can download and unpack the [PR tool](https://api.imagimob.com/v1/Data/Object/pr_tool.zip), then run the following command from within the unpacked directory:
+Once the project is ready, you can download [pr_tool.zip](https://api.imagimob.com/v1/Data/Object/pr_tool.zip) and run:
 
 ```bash
+tar -xf <download-path>\pr_tool.zip
+cd pr_tool
 python .\pr_tool.py --path <project-path>
 ```
 
@@ -28,4 +32,4 @@ where `<project-path>` is the root path of the starter model project. For more i
 
 Please be aware that you will need a GitHub Account. When you run the tool using the command shown above it will authenticate using your GitHub account, fork this repository and prepare the pull request. Once ready, it will open the pull request in a window in your browser. Please add the relevant detail requested to complete your pull request which will aid in the review process and then submit.
 
-***NOTE:*** The pipline will automatically generate the pre-processing, model predictions and train some models based on the default best model selection from DEEPCRAFT™ Studio. If you would not like to have this, then please specify in the pull request if that should not be what should be published.
+***NOTE:*** The pipeline will automatically generate the pre-processing, model predictions and train some models based on the default best model selection from DEEPCRAFT™ Studio. If you would not like to have this, then please specify in the pull request if that should not be what should be published.

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Annotations>
+	<Annotation>
+		<Path>train_93.jpg</Path>
+		<Object>
+			<Name>Rock</Name>
+			<Confidence>0.8425</Confidence>
+			<Bndbox>
+				<X>0.6859375</X>
+				<Y>0.78125</Y>
+				<Width>0.084375</Width>
+				<Height>0.175</Height>
+			</Bndbox>
+		</Object>
+		<Object>
+			<Name>Rock</Name>
+			<Confidence>0.8091</Confidence>
+			<Bndbox>
+				<X>0.39296875</X>
+				<Y>0.665625</Y>
+				<Width>0.0796875</Width>
+				<Height>0.159375</Height>
+			</Bndbox>
+		</Object>
+	</Annotation>
+</Annotations>

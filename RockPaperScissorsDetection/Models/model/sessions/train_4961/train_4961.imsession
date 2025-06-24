@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ImagimobStudio>
+	<Timeline id="79c22473-e7c8-4a4b-8990-d50f519e33d6">
+		<Tracks>
+			<Track name="model_predictions" type="labelxml">
+				<PayloadFile>train_4961_pred.labelxml</PayloadFile>
+			</Track>
+		</Tracks>
+	</Timeline>
+</ImagimobStudio>

@@ -1,0 +1,1 @@
+{"title": "Human Activity Detection", "description": "This starter model detects whether a person is performing different activities e.g. walking", "algorithm": "Classification", "sensors": ["IMU"]}

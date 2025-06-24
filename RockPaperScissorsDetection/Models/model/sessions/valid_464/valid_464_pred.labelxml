@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Annotations>
+	<Annotation>
+		<Path>valid_464.jpg</Path>
+		<Object>
+			<Name>Paper</Name>
+			<Confidence>0.7488</Confidence>
+			<Bndbox>
+				<X>0.14453125</X>
+				<Y>0.2203125</Y>
+				<Width>0.0703125</Width>
+				<Height>0.06875</Height>
+			</Bndbox>
+		</Object>
+		<Object>
+			<Name>Paper</Name>
+			<Confidence>0.6986</Confidence>
+			<Bndbox>
+				<X>0.52578125</X>
+				<Y>0.26796875</Y>
+				<Width>0.0640625</Width>
+				<Height>0.0609375</Height>
+			</Bndbox>
+		</Object>
+		<Object>
+			<Name>Scissors</Name>
+			<Confidence>0.6002</Confidence>
+			<Bndbox>
+				<X>0.8109375</X>
+				<Y>0.2765625</Y>
+				<Width>0.09375</Width>
+				<Height>0.1</Height>
+			</Bndbox>
+		</Object>
+		<Object>
+			<Name>Scissors</Name>
+			<Confidence>0.524</Confidence>
+			<Bndbox>
+				<X>0.2390625</X>
+				<Y>0.4578125</Y>
+				<Width>0.06875</Width>
+				<Height>0.084375</Height>
+			</Bndbox>
+		</Object>
+	</Annotation>
+</Annotations>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Annotations>
+	<Annotation>
+		<Path>train_6018.jpg</Path>
+		<Object>
+			<Name>Scissors</Name>
+			<Confidence>0.9433</Confidence>
+			<Bndbox>
+				<X>0.6515625</X>
+				<Y>0.65</Y>
+				<Width>0.334375</Width>
+				<Height>0.575</Height>
+			</Bndbox>
+		</Object>
+	</Annotation>
+</Annotations>
