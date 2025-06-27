@@ -33,6 +33,10 @@ This starter project provides a streamlined approach to build a surface detectio
 
 `Models` - Folder for saving trained models, predictions, and edge-deployable code.
 
+`PreprocessorTrack` - Folder containing preprocessed data tracks (i.e. the output of the preprocessor).
+
+`Resources` - Images and collaterals used in this README file. Not relevant for the ML part.
+
 `Units` - Folder for adding custom layers or preprocessors (not used in this project).
 
 `Tools/DataCollectionGraphUX` - Includes a data collection project using GraphUX, enabling efficient data acquisition.
