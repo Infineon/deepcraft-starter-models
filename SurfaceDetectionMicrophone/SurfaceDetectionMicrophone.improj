@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ImagimobStudio version="1.1.0">
-  <Job id="4db149d3-4c3d-11f0-a03e-dd52c0598aed" />
+  <Job id="49e29241-55a7-11f0-849b-89461fc8f0a3" />
   <ProjectType>Classification</ProjectType>
   <Preprocessor inshape="[1]" intype="Float32" infreq="16000" outshape="[100,50]" outtype="Float32">
     <Unit id="Core.Packages.SpeechAudio">
@@ -441,7 +441,7 @@
       <Postprocessor override="False" inshape="[128,3]" intype="Float32" infreq="1" outshape="[128,3]" outtype="Float32" />
     </Model>
   </Models>
-  <Database balance="AnnotatedLength" redistributionScope="Everything">
+  <Database balance="AnnotatedLength" redistributionScope="OnlyUnassigned">
     <SymbolMap>
       <Symbol name="Air" id="1" weight="1" />
       <Symbol name="Floor" id="2" weight="1" />
@@ -994,99 +994,8 @@
           <CustomColumnValue columnId="85af712f-0b6e-4fd7-a1c4-0a8e18a7acb9">Data Collection - Carpet</CustomColumnValue>
         </CustomColumnValues>
       </Session>
-      <Session name="Session-2025-04-03--15-44-48" sessionId="2dcb50ce-311c-47d1-9f93-aa556ae54482" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live-Labeling" dataTrack="Local Microphone Output Samples DataTrack" tags="None">
-        <DataFile shape="[1]" samplerate="16000" modified="5250478865327387904" start="0" length="65.28">/Data/Data Collection - Mixed/Session-2025-04-03--15-44-48/Local-Microphone-Output-Samples-DataTrack.wav</DataFile>
-        <SessionFile>/Data/Data Collection - Mixed/Session-2025-04-03--15-44-48/Session-2025-04-03--15-44-48.imsession</SessionFile>
-        <LabelFile modified="5250482983167387904">/Data/Data Collection - Mixed/Session-2025-04-03--15-44-48/Live-Labeling.label</LabelFile>
-        <Labels>
-          <Label count="1" length="20.7032222">Floor</Label>
-          <Label count="1" length="20.0739659">Air</Label>
-          <Label count="1" length="19.989931">Carpet</Label>
-        </Labels>
-        <CustomColumnValues>
-          <CustomColumnValue columnId="85af712f-0b6e-4fd7-a1c4-0a8e18a7acb9">Data Collection - Mixed</CustomColumnValue>
-        </CustomColumnValues>
-      </Session>
-      <Session name="Session-2025-04-03--15-46-13" sessionId="ff4100c5-9740-4176-bab8-19059dafe196" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live-Labeling" dataTrack="Local Microphone Output Samples DataTrack" tags="None">
-        <DataFile shape="[1]" samplerate="16000" modified="5250478866187387904" start="0" length="70.08">/Data/Data Collection - Mixed/Session-2025-04-03--15-46-13/Local-Microphone-Output-Samples-DataTrack.wav</DataFile>
-        <SessionFile>/Data/Data Collection - Mixed/Session-2025-04-03--15-46-13/Session-2025-04-03--15-46-13.imsession</SessionFile>
-        <LabelFile modified="5250482991687387904">/Data/Data Collection - Mixed/Session-2025-04-03--15-46-13/Live-Labeling.label</LabelFile>
-        <Labels>
-          <Label count="1" length="23.5207454">Floor</Label>
-          <Label count="1" length="16.4977438">Air</Label>
-          <Label count="1" length="22.0227564">Carpet</Label>
-        </Labels>
-        <CustomColumnValues>
-          <CustomColumnValue columnId="85af712f-0b6e-4fd7-a1c4-0a8e18a7acb9">Data Collection - Mixed</CustomColumnValue>
-        </CustomColumnValues>
-      </Session>
-      <Session name="Session-2025-04-03--15-47-30" sessionId="cf259b31-f84d-425d-b3d0-02238c557702" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live-Labeling" dataTrack="Local Microphone Output Samples DataTrack" tags="None">
-        <DataFile shape="[1]" samplerate="16000" modified="5250478867007387904" start="0" length="64.832">/Data/Data Collection - Mixed/Session-2025-04-03--15-47-30/Local-Microphone-Output-Samples-DataTrack.wav</DataFile>
-        <SessionFile>/Data/Data Collection - Mixed/Session-2025-04-03--15-47-30/Session-2025-04-03--15-47-30.imsession</SessionFile>
-        <LabelFile modified="5250482992927387904">/Data/Data Collection - Mixed/Session-2025-04-03--15-47-30/Live-Labeling.label</LabelFile>
-        <Labels>
-          <Label count="1" length="16.9460342">Carpet</Label>
-          <Label count="1" length="16.7471196">Air</Label>
-          <Label count="1" length="22.5584819">Floor</Label>
-        </Labels>
-        <CustomColumnValues>
-          <CustomColumnValue columnId="85af712f-0b6e-4fd7-a1c4-0a8e18a7acb9">Data Collection - Mixed</CustomColumnValue>
-        </CustomColumnValues>
-      </Session>
-      <Session name="Session-2025-04-03--15-49-11" sessionId="f4528508-3746-4793-a807-71727444a65e" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live-Labeling" dataTrack="Local Microphone Output Samples DataTrack" tags="None">
-        <DataFile shape="[1]" samplerate="16000" modified="5250478867987387904" start="0" length="64.96">/Data/Data Collection - Mixed/Session-2025-04-03--15-49-11/Local-Microphone-Output-Samples-DataTrack.wav</DataFile>
-        <SessionFile>/Data/Data Collection - Mixed/Session-2025-04-03--15-49-11/Session-2025-04-03--15-49-11.imsession</SessionFile>
-        <LabelFile modified="5250482990827387904">/Data/Data Collection - Mixed/Session-2025-04-03--15-49-11/Live-Labeling.label</LabelFile>
-        <Labels>
-          <Label count="2" length="26.724721">Air</Label>
-          <Label count="1" length="19.946386">Carpet</Label>
-          <Label count="1" length="12.976546">Floor</Label>
-        </Labels>
-        <CustomColumnValues>
-          <CustomColumnValue columnId="85af712f-0b6e-4fd7-a1c4-0a8e18a7acb9">Data Collection - Mixed</CustomColumnValue>
-        </CustomColumnValues>
-      </Session>
-      <Session name="Session-2025-04-03--15-50-35" sessionId="c3664664-f6f0-40ae-b879-2791edad1d38" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live-Labeling" dataTrack="Local Microphone Output Samples DataTrack" tags="None">
-        <DataFile shape="[1]" samplerate="16000" modified="5250478868827387904" start="0" length="64.832">/Data/Data Collection - Mixed/Session-2025-04-03--15-50-35/Local-Microphone-Output-Samples-DataTrack.wav</DataFile>
-        <SessionFile>/Data/Data Collection - Mixed/Session-2025-04-03--15-50-35/Session-2025-04-03--15-50-35.imsession</SessionFile>
-        <LabelFile modified="5250482993387387904">/Data/Data Collection - Mixed/Session-2025-04-03--15-50-35/Live-Labeling.label</LabelFile>
-        <Labels>
-          <Label count="1" length="22.1154978">Floor</Label>
-          <Label count="1" length="18.0341801">Air</Label>
-          <Label count="1" length="20.444539">Carpet</Label>
-        </Labels>
-        <CustomColumnValues>
-          <CustomColumnValue columnId="85af712f-0b6e-4fd7-a1c4-0a8e18a7acb9">Data Collection - Mixed</CustomColumnValue>
-        </CustomColumnValues>
-      </Session>
-      <Session name="Session-2025-04-03--15-52-21" sessionId="9aa383e1-27a1-4b05-89c3-dcef9710b8ee" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live-Labeling" dataTrack="Local Microphone Output Samples DataTrack" tags="None">
-        <DataFile shape="[1]" samplerate="16000" modified="5250478869867387904" start="0" length="65.472">/Data/Data Collection - Mixed/Session-2025-04-03--15-52-21/Local-Microphone-Output-Samples-DataTrack.wav</DataFile>
-        <SessionFile>/Data/Data Collection - Mixed/Session-2025-04-03--15-52-21/Session-2025-04-03--15-52-21.imsession</SessionFile>
-        <LabelFile modified="5250482986447387904">/Data/Data Collection - Mixed/Session-2025-04-03--15-52-21/Live-Labeling.label</LabelFile>
-        <Labels>
-          <Label count="1" length="22.6935124">Floor</Label>
-          <Label count="1" length="19.0732252">Air</Label>
-          <Label count="1" length="20.760999">Carpet</Label>
-        </Labels>
-        <CustomColumnValues>
-          <CustomColumnValue columnId="85af712f-0b6e-4fd7-a1c4-0a8e18a7acb9">Data Collection - Mixed</CustomColumnValue>
-        </CustomColumnValues>
-      </Session>
-      <Session name="Session-2025-04-03--15-56-04" sessionId="beddd977-4b19-4802-b79e-9a7105d1a31d" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="True" labelTrack="Live-Labeling" dataTrack="Local Microphone Output Samples DataTrack" tags="None">
-        <DataFile shape="[1]" samplerate="16000" modified="5250478872127387904" start="0" length="66.304">/Data/Data Collection - Mixed/Session-2025-04-03--15-56-04/Local-Microphone-Output-Samples-DataTrack.wav</DataFile>
-        <SessionFile>/Data/Data Collection - Mixed/Session-2025-04-03--15-56-04/Session-2025-04-03--15-56-04.imsession</SessionFile>
-        <LabelFile modified="5250482993867387904">/Data/Data Collection - Mixed/Session-2025-04-03--15-56-04/Live-Labeling.label</LabelFile>
-        <Labels>
-          <Label count="1" length="26.2310094">Floor</Label>
-          <Label count="1" length="13.8338458">Air</Label>
-          <Label count="1" length="22.198415">Carpet</Label>
-        </Labels>
-        <CustomColumnValues>
-          <CustomColumnValue columnId="85af712f-0b6e-4fd7-a1c4-0a8e18a7acb9">Data Collection - Mixed</CustomColumnValue>
-        </CustomColumnValues>
-      </Session>
-      <Session name="Session-2025-04-03--15-57-29" sessionId="2c519d60-d9b5-4570-b183-df7852926089" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live-Labeling" dataTrack="Local Microphone Output Samples DataTrack" tags="None">
-        <DataFile shape="[1]" samplerate="16000" modified="5250478872947387904" start="0" length="64.448">/Data/Data Collection - Mixed/Session-2025-04-03--15-57-29/Local-Microphone-Output-Samples-DataTrack.wav</DataFile>
+      <Session name="Session-2025-04-03--15-57-29" sessionId="2c519d60-d9b5-4570-b183-df7852926089" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live-Labeling" dataTrack="Microphone-Data" tags="None">
+        <DataFile shape="[1]" samplerate="16000" modified="5250478872947387904" start="0" length="64.448">/Data/Data Collection - Mixed/Session-2025-04-03--15-57-29/Microphone-Data.wav</DataFile>
         <SessionFile>/Data/Data Collection - Mixed/Session-2025-04-03--15-57-29/Session-2025-04-03--15-57-29.imsession</SessionFile>
         <LabelFile modified="5250483000727387904">/Data/Data Collection - Mixed/Session-2025-04-03--15-57-29/Live-Labeling.label</LabelFile>
         <Labels>
@@ -1094,9 +1003,73 @@
           <Label count="1" length="18.9220875">Carpet</Label>
           <Label count="1" length="18.3433233">Floor</Label>
         </Labels>
-        <CustomColumnValues>
-          <CustomColumnValue columnId="85af712f-0b6e-4fd7-a1c4-0a8e18a7acb9">Data Collection - Mixed</CustomColumnValue>
-        </CustomColumnValues>
+        <CustomColumnValues />
+      </Session>
+      <Session name="Session-2025-04-03--15-44-48" sessionId="2dcb50ce-311c-47d1-9f93-aa556ae54482" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live-Labeling" dataTrack="Microphone-Data" tags="None">
+        <DataFile shape="[1]" samplerate="16000" modified="5250478865327387904" start="0" length="65.28">/Data/Data Collection - Mixed/Session-2025-04-03--15-44-48/Microphone-Data.wav</DataFile>
+        <SessionFile>/Data/Data Collection - Mixed/Session-2025-04-03--15-44-48/Session-2025-04-03--15-44-48.imsession</SessionFile>
+        <LabelFile modified="5250482983167387904">/Data/Data Collection - Mixed/Session-2025-04-03--15-44-48/Live-Labeling.label</LabelFile>
+        <Labels>
+          <Label count="1" length="20.7032222">Floor</Label>
+          <Label count="1" length="20.0739659">Air</Label>
+          <Label count="1" length="19.989931">Carpet</Label>
+        </Labels>
+        <CustomColumnValues />
+      </Session>
+      <Session name="Session-2025-04-03--15-58-52" sessionId="48727e2a-22ce-4905-a777-f23b01ce3ca9" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live-Labeling" dataTrack="Microphone-Data" tags="None">
+        <DataFile shape="[1]" samplerate="16000" modified="5250478873767387904" start="0" length="64.576">/Data/Data Collection - Mixed/Session-2025-04-03--15-58-52/Microphone-Data.wav</DataFile>
+        <SessionFile>/Data/Data Collection - Mixed/Session-2025-04-03--15-58-52/Session-2025-04-03--15-58-52.imsession</SessionFile>
+        <LabelFile modified="5250482988767387904">/Data/Data Collection - Mixed/Session-2025-04-03--15-58-52/Live-Labeling.label</LabelFile>
+        <Labels>
+          <Label count="1" length="31.4443513">Floor</Label>
+          <Label count="1" length="13.3005742">Air</Label>
+          <Label count="1" length="17.0959873">Carpet</Label>
+        </Labels>
+        <CustomColumnValues />
+      </Session>
+      <Session name="Session-2025-04-03--15-47-30" sessionId="cf259b31-f84d-425d-b3d0-02238c557702" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live-Labeling" dataTrack="Microphone-Data" tags="None">
+        <DataFile shape="[1]" samplerate="16000" modified="5250478867007387904" start="0" length="64.832">/Data/Data Collection - Mixed/Session-2025-04-03--15-47-30/Microphone-Data.wav</DataFile>
+        <SessionFile>/Data/Data Collection - Mixed/Session-2025-04-03--15-47-30/Session-2025-04-03--15-47-30.imsession</SessionFile>
+        <LabelFile modified="5250482992927387904">/Data/Data Collection - Mixed/Session-2025-04-03--15-47-30/Live-Labeling.label</LabelFile>
+        <Labels>
+          <Label count="1" length="16.9460342">Carpet</Label>
+          <Label count="1" length="16.7471196">Air</Label>
+          <Label count="1" length="22.5584819">Floor</Label>
+        </Labels>
+        <CustomColumnValues />
+      </Session>
+      <Session name="Session-2025-04-03--15-49-11" sessionId="f4528508-3746-4793-a807-71727444a65e" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live-Labeling" dataTrack="Microphone-Data" tags="None">
+        <DataFile shape="[1]" samplerate="16000" modified="5250478867987387904" start="0" length="64.96">/Data/Data Collection - Mixed/Session-2025-04-03--15-49-11/Microphone-Data.wav</DataFile>
+        <SessionFile>/Data/Data Collection - Mixed/Session-2025-04-03--15-49-11/Session-2025-04-03--15-49-11.imsession</SessionFile>
+        <LabelFile modified="5250482990827387904">/Data/Data Collection - Mixed/Session-2025-04-03--15-49-11/Live-Labeling.label</LabelFile>
+        <Labels>
+          <Label count="2" length="26.724721">Air</Label>
+          <Label count="1" length="19.946386">Carpet</Label>
+          <Label count="1" length="12.976546">Floor</Label>
+        </Labels>
+        <CustomColumnValues />
+      </Session>
+      <Session name="Session-2025-04-03--15-52-21" sessionId="9aa383e1-27a1-4b05-89c3-dcef9710b8ee" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live-Labeling" dataTrack="Microphone-Data" tags="None">
+        <DataFile shape="[1]" samplerate="16000" modified="5250478869867387904" start="0" length="65.472">/Data/Data Collection - Mixed/Session-2025-04-03--15-52-21/Microphone-Data.wav</DataFile>
+        <SessionFile>/Data/Data Collection - Mixed/Session-2025-04-03--15-52-21/Session-2025-04-03--15-52-21.imsession</SessionFile>
+        <LabelFile modified="5250482986447387904">/Data/Data Collection - Mixed/Session-2025-04-03--15-52-21/Live-Labeling.label</LabelFile>
+        <Labels>
+          <Label count="1" length="22.6935124">Floor</Label>
+          <Label count="1" length="19.0732252">Air</Label>
+          <Label count="1" length="20.760999">Carpet</Label>
+        </Labels>
+        <CustomColumnValues />
+      </Session>
+      <Session name="Session-2025-04-03--15-56-04" sessionId="beddd977-4b19-4802-b79e-9a7105d1a31d" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live-Labeling" dataTrack="Microphone-Data" tags="None">
+        <DataFile shape="[1]" samplerate="16000" modified="5250478872127387904" start="0" length="66.304">/Data/Data Collection - Mixed/Session-2025-04-03--15-56-04/Microphone-Data.wav</DataFile>
+        <SessionFile>/Data/Data Collection - Mixed/Session-2025-04-03--15-56-04/Session-2025-04-03--15-56-04.imsession</SessionFile>
+        <LabelFile modified="5250482993867387904">/Data/Data Collection - Mixed/Session-2025-04-03--15-56-04/Live-Labeling.label</LabelFile>
+        <Labels>
+          <Label count="1" length="26.2310094">Floor</Label>
+          <Label count="1" length="13.8338458">Air</Label>
+          <Label count="1" length="22.198415">Carpet</Label>
+        </Labels>
+        <CustomColumnValues />
       </Session>
     </DataSet>
     <DataSet id="validation" targetSize="0.20189380026410556" labels="Complete">
@@ -1321,18 +1294,27 @@
           <CustomColumnValue columnId="85af712f-0b6e-4fd7-a1c4-0a8e18a7acb9">Data Collection - Carpet</CustomColumnValue>
         </CustomColumnValues>
       </Session>
-      <Session name="Session-2025-04-03--15-58-52" sessionId="48727e2a-22ce-4905-a777-f23b01ce3ca9" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live-Labeling" dataTrack="Local Microphone Output Samples DataTrack" tags="None">
-        <DataFile shape="[1]" samplerate="16000" modified="5250478873767387904" start="0" length="64.576">/Data/Data Collection - Mixed/Session-2025-04-03--15-58-52/Local-Microphone-Output-Samples-DataTrack.wav</DataFile>
-        <SessionFile>/Data/Data Collection - Mixed/Session-2025-04-03--15-58-52/Session-2025-04-03--15-58-52.imsession</SessionFile>
-        <LabelFile modified="5250482988767387904">/Data/Data Collection - Mixed/Session-2025-04-03--15-58-52/Live-Labeling.label</LabelFile>
+      <Session name="Session-2025-04-03--15-50-35" sessionId="c3664664-f6f0-40ae-b879-2791edad1d38" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live-Labeling" dataTrack="Microphone-Data" tags="None">
+        <DataFile shape="[1]" samplerate="16000" modified="5250478868827387904" start="0" length="64.832">/Data/Data Collection - Mixed/Session-2025-04-03--15-50-35/Microphone-Data.wav</DataFile>
+        <SessionFile>/Data/Data Collection - Mixed/Session-2025-04-03--15-50-35/Session-2025-04-03--15-50-35.imsession</SessionFile>
+        <LabelFile modified="5250482993387387904">/Data/Data Collection - Mixed/Session-2025-04-03--15-50-35/Live-Labeling.label</LabelFile>
         <Labels>
-          <Label count="1" length="31.4443513">Floor</Label>
-          <Label count="1" length="13.3005742">Air</Label>
-          <Label count="1" length="17.0959873">Carpet</Label>
+          <Label count="1" length="22.1154978">Floor</Label>
+          <Label count="1" length="18.0341801">Air</Label>
+          <Label count="1" length="20.444539">Carpet</Label>
         </Labels>
-        <CustomColumnValues>
-          <CustomColumnValue columnId="85af712f-0b6e-4fd7-a1c4-0a8e18a7acb9">Data Collection - Mixed</CustomColumnValue>
-        </CustomColumnValues>
+        <CustomColumnValues />
+      </Session>
+      <Session name="Session-2025-04-03--15-46-13" sessionId="ff4100c5-9740-4176-bab8-19059dafe196" originalSessionId="00000000-0000-0000-0000-000000000000" ownerLocked="False" labelTrack="Live-Labeling" dataTrack="Microphone-Data" tags="None">
+        <DataFile shape="[1]" samplerate="16000" modified="5250478866187387904" start="0" length="70.08">/Data/Data Collection - Mixed/Session-2025-04-03--15-46-13/Microphone-Data.wav</DataFile>
+        <SessionFile>/Data/Data Collection - Mixed/Session-2025-04-03--15-46-13/Session-2025-04-03--15-46-13.imsession</SessionFile>
+        <LabelFile modified="5250482991687387904">/Data/Data Collection - Mixed/Session-2025-04-03--15-46-13/Live-Labeling.label</LabelFile>
+        <Labels>
+          <Label count="1" length="23.5207454">Floor</Label>
+          <Label count="1" length="16.4977438">Air</Label>
+          <Label count="1" length="22.0227564">Carpet</Label>
+        </Labels>
+        <CustomColumnValues />
       </Session>
     </DataSet>
     <DataSet id="test" targetSize="0.19720270976436807" labels="Complete">
