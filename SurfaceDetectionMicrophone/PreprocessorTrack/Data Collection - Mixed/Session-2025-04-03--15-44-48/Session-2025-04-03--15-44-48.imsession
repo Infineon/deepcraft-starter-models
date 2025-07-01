@@ -3,7 +3,7 @@
   <Timeline id="2dcb50ce-311c-47d1-9f93-aa556ae54482">
     <Tracks>
       <Track name="Preprocessor" type="datacsv" timecoded="TimestampBeginDuration" isLabelTrack="False">
-        <PayloadFile>Local-Microphone-Output-Samples-DataTrack_Preprocessor.data</PayloadFile>
+        <PayloadFile>Microphone-Data_Preprocessor.data</PayloadFile>
       </Track>
     </Tracks>
   </Timeline>

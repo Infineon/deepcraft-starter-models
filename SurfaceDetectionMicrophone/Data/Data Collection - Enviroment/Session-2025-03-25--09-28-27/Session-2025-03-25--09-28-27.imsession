@@ -10,13 +10,13 @@
         <PayloadFile>Live-Labeling.label</PayloadFile>
         <Shape />
       </Track>
-      <Track name="Preprocessor" type="datacsv" timecoded="TimestampBeginDuration" isLabelTrack="False">
-        <PayloadFile>..\..\..\PreprocessorTrack\Data Collection - Enviroment\Session-2025-03-25--09-28-27\Microphone-Data_Preprocessor.data</PayloadFile>
-        <Shape />
-      </Track>
       <Track name="conv1d-small-balanced-00" type="datacsv" timecoded="TimestampBeginDuration" isLabelTrack="False">
         <PayloadFile>..\..\..\Models\conv1d-small-balanced-0\Predictions\sessions\Session-2025-03-25--09-28-27\conv1d-small-balanced-00.data</PayloadFile>
         <Offset unit="seconds">1.0219380000E+000</Offset>
+        <Shape />
+      </Track>
+      <Track name="Preprocessor" type="datacsv" timecoded="TimestampBeginDuration" isLabelTrack="False">
+        <PayloadFile>..\..\..\PreprocessorTrack\Data Collection - Enviroment\Session-2025-03-25--09-28-27\Microphone-Data_Preprocessor.data</PayloadFile>
         <Shape />
       </Track>
     </Tracks>

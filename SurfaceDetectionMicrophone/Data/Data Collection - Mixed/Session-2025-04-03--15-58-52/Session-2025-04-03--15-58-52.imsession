@@ -2,14 +2,9 @@
 <ImagimobStudio version="0.9">
   <Timeline id="48727e2a-22ce-4905-a777-f23b01ce3ca9">
     <Tracks>
-      <Track name="Microphone-Data" type="audiowav" isLabelTrack="False">
+      <Track name="Microphone-Data" type="audiowav" isLabelTrack="False" frequency="0">
         <PayloadFile>Microphone-Data.wav</PayloadFile>
-      </Track>
-      <Track name="Preprocessor" type="datacsv" isLabelTrack="False">
-        <PayloadFile>../../../PreprocessorTrack/Data Collection - Mixed/Session-2025-04-03--15-58-52/Local-Microphone-Output-Samples-DataTrack_Preprocessor.data</PayloadFile>
-      </Track>
-      <Track name="conv1d-small-balanced-00" type="datacsv" isLabelTrack="False">
-        <PayloadFile>../../../Models/conv1d-small-balanced-0/Predictions/sessions/Session-2025-04-03--15-58-52/conv1d-small-balanced-00.data</PayloadFile>
+        <Shape />
       </Track>
       <Track name="Live-Labeling" type="labelcsv">
         <PayloadFile>Live-Labeling.label</PayloadFile>
@@ -21,8 +16,15 @@
           </Axis>
         </Shape>
       </Track>
+      <Track name="conv1d-small-balanced-00" type="datacsv" isLabelTrack="False">
+        <PayloadFile>../../../Models/conv1d-small-balanced-0/Predictions/sessions/Session-2025-04-03--15-58-52/conv1d-small-balanced-00.data</PayloadFile>
+        <Shape />
+      </Track>
       <Track name="Local Camera Video" type="videomp4">
         <PayloadFile>Local Camera Video.mp4</PayloadFile>
+      </Track>
+      <Track name="Preprocessor" type="datacsv" timecoded="TimestampBeginDuration" isLabelTrack="False">
+        <PayloadFile>..\..\..\PreprocessorTrack\Data Collection - Mixed\Session-2025-04-03--15-58-52\Microphone-Data_Preprocessor.data</PayloadFile>
         <Shape />
       </Track>
     </Tracks>
