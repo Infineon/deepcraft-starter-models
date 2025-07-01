@@ -14,11 +14,15 @@ All users are welcome to submit new models/projects, subject to the Infineon DEE
 ## Submission Process
 To submit a project, create a pull request with your data and DEEPCRAFT™ Studio project file (.improj) using the automation tool provided below.
 
-All project submissions must include a README file with the following information:
-* Use-case description
-* Sensor settings specifications
-* Guidelines for collecting and expanding the dataset
-* Recommended path to production, including steps to make the model production-ready
+Use the available PROJECT_TEMPLATE to structure your project:
+* Add content to the relevant folders and delete the ones which do not apply to your project
+* Before the submission, make sure to remove the README files contained in all folders of the PROJECT_TEMPLATE
+* Set up the provided project file example or replace it with your own project file
+* Add content to the project README file making sure to include the following information:
+    - Use-case description
+    - Sensor settings specifications and data description
+    - Guidelines for collecting and expanding the dataset
+    - Recommended path to production, including steps to make the model production-ready
 
 Once the project is ready, you can download [pr_tool.zip](https://api.imagimob.com/v1/Data/Object/pr_tool.zip) and run:
 

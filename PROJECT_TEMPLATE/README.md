@@ -32,9 +32,9 @@ Make sure to specify the data attribution, specifying under which conditions the
 
 ## Adding More Data
 
-Describe here how to expand the dataset of the project using Infineon boards and/or Studio and/or other tools to collect data
+Describe here how to expand the dataset of the project using Infineon boards, Studio Graph UX, and/or other tools to collect data and/or other data sources
 
-Describe briefly how to label the new data, focus on Studio capabilities (manual labeling and model assisted) or add and describe a script used to label the data automatically
+Describe briefly how to label the new data, focusing on Studio capabilities (manual labeling and model assisted) or add and describe a script used to label the data automatically
 
 ## Steps to Production
 
@@ -42,6 +42,6 @@ Describe here the main steps to bring this specific project and trained model to
 
 Some points to highlight:
 
-- increase data variability: data from different environments, devices, conditions, use cases, people, patterns
+- increase data variability: data from different environments, devices, conditions, use cases, people, patterns. Mention in case how to use Data Augmentation functionality for audio data
 - make sure Test set contains data that is not used in Train and Validation sets and that allows you to verify that model generalizes to different scenarios
 - make sure to add negative data to increase model robustness
