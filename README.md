@@ -14,15 +14,21 @@ All users are welcome to submit new models/projects, subject to the Infineon DEE
 ## Submission Process
 To submit a project, create a pull request with your data and DEEPCRAFT™ Studio project file (.improj) using the automation tool provided below.
 
-Use the available PROJECT_TEMPLATE to structure your project:
-* Add content to the relevant folders and delete the ones which do not apply to your project
-* Before the submission, make sure to remove the README files contained in all folders of the PROJECT_TEMPLATE
+Use the available `PROJECT_TEMPLATE` to structure your project:
+* Add content to the relevant folders and delete the ones which do not apply to your project. Data and Models folders are mandatory
 * Set up the provided project file example or replace it with your own project file
-* Add content to the project README file making sure to include the following information:
+* Add content to the project `README.md` file making sure to include the following information:
     - Use-case description
     - Sensor settings specifications and data description
     - Guidelines for collecting and expanding the dataset
     - Recommended path to production, including steps to make the model production-ready
+* Before the submission
+    - Make sure to remove the `README.md` files contained in all folders of the `PROJECT_TEMPLATE`
+    - Fill in the fields in the `.deepcraft/metadata.json` file as follows:
+        - `title` (max 40 characters): give a title to your project making sure it does not exist already. For instance, use words describing the use case and sensor. Get inspired by the existing ones in DEEPCRAFT™ Studio.
+        - `description` (max 100 characters): briefly describe your project. Get inspired by the existing ones in DEEPCRAFT™ Studio.
+        - `algorithm`: choose between **Classification** or **Regression**
+        - `sensors`: specify the sensor used in you project. Choose from the existing ones in DEEPCRAFT™ Studio: **IMU & Vibration**, **Microphone**, **Capacitive & Inductive Sensing**, **Camera**, etc.
 
 Once the project is ready, you can download [pr_tool.zip](https://api.imagimob.com/v1/Data/Object/pr_tool.zip) and run:
 
