@@ -14,11 +14,21 @@ All users are welcome to submit new models/projects, subject to the Infineon DEE
 ## Submission Process
 To submit a project, create a pull request with your data and DEEPCRAFT™ Studio project file (.improj) using the automation tool provided below.
 
-All project submissions must include a README file with the following information:
-* Use-case description
-* Sensor settings specifications
-* Guidelines for collecting and expanding the dataset
-* Recommended path to production, including steps to make the model production-ready
+Use the available `PROJECT_TEMPLATE` to structure your project:
+* Add content to the relevant folders and delete the ones which do not apply to your project. Data and Models folders are mandatory. Add your custom folder(s) if needed
+* Set up the provided project file example or replace it with your own project file
+* Add content to the project `README.md` file making sure to include the following information:
+    - Use-case description
+    - Sensor settings specifications and data description
+    - Guidelines for collecting and expanding the dataset
+    - Recommended path to production, including steps to make the model production-ready
+* Before the submission
+    - Make sure to remove the `README.md` files contained in all folders of the `PROJECT_TEMPLATE`
+    - Fill in the fields in the `.deepcraft/metadata.json` file as follows:
+        - `title` (max 40 characters): give a title to your project making sure it does not exist already. For instance, use words describing the use case and sensor. Get inspired by the existing ones in DEEPCRAFT™ Studio.
+        - `description` (max 100 characters): briefly describe your project. Get inspired by the existing ones in DEEPCRAFT™ Studio.
+        - `algorithm`: choose between **Classification** or **Regression**
+        - `sensors`: specify the sensor used in you project. Choose from the existing ones in DEEPCRAFT™ Studio: **IMU & Vibration**, **Microphone**, **Capacitive & Inductive Sensing**, **Camera**, etc.
 
 Once the project is ready, you can download [pr_tool.zip](https://api.imagimob.com/v1/Data/Object/pr_tool.zip) and run:
 
@@ -28,7 +38,7 @@ cd pr_tool
 python .\pr_tool.py --path <project-path>
 ```
 
-where `<project-path>` is the root path of the starter model project. For more information review the tools' `README.md` file.
+where `<project-path>` is the root path of the Starter Model project. For more information review the tools' `README.md` file.
 
 Please be aware that you will need a GitHub Account. When you run the tool using the command shown above it will authenticate using your GitHub account, fork this repository and prepare the pull request. Once ready, it will open the pull request in a window in your browser. Please add the relevant detail requested to complete your pull request which will aid in the review process and then submit.
 
