@@ -15,7 +15,7 @@ All users are welcome to submit new models/projects, subject to the Infineon DEE
 To submit a project, create a pull request with your data and DEEPCRAFT™ Studio project file (.improj) using the automation tool provided below.
 
 Use the available `PROJECT_TEMPLATE` to structure your project:
-* Add content to the relevant folders and delete the ones which do not apply to your project. Data and Models folders are mandatory
+* Add content to the relevant folders and delete the ones which do not apply to your project. Data and Models folders are mandatory. Add your custom folder(s) if needed
 * Set up the provided project file example or replace it with your own project file
 * Add content to the project `README.md` file making sure to include the following information:
     - Use-case description
@@ -38,7 +38,7 @@ cd pr_tool
 python .\pr_tool.py --path <project-path>
 ```
 
-where `<project-path>` is the root path of the starter model project. For more information review the tools' `README.md` file.
+where `<project-path>` is the root path of the Starter Model project. For more information review the tools' `README.md` file.
 
 Please be aware that you will need a GitHub Account. When you run the tool using the command shown above it will authenticate using your GitHub account, fork this repository and prepare the pull request. Once ready, it will open the pull request in a window in your browser. Please add the relevant detail requested to complete your pull request which will aid in the review process and then submit.
 
