@@ -1,5 +1,5 @@
-# DEEPCRAFT™ Starter Models
-This repository contains DEEPCRAFT™ Starter Models - deep learning based projects for various use-cases designed as starting points for building custom applications. These projects have data and a project file that is ready to be used with DEEPCRAFT™ Studio.
+# DEEPCRAFT™ Studio Accelerators
+This repository contains DEEPCRAFT™ Studio Accelerators - deep learning based projects for various use-cases designed as starting points for building custom applications. These projects have data and a project file that is ready to be used with DEEPCRAFT™ Studio.
 
 This repository is automatically pulled and content is generated in DEEPCRAFT™ Studio. For the best experience, access these models through DEEPCRAFT™ Studio.
 
@@ -9,7 +9,7 @@ For commercial use, our standard terms and conditions applies, https://developer
 These projects are designed to be used through DEEPCRAFT™ Studio (https://www.imagimob.com/studio) and should be accessed through that platform.
 
 ## Contribution
-All users are welcome to submit new models/projects, subject to the Infineon DEEPCRAFT™ Starter Model review process.
+All users are welcome to submit new models/projects, subject to the Infineon DEEPCRAFT™ Studio Accelerators review process.
 
 ## Submission Process
 To submit a project, create a pull request with your data and DEEPCRAFT™ Studio project file (.improj) using the automation tool provided below.
@@ -38,7 +38,7 @@ cd pr_tool
 python .\pr_tool.py --path <project-path>
 ```
 
-where `<project-path>` is the root path of the Starter Model project. For more information review the tools' `README.md` file.
+where `<project-path>` is the root path of the studio accelerator project. For more information review the tools' `README.md` file.
 
 Please be aware that you will need a GitHub Account. When you run the tool using the command shown above it will authenticate using your GitHub account, fork this repository and prepare the pull request. Once ready, it will open the pull request in a window in your browser. Please add the relevant detail requested to complete your pull request which will aid in the review process and then submit.
 

@@ -1,0 +1,1 @@
+{"title": "Vacuum Cleaner Surface Detection (MIC)", "description": "Starter Model showcasing microphone-based surface detection for vacuum cleaners (Floor/Carpet/Air).", "algorithm": "Classification", "sensors": ["Microphone"]}
