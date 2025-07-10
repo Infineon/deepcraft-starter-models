@@ -24,7 +24,7 @@ Use the available `PROJECT_TEMPLATE` to structure your project:
     - Guidelines for collecting and expanding the dataset
     - Recommended path to production, including steps to make the model production-ready
 * Before the submission
-    - Make sure to remove all the `README.md` files contained in all subfolders of the `PROJECT_TEMPLATE` or `<your_project_name>` folder
+    - Make sure to remove all the `README.md` files contained in all subfolders of the `PROJECT_TEMPLATE` if you use it
     - Fill in the fields in the `metadata.json` file as follows:
         - `title` (max 40 characters): give a title to your project making sure it does not exist already. For instance, use words describing the use case and sensor. Get inspired by the existing ones in DEEPCRAFT™ Studio.
         - `description` (max 100 characters): briefly describe your project. Get inspired by the existing ones in DEEPCRAFT™ Studio.
