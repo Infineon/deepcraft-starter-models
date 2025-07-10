@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ImagimobStudio version="1.1.0">
   <Job id="2c98ef7a-dfb4-11ee-ac42-a9c3c2a03171" />
+  <ProjectType>Classification</ProjectType>
+  <ProjectId>52745f4a-f6d3-42f2-a6db-d3f6d5fa5bbe</ProjectId>
   <Preprocessor inshape="[1]" intype="Float32" infreq="16000" outshape="[50,40]" outtype="Float32">
     <Unit id="Core.Packages.SpeechAudio">
       <Argument param="output_freq" type="Double">100</Argument>
@@ -26,13 +28,12 @@
     <BatchSize>256</BatchSize>
     <SplitCount>16</SplitCount>
     <Patience>20</Patience>
-    <AppendModels>True</AppendModels>
+    <AppendModels>False</AppendModels>
     <LossFunction>CategoricalCrossentropy</LossFunction>
-    <FactoryOptions>None</FactoryOptions>
-    <HardwareType>Default</HardwareType>
+    <HardwareType>Generic</HardwareType>
     <TrainingEnvironment>
     </TrainingEnvironment>
-    <ModelFamily>Conv1DLSTM</ModelFamily>
+    <ModelFamily>Conv1D</ModelFamily>
     <ModelFlavor>SmallKern</ModelFlavor>
     <ClassifierType>Dense</ClassifierType>
     <Optimization>Balanced</Optimization>
@@ -52,7 +53,7 @@
     </BuildSteps>
   </ModelFactory>
   <Models>
-    <Model name="conv1dlstm-medium-balanced-0" id="970343fc-67d0-49da-92d0-ca42ef280ca6">
+    <Model name="conv1d-medium-balanced-0" id="7f830ed0-01a1-4a90-9164-6e42a665f462">
       <LossFunction>CategoricalCrossentropy</LossFunction>
       <Epochs>250</Epochs>
       <BatchSize>256</BatchSize>
@@ -136,16 +137,6 @@
           <Argument param="strides" type="Int32">2</Argument>
           <Argument param="padding" type="String">valid</Argument>
         </Unit>
-        <Unit id="Core.Layers.LSTM">
-          <Argument param="units" type="Int32">16</Argument>
-          <Argument param="activation" type="String">tanh</Argument>
-          <Argument param="recurrent_activation" type="String">sigmoid</Argument>
-          <Argument param="use_bias" type="Boolean">True</Argument>
-          <Argument param="return_sequences" type="Boolean">False</Argument>
-          <Argument param="return_state" type="Boolean">False</Argument>
-          <Argument param="stateful" type="Boolean">False</Argument>
-          <Argument param="go_backwards" type="Boolean">False</Argument>
-        </Unit>
         <Unit id="Core.Layers.Flatten" />
         <Unit id="Core.Layers.Dense">
           <Argument param="units" type="Int32">360</Argument>
@@ -212,7 +203,7 @@
         <SymbolWeight symbol="left" weight="74" />
         <SymbolWeight symbol="off" weight="91" />
       </SymbolWeights>
-      <Preprocessor override="False" inshape="[1]" intype="Float32" infreq="0" outshape="[50,40]" outtype="Float32">
+      <Preprocessor override="False" inshape="[1]" intype="Float32" infreq="16000" outshape="[50,40]" outtype="Float32">
         <Unit id="Core.Packages.SpeechAudio">
           <Argument param="output_freq" type="Double">100</Argument>
           <Argument param="output_features" type="Int32">40</Argument>
@@ -232,9 +223,9 @@
           <Argument param="time_output" type="String">time</Argument>
         </Unit>
       </Preprocessor>
-      <Postprocessor override="False" inshape="[128,3]" intype="Float32" infreq="0" outshape="[10]" outtype="Float32" />
+      <Postprocessor override="False" inshape="[128,3]" intype="Float32" infreq="1" outshape="[128,3]" outtype="Float32" />
     </Model>
-    <Model name="conv1dlstm-medium-balanced-1" id="69367e18-0cd2-4a21-81b5-9ec7a08a825f">
+    <Model name="conv1d-medium-balanced-1" id="17642dac-1536-4444-9823-65f50b1dc64d">
       <LossFunction>CategoricalCrossentropy</LossFunction>
       <Epochs>250</Epochs>
       <BatchSize>256</BatchSize>
@@ -318,16 +309,6 @@
           <Argument param="strides" type="Int32">2</Argument>
           <Argument param="padding" type="String">valid</Argument>
         </Unit>
-        <Unit id="Core.Layers.LSTM">
-          <Argument param="units" type="Int32">32</Argument>
-          <Argument param="activation" type="String">tanh</Argument>
-          <Argument param="recurrent_activation" type="String">sigmoid</Argument>
-          <Argument param="use_bias" type="Boolean">True</Argument>
-          <Argument param="return_sequences" type="Boolean">False</Argument>
-          <Argument param="return_state" type="Boolean">False</Argument>
-          <Argument param="stateful" type="Boolean">False</Argument>
-          <Argument param="go_backwards" type="Boolean">False</Argument>
-        </Unit>
         <Unit id="Core.Layers.Flatten" />
         <Unit id="Core.Layers.Dense">
           <Argument param="units" type="Int32">360</Argument>
@@ -394,7 +375,7 @@
         <SymbolWeight symbol="left" weight="74" />
         <SymbolWeight symbol="off" weight="91" />
       </SymbolWeights>
-      <Preprocessor override="False" inshape="[1]" intype="Float32" infreq="0" outshape="[50,40]" outtype="Float32">
+      <Preprocessor override="False" inshape="[1]" intype="Float32" infreq="16000" outshape="[50,40]" outtype="Float32">
         <Unit id="Core.Packages.SpeechAudio">
           <Argument param="output_freq" type="Double">100</Argument>
           <Argument param="output_features" type="Int32">40</Argument>
@@ -414,9 +395,9 @@
           <Argument param="time_output" type="String">time</Argument>
         </Unit>
       </Preprocessor>
-      <Postprocessor override="False" inshape="[128,3]" intype="Float32" infreq="0" outshape="[10]" outtype="Float32" />
+      <Postprocessor override="False" inshape="[128,3]" intype="Float32" infreq="1" outshape="[128,3]" outtype="Float32" />
     </Model>
-    <Model name="conv1dlstm-medium-balanced-2" id="4af63c1b-e092-4331-8298-3898eb1fd82a">
+    <Model name="conv1d-medium-balanced-2" id="d2aedc6f-33cb-48cd-a5d9-852b31ab6fa7">
       <LossFunction>CategoricalCrossentropy</LossFunction>
       <Epochs>250</Epochs>
       <BatchSize>256</BatchSize>
@@ -500,16 +481,6 @@
           <Argument param="strides" type="Int32">2</Argument>
           <Argument param="padding" type="String">valid</Argument>
         </Unit>
-        <Unit id="Core.Layers.LSTM">
-          <Argument param="units" type="Int32">64</Argument>
-          <Argument param="activation" type="String">tanh</Argument>
-          <Argument param="recurrent_activation" type="String">sigmoid</Argument>
-          <Argument param="use_bias" type="Boolean">True</Argument>
-          <Argument param="return_sequences" type="Boolean">False</Argument>
-          <Argument param="return_state" type="Boolean">False</Argument>
-          <Argument param="stateful" type="Boolean">False</Argument>
-          <Argument param="go_backwards" type="Boolean">False</Argument>
-        </Unit>
         <Unit id="Core.Layers.Flatten" />
         <Unit id="Core.Layers.Dense">
           <Argument param="units" type="Int32">360</Argument>
@@ -576,7 +547,7 @@
         <SymbolWeight symbol="left" weight="74" />
         <SymbolWeight symbol="off" weight="91" />
       </SymbolWeights>
-      <Preprocessor override="False" inshape="[1]" intype="Float32" infreq="0" outshape="[50,40]" outtype="Float32">
+      <Preprocessor override="False" inshape="[1]" intype="Float32" infreq="16000" outshape="[50,40]" outtype="Float32">
         <Unit id="Core.Packages.SpeechAudio">
           <Argument param="output_freq" type="Double">100</Argument>
           <Argument param="output_features" type="Int32">40</Argument>
@@ -596,9 +567,9 @@
           <Argument param="time_output" type="String">time</Argument>
         </Unit>
       </Preprocessor>
-      <Postprocessor override="False" inshape="[128,3]" intype="Float32" infreq="0" outshape="[10]" outtype="Float32" />
+      <Postprocessor override="False" inshape="[128,3]" intype="Float32" infreq="1" outshape="[128,3]" outtype="Float32" />
     </Model>
-    <Model name="conv1dlstm-medium-balanced-3" id="2ef28985-cf05-4102-a0eb-abed302f2a50">
+    <Model name="conv1d-medium-balanced-3" id="cd3b1e52-a8d2-491b-a1dd-cc06dd81a41e">
       <LossFunction>CategoricalCrossentropy</LossFunction>
       <Epochs>250</Epochs>
       <BatchSize>256</BatchSize>
@@ -682,16 +653,6 @@
           <Argument param="strides" type="Int32">2</Argument>
           <Argument param="padding" type="String">valid</Argument>
         </Unit>
-        <Unit id="Core.Layers.LSTM">
-          <Argument param="units" type="Int32">64</Argument>
-          <Argument param="activation" type="String">tanh</Argument>
-          <Argument param="recurrent_activation" type="String">sigmoid</Argument>
-          <Argument param="use_bias" type="Boolean">True</Argument>
-          <Argument param="return_sequences" type="Boolean">False</Argument>
-          <Argument param="return_state" type="Boolean">False</Argument>
-          <Argument param="stateful" type="Boolean">False</Argument>
-          <Argument param="go_backwards" type="Boolean">False</Argument>
-        </Unit>
         <Unit id="Core.Layers.Flatten" />
         <Unit id="Core.Layers.Dense">
           <Argument param="units" type="Int32">360</Argument>
@@ -758,7 +719,7 @@
         <SymbolWeight symbol="left" weight="74" />
         <SymbolWeight symbol="off" weight="91" />
       </SymbolWeights>
-      <Preprocessor override="False" inshape="[1]" intype="Float32" infreq="0" outshape="[50,40]" outtype="Float32">
+      <Preprocessor override="False" inshape="[1]" intype="Float32" infreq="16000" outshape="[50,40]" outtype="Float32">
         <Unit id="Core.Packages.SpeechAudio">
           <Argument param="output_freq" type="Double">100</Argument>
           <Argument param="output_features" type="Int32">40</Argument>
@@ -778,7 +739,7 @@
           <Argument param="time_output" type="String">time</Argument>
         </Unit>
       </Preprocessor>
-      <Postprocessor override="False" inshape="[128,3]" intype="Float32" infreq="0" outshape="[10]" outtype="Float32" />
+      <Postprocessor override="False" inshape="[128,3]" intype="Float32" infreq="1" outshape="[128,3]" outtype="Float32" />
     </Model>
   </Models>
   <Database balance="AnnotatedLength" redistributionScope="Everything">

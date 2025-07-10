@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ImagimobStudio>
+  <Timeline id="8509d849-dfd6-404c-9f00-13970ab76119">
+    <Tracks>
+      <Track name="conv1dlstm-medium-balanced-00" type="datacsv" timecoded="TimestampBeginDuration">
+        <PayloadFile TrackType="Prediction">conv1dlstm-medium-balanced-00.data</PayloadFile>
+        <Offset unit="seconds">0.521937</Offset>
+      </Track>
+      <Track name="preprocessed_label" type="datacsv">
+        <PayloadFile TrackType="Prediction">preprocessed_label.data</PayloadFile>
+        <Offset unit="seconds">0.521937</Offset>
+      </Track>
+    </Tracks>
+  </Timeline>
+</ImagimobStudio>
